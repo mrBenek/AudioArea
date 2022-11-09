@@ -19,7 +19,7 @@ namespace WebScraper
         static void Main(string[] args)
         {
             Parser parser = new Parser();
-            //ClearCSVFiles();
+            ClearCSVFiles();
             var companies = parser.GetCompanies("https://audio-database.com", "links");
         }
 

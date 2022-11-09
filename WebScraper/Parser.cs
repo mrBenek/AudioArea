@@ -65,7 +65,7 @@ namespace WebScraper
                 {
                     Company company = new Company
                     {
-                        Name = link.InnerText,
+                        Name = link.InnerText.Replace('/', '-'),
                         Link = baseLink + '/' + link.ParentNode.FirstChild.Attributes[0].Value,
                     };
                     companies.Add(company);
@@ -106,7 +106,7 @@ namespace WebScraper
                 response = File.ReadAllText(pathFile);
             }
 #else
-            response = CallUrl(url).Result;
+            response = CallUrl(company.Link).Result;
 #endif
             if (!String.IsNullOrEmpty(response))
             {
@@ -148,7 +148,7 @@ namespace WebScraper
                         category = new Category(catName);
                         categories.Add(category);
                     }
-                    if (link.Attributes.Count > 0)
+                    if (link.Attributes.Count > 0 && link.FirstChild.Attributes.Count > 0)
                     {
                         string[] subCategories = r.Matches(link.InnerText)
                                                 .Cast<Match>()
@@ -234,14 +234,27 @@ namespace WebScraper
             return await response;
         }
 
+        private bool IsValidPath(string path)
+        {
+            if (path != null)
+            {
+                Regex r = new Regex(@"^[\w\-. ]+$");
+                return r.IsMatch(path);
+            }
+            return false;
+        }
+
         private void WriteToCsv(Category category, string fileName = null)
         {
-            String catategoryCompany = String.Join(
-                Environment.NewLine,
-                category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
-            );
+            if (IsValidPath(category.Name))
+            {
+                String catategoryCompany = String.Join(
+                    Environment.NewLine,
+                    category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
+                );
 
-            File.AppendAllText(Path.Combine(projPath, "data", fileName??category.Name + ".csv"), catategoryCompany);
+                File.AppendAllText(Path.Combine(projPath, "data", fileName ?? category.Name + ".csv"), catategoryCompany);
+            }
         }
     }
 }
