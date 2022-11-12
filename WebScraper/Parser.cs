@@ -37,6 +37,7 @@ namespace WebScraper
             string response = CallUrl(url).Result;
 #endif
             var decodedhtml = HttpUtility.HtmlDecode(response);
+            decodedhtml = Regex.Replace(decodedhtml, @"(?<=>)\s+?(?=<)", string.Empty); //remove spaces between html tags
             var companyList = ParseHtmlCompanies(decodedhtml, url);
 
 #if SAVE_HTML
@@ -111,6 +112,7 @@ namespace WebScraper
             if (!String.IsNullOrEmpty(response))
             {
                 var decodedhtml = HttpUtility.HtmlDecode(response);
+                decodedhtml = Regex.Replace(decodedhtml, @"(?<=>)\s+?(?=<)", string.Empty); //remove spaces between html tags
                 var categories = ParseHtmlCategory(decodedhtml, company);
 
 #if SAVE_HTML
@@ -148,31 +150,31 @@ namespace WebScraper
                     if (i < nodeSubcategory.Count())
                     {
                         foreach (HtmlNode nodeSubCatLink in nodeSubcategory[i].SelectNodes("//li/a"))
-                    {
-                            if (nodeSubCatLink.Attributes.Count > 0)
-                    {
-                                string[] subCategories = r.Matches(nodeSubCatLink.InnerText)
-                                                .Cast<Match>()
-                                                .Select(m => m.Value)
-                                                .ToArray();
-
-                        if (subCategories != null)
                         {
-                            string baseLink = company.Link.Substring(0, company.Link.Length - 10);
-                            foreach (string subCategory in subCategories)
+                            if (nodeSubCatLink.Attributes.Count > 0)
                             {
-                                SubCategory subCat = new SubCategory()
+                                string[] subCategories = r.Matches(nodeSubCatLink.InnerText)
+                                                        .Cast<Match>()
+                                                        .Select(m => m.Value)
+                                                        .ToArray();
+
+                                if (subCategories != null)
                                 {
-                                    Name = subCategory,
+                                    string baseLink = company.Link.Substring(0, company.Link.Length - 10);
+                                    foreach (string subCategory in subCategories)
+                                    {
+                                        SubCategory subCat = new SubCategory()
+                                        {
+                                            Name = subCategory,
                                             Link = baseLink + nodeSubCatLink.FirstChild.Attributes[0].Value,
                                             PictureLink = baseLink + nodeSubCatLink.Attributes[0].Value,
-                                };
-                                category.SubCategories.Add(subCat);
+                                        };
+                                        category.SubCategories.Add(subCat);
+                                    }
+                                }
                             }
                         }
                     }
-                }
-            }
                 }
             }
 
