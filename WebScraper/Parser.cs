@@ -23,7 +23,7 @@ namespace WebScraper
             var companies = ParseCompanies("https://audio-database.com", "links");
             foreach (var company in companies)
             {
-                ParseCategory(company, true);
+                ParseCategory(company, false);
                 //ParseCategory("https://audio-database.com/MARANTZ", "Marantz");
             }
             return companies;
@@ -61,12 +61,12 @@ namespace WebScraper
 
             foreach (var link in links)
             {
-                if (link.ParentNode.FirstChild.Attributes.Count > 0)
+                if (link.Attributes.Count > 0)
                 {
                     Company company = new Company
                     {
                         Name = link.InnerText.Replace('/', '-'),
-                        Link = baseLink + '/' + link.ParentNode.FirstChild.Attributes[0].Value,
+                        Link = baseLink + '/' + link.Attributes[0].Value,
                     };
                     companies.Add(company);
                 }
@@ -131,26 +131,27 @@ namespace WebScraper
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
 
-            var node = htmlDoc.DocumentNode.SelectNodes("//li/a");
+            var nodeCategory = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/h5");
+            var nodeSubcategory = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/ul[contains(@class, 'area')]");
 
             Regex r = new Regex(@"\w.*\w", RegexOptions.Multiline);
 
             List<Category> categories = company.Categories;
-            if (node != null)
+            if (nodeCategory != null && nodeSubcategory != null)
             {
-                foreach (var link in node)
+                for (int i = 0; i < nodeCategory.Count; i++)
                 {
-                    Category category = categories.LastOrDefault();
-                    string catName = link.ParentNode.ParentNode.PreviousSibling.PreviousSibling.InnerText;
+                    string catName = nodeCategory[i].InnerText;
+                    Category category = new Category(catName);
+                    categories.Add(category);
 
-                    if (catName != category?.Name)
+                    if (i < nodeSubcategory.Count())
                     {
-                        category = new Category(catName);
-                        categories.Add(category);
-                    }
-                    if (link.Attributes.Count > 0 && link.FirstChild.Attributes.Count > 0)
+                        foreach (HtmlNode nodeSubCatLink in nodeSubcategory[i].SelectNodes("//li/a"))
                     {
-                        string[] subCategories = r.Matches(link.InnerText)
+                            if (nodeSubCatLink.Attributes.Count > 0)
+                    {
+                                string[] subCategories = r.Matches(nodeSubCatLink.InnerText)
                                                 .Cast<Match>()
                                                 .Select(m => m.Value)
                                                 .ToArray();
@@ -163,13 +164,15 @@ namespace WebScraper
                                 SubCategory subCat = new SubCategory()
                                 {
                                     Name = subCategory,
-                                    Link = baseLink + link.FirstChild.Attributes[0].Value,
-                                    PictureLink = baseLink + link.Attributes[0].Value,
+                                            Link = baseLink + nodeSubCatLink.FirstChild.Attributes[0].Value,
+                                            PictureLink = baseLink + nodeSubCatLink.Attributes[0].Value,
                                 };
                                 category.SubCategories.Add(subCat);
                             }
                         }
                     }
+                }
+            }
                 }
             }
 
