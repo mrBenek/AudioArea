@@ -125,7 +125,6 @@ namespace WebScraper
 
                                     if (subCategories != null)
                                     {
-
                                         foreach (string subCategory in subCategories)
                                         {
                                             SubCategory subCat = new SubCategory()
@@ -199,7 +198,7 @@ namespace WebScraper
                     category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
                 );
 
-                File.AppendAllText(Path.Combine(projPath, "data", fileName ?? category.Name + ".csv"), catategoryCompany + Environment.NewLine);
+                File.AppendAllText(Path.Combine(projPath, "data", "Categories", fileName ?? category.Name + ".csv"), catategoryCompany + Environment.NewLine);
             }
         }
 
@@ -210,7 +209,7 @@ namespace WebScraper
                 companies.Select(d => $"{d.Name};{d.Link};")
             );
 
-            File.WriteAllText(Path.Combine(projPath, "data", fileName + ".csv"), csv);
+            File.WriteAllText(Path.Combine(projPath, "data", "Companies", fileName + ".csv"), csv);
         }
     }
 }
