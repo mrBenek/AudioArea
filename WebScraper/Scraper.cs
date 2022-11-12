@@ -34,6 +34,7 @@ namespace WebScraper
     {
         internal string Name { get; set; }
         internal string Link { get; set; }
+        internal string BaseLink { get; set; }
         internal List<Category> Categories = new List<Category>();
     }
 
