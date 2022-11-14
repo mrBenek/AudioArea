@@ -30,14 +30,32 @@ namespace WebScraper
                             foreach (CategoryGroup subCategory in category.SubCategories)
                             {
                                 ParseCategoryGroup(subCategory, company, false);
+                                foreach (Category cat in subCategory.Categories)
+                                {
+                                    if (cat.Products != null)
+                                    {
+                                        foreach (Product product in cat.Products)
+                                        {
+                                            ParseProducts(product, company.Name, false);
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("subCategory.Products = null: company: " + company.Name + ", subCategory: " + subCategory.Name);
+                                    }
+                                }
                             }
+                        }
+                        else
+                        {
+                            Console.WriteLine("catgory.SubCategories = null: company: " + company.Name + ", category: " + category.Name);
                         }
                     }
                     else
                     {
                         foreach (Product product in category.Products)
                         {
-                            //ParseProducts(product, company.Name, false);
+                            ParseProducts(product, company.Name, false);
                         }
                     }
                 }
@@ -144,12 +162,24 @@ namespace WebScraper
                         {
                             product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                             product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
+
+                            int index = linkNode.Attributes[0].Value.IndexOf('/');
+                            if (index != -1)
+                            {
+                                product.MainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                            }
                         }
                         else
                         {
-                            string baseLink = catGroup.Link.Substring(0, catGroup.Link.LastIndexOf("/") + 1);
-                            product.Link = baseLink + linkNode.Attributes[0].Value;
-                            product.PictureLink = baseLink + linkNode.FirstChild.Attributes[0].Value;
+                            int lastIndex = catGroup.Link.LastIndexOf("/");
+                            string baseLink = catGroup.Link.Substring(0, lastIndex);
+                            product.Link = baseLink + '/' + linkNode.Attributes[0].Value;
+                            product.PictureLink = baseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
+                            product.MainCategory = baseLink.Substring(baseLink.LastIndexOf("/") + 1);
                         }
                         if (category.Products == null)
                         {
@@ -176,8 +206,6 @@ namespace WebScraper
             htmlDoc.LoadHtml(html);
 
             var nodeAreaItems = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/ul[contains(@class, 'area')]");
-            //var nodeCategory = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/h5");
-            //var nodeAreaItem = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/ul[@class=\"brandarea\"]");
 
             if (nodeAreaItems != null)
             {
@@ -234,48 +262,75 @@ namespace WebScraper
 
         public void ParseProducts(Product product, string companyName, bool saveToFile, string fileName = null)
         {
-            fileName = product.Link.Substring(Scraper.url.Length + 1).Replace('/', '_');
-            string pathFile = Path.Combine(projPath, "test", "products", fileName);
-            string html = GetHtml(product.Link, pathFile, true, false);
-
-            if (!String.IsNullOrEmpty(html))
+            if (product.MainCategory != null)
             {
-                //var products = ParseHtmlProducts(html, company);
+                string pathDirectory = Path.Combine(projPath, "test", "products", product.MainCategory);
+                if (!Directory.Exists(pathDirectory))
+                {
+                    Directory.CreateDirectory(pathDirectory);
+                }
+                fileName = companyName + "_" + Path.GetFileName(product.Link);
+                string pathFile = Path.Combine(projPath, "test", "products", product.MainCategory, fileName);
+                string html = GetHtml(product.Link, pathFile, false, true);
 
-                //if (saveToFile)
-                //{
-                //    foreach (Category category in categories)
-                //    {
-                //        WriteToCsv(category, fileName);
-                //    }
-                //}
+                if (!String.IsNullOrEmpty(html))
+                {
+                    //var products = ParseHtmlProducts(html, company);
+
+                    //if (saveToFile)
+                    //{
+                    //    foreach (Category category in categories)
+                    //    {
+                    //        WriteToCsv(category, fileName);
+                    //    }
+                    //}
+                }
             }
         }
 
-        private List<Company> ParseHtmlProducts(string html, string baseLink)
+        public List<Company> ParseHtmlProducts(Product product, string htmlPath, string baseLink)
         {
-            List<Company> companies = new();
+            string html = GetHtml(product.Link, htmlPath, true, false);
 
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
 
-            var links = htmlDoc.DocumentNode.SelectNodes("//li/a");
+            var commentaryNode = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"detailarea\")]/p[@class=\"detail\"");
+            var specNodes = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"specarea\")]/tr");
 
-            foreach (var link in links)
+            if (commentaryNode != null)
             {
-                if (link.Attributes.Count > 0)
+                if (specNodes != null)
                 {
-                    Company company = new Company
+                    foreach (HtmlNode propiertyNode in specNodes)
                     {
-                        Name = link.InnerText.Replace('/', '-'),
-                        Link = baseLink + '/' + link.Attributes[0].Value,
-                    };
-                    company.BaseLink = company.Link.Substring(0, company.Link.Length - 10);
-                    companies.Add(company);
+
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("No Specification! htmlPath: " + htmlPath);
                 }
             }
+            else
+            {
+                Console.WriteLine("No commentary! htmlPath: " + htmlPath);
+            }
+            //foreach (var link in links)
+            //{
+            //    if (link.Attributes.Count > 0)
+            //    {
+            //        Company company = new Company
+            //        {
+            //            Name = link.InnerText.Replace('/', '-'),
+            //            Link = baseLink + '/' + link.Attributes[0].Value,
+            //        };
+            //        company.BaseLink = company.Link.Substring(0, company.Link.Length - 10);
+            //        companies.Add(company);
+            //    }
+            //}
 
-            return companies;
+            return null;
         }
 
         private async Task<string> CallUrl(string fullUrl)

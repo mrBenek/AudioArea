@@ -22,6 +22,11 @@ namespace WebScraper
             Parser parser = new Parser();
             //ClearCSVFiles();
             var companies = parser.GetCompanies(url, "links");
+
+            //foreach (string htmlFile in Directory.GetFiles(Path.Combine(projPath, "test", "products", "amp")))
+            //{
+            //    parser.ParseHtmlProducts(null, htmlFile, "");
+            //}
         }
 
         static void ClearCSVFiles()
@@ -69,11 +74,20 @@ namespace WebScraper
         internal string Name { get; set; }
         internal string Link { get; set; }
         internal string PictureLink { get; set; }
-        internal string Commentary { get; set; }
+        internal string MainCategory { get; set; }
+        internal string Description { get; set; }
 
         public Product()
         {
 
         }
+    }
+
+    class Amplifier : Product
+    {
+        internal string Type { get; set; }
+        internal string RatedOutput { get; set; }
+        internal string TotalHarmonicDistortion { get; set; }
+        internal string IntermodulationDistortion { get; set; }
     }
 }
