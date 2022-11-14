@@ -15,12 +15,13 @@ namespace WebScraper
 {
     class Scraper
     {
+        public const string url = "https://audio-database.com";
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         static void Main(string[] args)
         {
             Parser parser = new Parser();
-            ClearCSVFiles();
-            var companies = parser.GetCompanies("https://audio-database.com", "links");
+            //ClearCSVFiles();
+            var companies = parser.GetCompanies(url, "links");
         }
 
         static void ClearCSVFiles()
@@ -41,7 +42,8 @@ namespace WebScraper
     class Category
     {
         internal string Name { get; set; }
-        internal List<SubCategory> SubCategories = new List<SubCategory>();
+        internal List<Product> Products { get; set; }
+        internal List<CategoryGroup> SubCategories;
 
         public Category(string name)
         {
@@ -49,13 +51,15 @@ namespace WebScraper
         }
     }
 
-    class SubCategory
+    class CategoryGroup
     {
         internal string Name { get; set; }
         internal string Link { get; set; }
         internal string PictureLink { get; set; }
+        internal string BaseLink { get; set; }
+        internal List<Category> Categories { get; set; } = new();
 
-        public SubCategory()
+        public CategoryGroup()
         {
         }
     }
@@ -65,5 +69,11 @@ namespace WebScraper
         internal string Name { get; set; }
         internal string Link { get; set; }
         internal string PictureLink { get; set; }
+        internal string Commentary { get; set; }
+
+        public Product()
+        {
+
+        }
     }
 }
