@@ -1,0 +1,334 @@
+company.BaseLink: https://audio-database.com/ACOUSTICARTS(eng)/speaker/, Attribute value: amphora.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae1.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae1signature.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae1mk3.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae2.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae2signature.html
+company.BaseLink: https://audio-database.com/ACOUSTICENERGY/speaker/, Attribute value: ae3mk2.html
+catgory.SubCategories = null: company: Advent, category:  About ADVENT
+subCategory.Products = null: company: AKAI-A&D, subCategory: DA-F9000
+Wrong element:
+Company: Altec Lansing
+Name: full-range unit,Coaxial Unit
+Link: https://audio-database.com/ALTEC/unit/index.html
+
+
+Wrong element:
+Company: Altec Lansing
+Name: Tweeter Unit,Driver Unit,horn
+Link: https://audio-database.com/ALTEC/unit/index3.html
+
+
+Wrong element:
+Company: Altec Lansing
+Name: network,enclosure,line transformer,Car audio units
+Link: https://audio-database.com/ALTEC/unit/index4.html
+
+
+Wrong element:
+Company: Altec Lansing
+Name: Mixing consoles,active equalizer,Limiter Amplifier,frequency shifter,Microphones
+Link: https://audio-database.com/ALTEC/etc/index.html
+
+
+catgory.SubCategories = null: company: Altec Lansing, category: Other
+company.BaseLink: https://audio-database.com/AUDIOINTERFACE/etc/, Attribute value: cst-80ii.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: arcus-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: ascendant.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: avatar-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: diamond.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: eclipse-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: monitor-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: osiris-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: radian-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: radianhc-e.html
+company.BaseLink: https://audio-database.com/AVALON/speaker/, Attribute value: symbol-ii.html
+company.BaseLink: https://audio-database.com/BNS/speaker/, Attribute value: sci.html
+company.BaseLink: https://audio-database.com/BNS/speaker/, Attribute value: sciii.html
+subCategory.Products = null: company: Bow Technologies, subCategory: WAZOO
+subCategory.Products = null: company: Bow Technologies, subCategory: WAZOO XL
+subCategory.Products = null: company: Bow Technologies, subCategory: ZZ-One
+subCategory.Products = null: company: Bow Technologies, subCategory: WALRUS
+subCategory.Products = null: company: Bow Technologies, subCategory: WARLOCK
+subCategory.Products = null: company: Bow Technologies, subCategory: WIZARD
+subCategory.Products = null: company: Bow Technologies, subCategory: ZZ-Eight
+Wrong element:
+Company: Bozak
+Name: Woofer unit,Midrange unit,Tweeter unit,Network
+Link: https://audio-database.com/BOZAK/unit/index.html
+
+
+catgory.SubCategories = null: company: Bozak, category: Speaker unit
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 310x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 610x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 710x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 810x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 1000x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: 6500x.html
+company.BaseLink: https://audio-database.com/BSR/player/, Attribute value: ht-70mkii.html
+Wrong element:
+Company: B&W-Solid
+Name: LM1 / LM1-PM,Micro Monitor
+Link: https://audio-database.com/BandW/lm1micromonitor.html
+
+
+Wrong element:
+Company: B&W-Solid
+Name: Matrix801Series3,M801S3
+Link: https://audio-database.com/BandW/m801s3.html
+
+
+Wrong element:
+Company: B&W-Solid
+Name: Matrix802Series3,M802S3
+Link: https://audio-database.com/BandW/m802s3.html
+
+
+Wrong element:
+Company: B&W-Solid
+Name: Matrix805H,M805H
+Link: https://audio-database.com/BandW/m805h.html
+
+
+Wrong element:
+Company: B&W-Solid
+Name: Matrix805V,M805V
+Link: https://audio-database.com/BandW/m805v.html
+
+
+company.BaseLink: https://audio-database.com/CABASSE/speaker/, Attribute value: brigantin.html
+company.BaseLink: https://audio-database.com/CABASSE/speaker/, Attribute value: dinghy2.html
+company.BaseLink: https://audio-database.com/CABASSE/speaker/, Attribute value: galion.html
+company.BaseLink: https://audio-database.com/CABASSE/speaker/, Attribute value: sampanleger.html
+company.BaseLink: https://audio-database.com/CABASSE/speaker/, Attribute value: sampanlourd.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ct80n.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ct90.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ct100n.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ct120.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ergo70.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ergo90.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ergo120.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: fonum300.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat20.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat30.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat30n.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat40.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat60.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat60n.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: karat920.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: plusd.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: pluss.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: plusc.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: pluse.html
+company.BaseLink: https://audio-database.com/CANTON/speaker/, Attribute value: ca30n.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: d-1.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: 250se.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: 280se.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: 380se.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: ve-5m.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: ve-8.html
+company.BaseLink: https://audio-database.com/CERWINVEGA/speaker/, Attribute value: ve-15.html
+Wrong element:
+Company: Copland
+Name: Integrated Amplifier,Control Amplifier,Power Amplifier
+Link: https://audio-database.com/COPLAND/amp/index.html
+
+
+catgory.SubCategories = null: company: Copland, category: Amplifier
+Wrong element:
+Company: Coral
+Name: Headphones,Cartridge,step-up transformer,Microphone,headshell, stand
+Link: https://audio-database.com/CORAL/etc/index.html
+
+
+catgory.SubCategories = null: company: Coral, category: Other
+company.BaseLink: https://audio-database.com/COTTER/etc/, Attribute value: mark2-e.html
+company.BaseLink: https://audio-database.com/CROWN/player/, Attribute value: ctd-1300.html
+company.BaseLink: https://audio-database.com/CROWN/player/, Attribute value: ctd-1500.html
+catgory.SubCategories = null: company: Crysler, category: Other
+company.BaseLink: https://audio-database.com/DAIKEN/speaker/, Attribute value: craft-alpha9000.html
+Wrong element:
+Company: DBX
+Name: SF-ONE,SFX-1/SFC-1
+Link: https://audio-database.com/DBX/sf-one-e.html
+
+
+subCategory.Products = null: company: DBX, subCategory: Speaker System
+Wrong element:
+Company: Denon-Columbia
+Name: System-5,SC-5/DSW-5
+Link: https://audio-database.com/DENON-COLUMBIA/system-5-e.html
+
+
+subCategory.Products = null: company: Denon-Columbia, subCategory: Center Speaker,Subwoofer,Active Speaker,Speaker Set
+Wrong element:
+Company: Denon-Columbia
+Name: Turntable Seat,Stabilizer,Shell Stand
+Link: https://audio-database.com/DENON-COLUMBIA/analogaccessory.html
+
+
+Wrong element:
+Company: Denon-Columbia
+Name:
+Link: https://audio-database.com/DENON-COLUMBIA/dp-2700photo.html
+
+
+subCategory.Products = null: company: Denon-Columbia, subCategory: Photo
+catgory.SubCategories = null: company: Denon-Columbia, category: Other information
+catgory.SubCategories = null: company: Denon-Columbia, category: Regarding Denon's PCM (digital) recording technology (mainly for business use)
+Wrong element:
+Company: Foster-Fostex
+Name: Midrange Unit,Tweeter Unit
+Link: https://audio-database.com/FOSTER-FOSTEX/unit/index3.html
+
+
+Wrong element:
+Company: Foster-Fostex
+Name: Driver unit,Horn
+Link: https://audio-database.com/FOSTER-FOSTEX/unit/index4.html
+
+
+Wrong element:
+Company: Foster-Fostex
+Name: Enclosure,Speaker kit,Other
+Link: https://audio-database.com/FOSTER-FOSTEX/unit/index5.html
+
+
+Wrong element:
+Company: Foster-Fostex
+Name: Car speakers,In-vehicle speaker unit
+Link: https://audio-database.com/FOSTER-FOSTEX/unit/index6.html
+
+
+Wrong element:
+Company: GOTO UNIT
+Name: SD-4000?SD-4300A/B,SD-4500?SD-4600
+Link: https://audio-database.com/GOTOUNIT/sd-4000-e.html
+
+
+subCategory.Products = null: company: GOTO UNIT, subCategory: Channel Divider,Network
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hl-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hltypeiv-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hl5-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: superhl5-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hlcompact-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hlcompact7-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hlcompact7es-2-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hlcompact7es-3-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hl-p3es-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: hl-p3es-2-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: ls3_5a-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: ls5_12a-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: masteringmonitor20.-e.html
+company.BaseLink: https://audio-database.com/HARBETH/speaker/, Attribute value: masteringmonitor30-e.html
+Wrong element:
+Company: JBL
+Name:
+Link: https://audio-database.com/JBL/professionalseries1979.html
+
+
+Wrong element:
+Company: JBL
+Name:
+Link: https://audio-database.com/JBL/studio.html
+
+
+Wrong element:
+Company: JBL
+Name:
+Link: https://audio-database.com/JBL/etc1.html
+
+
+Wrong element:
+Company: JBL
+Name:
+Link: https://audio-database.com/JBL/pa.html
+
+
+subCategory.Products = null: company: JBL, subCategory: Picture
+catgory.SubCategories = null: company: KEF, category: Other
+subCategory.Products = null: company: LUXMAN, subCategory: Phono Equalizer Amplifier,Passive Attenuator
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/ml-6-e.html
+
+
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/ml-7l-e.html
+
+
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/no26sl-e.html
+
+
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/no20_5-e.html
+
+
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/ml-9l-e.html
+
+
+Wrong element:
+Company: MARK LEVINSON
+Name:
+Link: https://audio-database.com/MARK_LEVINSON/no27l-e.html
+
+
+Wrong element:
+Company: NEC-AUTHENTIC
+Name: A-10XXP,typeI/typeII/typeIII
+Link: https://audio-database.com/NEC/a-10xxp-e.html
+
+
+subCategory.Products = null: company: NEC-AUTHENTIC, subCategory: Integrated Amplifier,Monaural Amplifier,Receiver,AV Amplifier
+Wrong element:
+Company: ONKYO
+Name: D-202,cafe classics
+Link: https://audio-database.com/ONKYO/d-202-e.html
+
+
+Wrong element:
+Company: PIONEER-EXCLUSIVE-TAD
+Name: CT-3030A/CT-3030AD,CT-3030S
+Link: https://audio-database.com/PIONEER-EXCLUSIVE/ct-3030a-e.html
+
+
+subCategory.Products = null: company: Sony, subCategory: MC head amplifierCartridgeTurntableTone armOther Record Players
+Wrong element:
+Company: Technics-Panasonic
+Name: EAA-2010/SU-2010/SU-50A,Technics 50A
+Link: https://audio-database.com/TechnicsPanasonic/su-50a-e.html
+
+
+Wrong element:
+Company: Technics-Panasonic
+Name: EAA-2008/SU-2008/SU-30A,Technics 30A
+Link: https://audio-database.com/TechnicsPanasonic/su-30a-e.html
+
+
+Wrong element:
+Company: Technics-Panasonic
+Name: EAA-2007/SU-2007,Technics 20A
+Link: https://audio-database.com/TechnicsPanasonic/eaa-2007-e.html
+
+
+Wrong element:
+Company: Technics-Panasonic
+Name: EAA-2009/SU-2009/SU-40A,Technics 40A
+Link: https://audio-database.com/TechnicsPanasonic/su-40a-e.html
+
+
+
+D:\Moje\Projects\C#\WebScraper\WebScraper\bin\Debug\net5.0\WebScraper.exe (process 1664) exited with code 0.
+To automatically close the console when debugging stops, enable Tools->Options->Debugging->Automatically close the console when debugging stops.
+Press any key to close this window . . .
