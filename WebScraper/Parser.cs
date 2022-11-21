@@ -290,21 +290,26 @@ namespace WebScraper
 
         public List<Company> ParseHtmlProducts(Product product, string htmlPath, string baseLink)
         {
-            string html = GetHtml(product.Link, htmlPath, true, false);
+            string html = GetHtml(product?.Link, htmlPath, true, false);
 
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
 
-            var commentaryNode = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"detailarea\")]/p[@class=\"detail\"");
-            var specNodes = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"specarea\")]/tr");
+            var commentaryNode = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"detailarea\"]/p[@class=\"detail\"]");
+            var specNodes = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"specarea\"]/table[@class=\"spec\"]/tr");
 
             if (commentaryNode != null)
             {
+                string commentary = string.Join(Environment.NewLine, commentaryNode[0].InnerHtml.Trim().Split('\n').Select(s => s.Trim().Replace(" <br><br>", Environment.NewLine).Replace(" <br>", "")));
                 if (specNodes != null)
                 {
                     foreach (HtmlNode propiertyNode in specNodes)
                     {
-
+                        if (propiertyNode.ChildNodes.Count == 2)
+                        {
+                            string propierty = string.Join(Environment.NewLine, propiertyNode.ChildNodes[0].InnerText.Trim().Split('\n').Select(s => s.Trim()));
+                            string value = string.Join(Environment.NewLine, propiertyNode.ChildNodes[1].InnerText.Trim().Split('\n').Select(s => s.Trim()));
+                        }
                     }
                 }
                 else
@@ -316,19 +321,6 @@ namespace WebScraper
             {
                 Console.WriteLine("No commentary! htmlPath: " + htmlPath);
             }
-            //foreach (var link in links)
-            //{
-            //    if (link.Attributes.Count > 0)
-            //    {
-            //        Company company = new Company
-            //        {
-            //            Name = link.InnerText.Replace('/', '-'),
-            //            Link = baseLink + '/' + link.Attributes[0].Value,
-            //        };
-            //        company.BaseLink = company.Link.Substring(0, company.Link.Length - 10);
-            //        companies.Add(company);
-            //    }
-            //}
 
             return null;
         }
