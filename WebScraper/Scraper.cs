@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
@@ -13,7 +14,7 @@ using System.Web;
 
 namespace WebScraper
 {
-    class Scraper
+    public class Scraper
     {
         public const string url = "https://audio-database.com";
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
@@ -36,58 +37,58 @@ namespace WebScraper
         }
     }
 
-    class Company
+    public class Company
     {
-        internal string Name { get; set; }
-        internal string Link { get; set; }
-        internal string BaseLink { get; set; }
-        internal List<Category> Categories = new List<Category>();
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Link { get; set; }
+        public string BaseLink { get; set; }
+        public List<Product> Products { get; set; } = new List<Product>();
     }
 
-    class Category
+    public class Category
     {
-        internal string Name { get; set; }
-        internal List<Product> Products { get; set; }
-        internal List<CategoryGroup> SubCategories;
+        public int Id { get; set; }
+        public int ParentId { get; set; }
+        public string Name { get; set; }
+        public string Link { get; set; }
+        public string PictureLink { get; set; }
+        public string BaseLink { get; set; }
+        public string FileName { get; set; }
+        public List<Product> Products { get; set; } = new List<Product>();
 
-        public Category(string name)
+    public Category(string name)
         {
             Name = name;
         }
     }
 
-    class CategoryGroup
+    public class Product
     {
-        internal string Name { get; set; }
-        internal string Link { get; set; }
-        internal string PictureLink { get; set; }
-        internal string BaseLink { get; set; }
-        internal List<Category> Categories { get; set; } = new();
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Link { get; set; }
+        public string PictureLink { get; set; }
+        public string Description { get; set; }
+        public string Propierties { get; set; } //json
 
-        public CategoryGroup()
+        public int CategoryId { get; set; }
+        
+        [JsonIgnore]
+        public Category Category { get; set; }
+
+        public int CompanyId { get; set; }
+
+        [JsonIgnore]
+        public Company Company { get; set; }
+
+        public Product(Category category, Company company)
         {
+            Category = category;
+            CategoryId = category.Id;
+
+            Company = company;
+            CompanyId = company.Id;
         }
-    }
-
-    class Product
-    {
-        internal string Name { get; set; }
-        internal string Link { get; set; }
-        internal string PictureLink { get; set; }
-        internal string MainCategory { get; set; }
-        internal string Description { get; set; }
-
-        public Product()
-        {
-
-        }
-    }
-
-    class Amplifier : Product
-    {
-        internal string Type { get; set; }
-        internal string RatedOutput { get; set; }
-        internal string TotalHarmonicDistortion { get; set; }
-        internal string IntermodulationDistortion { get; set; }
     }
 }

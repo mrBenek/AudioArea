@@ -1,66 +1,57 @@
 ﻿using HtmlAgilityPack;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Text;
+using System.Reflection;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
 
 namespace WebScraper
 {
+    public enum Category_t
+    {
+        stereo = 1,
+        etc,
+        surround,
+        unit,
+        speaker,
+        tuner,
+        player,
+        amp,
+        portable,
+        radio,
+        headphone,
+        kit
+    }
 
     class Parser
     {
+        private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
+        List<Category> categories = new List<Category>();
         readonly string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         public List<Company> GetCompanies(string url, string fileName = null)
         {
             var companies = ParseCompanies(url, "links");
+            int i = 0;
             foreach (var company in companies)
             {
                 ParseCategory(company, false);
-                foreach (Category category in company.Categories)
-                {
-                    if (category.Products == null)
-                    {
-                        if (category.SubCategories != null)
-                        {
-                            foreach (CategoryGroup subCategory in category.SubCategories)
-                            {
-                                ParseCategoryGroup(subCategory, company, false);
-                                foreach (Category cat in subCategory.Categories)
-                                {
-                                    if (cat.Products != null)
-                                    {
-                                        foreach (Product product in cat.Products)
-                                        {
-                                            ParseProducts(product, company.Name, false);
-                                        }
-                                    }
-                                    else
-                                    {
-                                        Console.WriteLine("subCategory.Products = null: company: " + company.Name + ", subCategory: " + subCategory.Name);
-                                    }
-                                }
-                            }
-                        }
-                        else
-                        {
-                            Console.WriteLine("catgory.SubCategories = null: company: " + company.Name + ", category: " + category.Name);
-                        }
-                    }
-                    else
-                    {
-                        foreach (Product product in category.Products)
-                        {
-                            ParseProducts(product, company.Name, false);
-                        }
-                    }
-                }
+                company.Id = i++;
             }
+            var options = new JsonSerializerOptions { WriteIndented = true };
+
+            string filePath = Path.Combine(projPath, "data", "Categories.json");
+            string jsonString = JsonSerializer.Serialize(categories, options);
+            File.WriteAllText("Categories.json", jsonString);
+
             return companies;
+
         }
 
         public List<Company> ParseCompanies(string url, string fileName = null)
@@ -106,14 +97,14 @@ namespace WebScraper
             return companies;
         }
 
-        public void ParseCategory(Company company, bool saveToFile, string fileName = null)
+        public void ParseCategory(Company company, bool saveToFile, string pathFile = null, string fileName = null, string mainCategory = null)
         {
-            string pathFile = Path.Combine(projPath, "test", "companies", company.Name + ".html");
+            pathFile ??= Path.Combine(projPath, "test", "companies", company.Name + ".html");
             string html = GetHtml(company.Link, pathFile, true, false);
 
             if (!String.IsNullOrEmpty(html))
             {
-                var categories = ParseHtmlCategory(html, company);
+                var categories = ParseHtmlCategory(html, company, mainCategory);
 
                 if (saveToFile)
                 {
@@ -125,7 +116,7 @@ namespace WebScraper
             }
         }
 
-        private void ParseLinks(HtmlNode linkNode, HtmlNode nodeAreaItem, Company company, ref Category category, CategoryGroup catGroup)
+        private void ParseLinks(HtmlNode linkNode, HtmlNode nodeAreaItem, Company company, ref Category category)
         {
             Regex r = new Regex(@"\w.*\w", RegexOptions.Multiline);
             
@@ -140,52 +131,103 @@ namespace WebScraper
                 {
                     if (nodeAreaItem.Attributes[0].Value == "brandarea")
                     {
-                        CategoryGroup gruop = new CategoryGroup()
+                        int index = linkNode.Attributes[0].Value.IndexOf('/');
+                        if (index != -1)
                         {
-                            Name = String.Join(',', categoryGroups),
-                            Link = company.BaseLink + linkNode.Attributes[0].Value,
-                            PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value,
-                        };
-                        if (category.SubCategories == null)
-                        {
-                            category.SubCategories = new();
+                            string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                            string fileName = Path.GetFileName(company.Name + '_' + String.Join(',', categoryGroups) + ".html");
+                            string pathFile = Path.Combine(projPath, "test", "categoryGroup", fileName);
+                            ParseCategory(company, false, pathFile, null, mainCategory);
                         }
-                        category.SubCategories.Add(gruop);
                     }
                     else if (categoryGroups.Count() == 1)
                     {
-                        Product product = new Product()
+                        Product product = new Product(category, company)
                         {
                             Name = categoryGroups[0],
                         };
-                        if (catGroup == null)
+                        int index = linkNode.Attributes[0].Value.IndexOf('/');
+                        if (index != -1)
                         {
+                            string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                            if (mainCategory == "..")
+                            {
+                                linkNode.Attributes[0].Value = linkNode.Attributes[0].Value.Replace("../", "");
+                                linkNode.FirstChild.Attributes[0].Value = linkNode.FirstChild.Attributes[0].Value.Replace("../", "");
+                            }
+                            index = linkNode.Attributes[0].Value.IndexOf('/');
+                            mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+
                             product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                             product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
 
-                            int index = linkNode.Attributes[0].Value.IndexOf('/');
-                            if (index != -1)
+                            Category cat = categories.FirstOrDefault(x => x.Name == mainCategory);
+
+                            if (cat == null)
                             {
-                                product.MainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                                if (Enum.TryParse(mainCategory.ToLower(), out Category_t mainCat))
+                                {
+                                    cat = new(mainCategory)
+                                    {
+                                        Id = (int)mainCat,
+                                        ParentId = 0,
+                                    };
+                                    categories.Add(cat);
+                                }
+                            }
+                            if (cat != null)
+                            {
+                                category.ParentId = cat.Id;
+                                category.Products.Add(product);
                             }
                             else
                             {
-                                Console.WriteLine("company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                                Console.WriteLine("1. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
                             }
                         }
                         else
                         {
-                            int lastIndex = catGroup.Link.LastIndexOf("/");
-                            string baseLink = catGroup.Link.Substring(0, lastIndex);
-                            product.Link = baseLink + '/' + linkNode.Attributes[0].Value;
-                            product.PictureLink = baseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
-                            product.MainCategory = baseLink.Substring(baseLink.LastIndexOf("/") + 1);
+                            if (category.BaseLink == null)
+                            {
+                                category.BaseLink = company.BaseLink.Remove(company.BaseLink.Length - 1);
+                            }
+                            product.Link = category.BaseLink + '/' + linkNode.Attributes[0].Value;
+                            product.PictureLink = category.BaseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
+
+                            int index2 = category.BaseLink.LastIndexOf('/');
+                            string mainCategory2;
+                            if (category.ParentId == 0)
+                            {
+                                mainCategory2 = category.BaseLink.Substring(index2 + 1);
+                            }
+                            else
+                            {
+                                mainCategory2 = ((Category_t)category.ParentId).ToString();
+                            }
+                            Category cat = categories.FirstOrDefault(x => x.Name == mainCategory2);
+                                
+                            if (cat == null)
+                            {
+                                if (Enum.TryParse(mainCategory2.ToLower(), out Category_t mainCat))
+                                {
+                                    cat = new(mainCategory2)
+                                    {
+                                        Id = (int)mainCat,
+                                        ParentId = 0,
+                                    };
+                                    categories.Add(cat);
+                                }
+                            }
+                            if (cat != null)
+                            {
+                                category.ParentId = cat.Id;
+                                category.Products.Add(product);
+                            }
+                            else
+                            {
+                                Console.WriteLine("2. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                            }
                         }
-                        if (category.Products == null)
-                        {
-                            category.Products = new();
-                        }
-                        category.Products.Add(product);
                     }
                     else
                     {
@@ -198,10 +240,18 @@ namespace WebScraper
             }
         }
 
-        private List<Category> ParseHtmlCategory(string html, Company company, CategoryGroup catGroup = null)
+        private string MainCategory(ref string name)
         {
-            List<Category> categories = (catGroup == null) ? company.Categories : catGroup.Categories;
+            string mainCategory = Translation.ResourceManager.GetString(name.ToLower());
+            if (mainCategory is not null)
+            {
+                name = mainCategory;
+            }
+            return name;
+        }
 
+        private List<Category> ParseHtmlCategory(string html, Company company, string mainCategory = null)
+        {
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
 
@@ -212,80 +262,50 @@ namespace WebScraper
                 string catName = nodeAreaItems[0].ParentNode.SelectSingleNode("//h5").InnerText;
                 foreach (HtmlNode nodeAreaItem in nodeAreaItems)
                 {
+                    var linkNodes = nodeAreaItem.SelectNodes(".//li/a");
                     if (nodeAreaItem.PreviousSibling.Name == "h5")
                     {
                         catName = nodeAreaItem.PreviousSibling.InnerText;
                     }
-                    Category category = categories.FirstOrDefault(x => x.Name == catName);
-                    
-                    if (category == null)
-                    {
-                        category = new(catName);
-                        categories.Add(category);
-                    }
+                    Category category = categories.FirstOrDefault(x => x.Name == MainCategory(ref catName));
 
-                    var linkNodes = nodeAreaItem.SelectNodes(".//li/a");
+                    if (nodeAreaItem.Attributes[0].Value != "brandarea" && linkNodes != null)
+                    {
+                        if (category == null)
+                        {
+                            category = new(catName)
+                            {
+                                Id = categoryId++,
+                            };
+
+                            if (mainCategory != null)
+                            {
+                                if (Enum.TryParse(mainCategory, out Category_t mainCat))
+                                {
+                                    category.ParentId = (int)mainCat;
+                                }
+                                else
+                                {
+                                    Console.WriteLine($"Main category: {mainCategory} doesn't exist");
+                                    category.ParentId = 1000;
+                                }
+                                category.BaseLink = company.BaseLink + mainCategory;
+                            }
+                            categories.Add(category);
+                        }
+                    }
 
                     if (linkNodes != null)
                     {
                         foreach (HtmlNode linkNode in linkNodes)
                         {
-                            ParseLinks(linkNode, nodeAreaItem, company, ref category, catGroup);
+                            ParseLinks(linkNode, nodeAreaItem, company, ref category);
                         }
                     }
                 }
             }
 
             return categories;
-        }
-
-
-        public void ParseCategoryGroup(CategoryGroup catGruop, Company company, bool saveToFile, string fileName = null)
-        {
-            fileName = Path.GetFileName(company.Name + '_' + catGruop.Name + ".html");
-            string pathFile = Path.Combine(projPath, "test", "categoryGroup", fileName);
-            string html = GetHtml(catGruop.Link, pathFile, true, false);
-
-            if (!String.IsNullOrEmpty(html))
-            {
-                var products = ParseHtmlCategory(html, company, catGruop);
-
-                //if (saveToFile)
-                //{
-                //    foreach (Category category in categories)
-                //    {
-                //        WriteToCsv(category, fileName);
-                //    }
-                //}
-            }
-        }
-
-        public void ParseProducts(Product product, string companyName, bool saveToFile, string fileName = null)
-        {
-            if (product.MainCategory != null)
-            {
-                string pathDirectory = Path.Combine(projPath, "test", "products", product.MainCategory);
-                if (!Directory.Exists(pathDirectory))
-                {
-                    Directory.CreateDirectory(pathDirectory);
-                }
-                fileName = companyName + "_" + Path.GetFileName(product.Link);
-                string pathFile = Path.Combine(projPath, "test", "products", product.MainCategory, fileName);
-                string html = GetHtml(product.Link, pathFile, false, true);
-
-                if (!String.IsNullOrEmpty(html))
-                {
-                    //var products = ParseHtmlProducts(html, company);
-
-                    //if (saveToFile)
-                    //{
-                    //    foreach (Category category in categories)
-                    //    {
-                    //        WriteToCsv(category, fileName);
-                    //    }
-                    //}
-                }
-            }
         }
 
         public List<Company> ParseHtmlProducts(Product product, string htmlPath, string baseLink)
@@ -378,15 +398,15 @@ namespace WebScraper
 
         private void WriteToCsv(Category category, string fileName = null)
         {
-            if (IsValidPath(category.Name))
-            {
-                String catategoryCompany = String.Join(
-                    Environment.NewLine,
-                    category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
-                );
+            //if (IsValidPath(category.Name))
+            //{
+            //    String catategoryCompany = String.Join(
+            //        Environment.NewLine,
+            //        category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
+            //    );
 
-                File.AppendAllText(Path.Combine(projPath, "data", "Categories", fileName ?? category.Name + ".csv"), catategoryCompany + Environment.NewLine);
-            }
+            //    File.AppendAllText(Path.Combine(projPath, "data", "Categories", fileName ?? category.Name + ".csv"), catategoryCompany + Environment.NewLine);
+            //}
         }
 
         private void WriteToCsv(List<Company> companies, string fileName)
