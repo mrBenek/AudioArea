@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -51,10 +52,23 @@ namespace WebScraper
                 company.Id = i++;
             }
             var options = new JsonSerializerOptions { WriteIndented = true };
-
             string filePath = Path.Combine(projPath, "data", "Categories.json");
+            string jsonStringOld = File.ReadAllText(filePath);
+
             string jsonString = JsonSerializer.Serialize(categories, options);
-            File.WriteAllText(filePath, jsonString);
+
+            JValue s1 = new JValue(jsonStringOld);
+            JValue s2 = new JValue(jsonString);
+
+            if (!JToken.DeepEquals(s1, s2))
+            {
+                Console.WriteLine("categories are not the same");
+                File.WriteAllText(filePath, jsonString);
+            }
+            else
+            {
+                Console.WriteLine("categories are the same");
+            }
 
             return companies;
         }
@@ -121,6 +135,34 @@ namespace WebScraper
             }
         }
 
+        private Category AddMainCategory(string mainCategory)
+        {
+            Category cat = null;
+            if (Enum.TryParse(mainCategory, out Category_t mainCat))
+            {
+                cat = new(mainCategory)
+                {
+                    Id = (int)mainCat,
+                    ParentId = 0,
+                };
+                categories.Add(cat);
+            }
+            return cat;
+        }
+
+        private void FillCategory(Category category, Product product, int? mainCatID)
+        {
+            if (mainCatID != null)
+            {
+                category.ParentId = (int)mainCatID;
+                category.Products.Add(product);
+            }
+            else
+            {
+                Console.WriteLine("Product: " + product.Link);
+            }
+        }
+
         private void ParseLinks(HtmlNode linkNode, HtmlNode nodeAreaItem, Company company, ref Category category)
         {
             Regex r = new Regex(@"\w.*\w", RegexOptions.Multiline);
@@ -134,7 +176,7 @@ namespace WebScraper
 
                 if (categoryGroups != null)
                 {
-                    if (nodeAreaItem.Attributes[0].Value == "brandarea")
+                    if (nodeAreaItem.Attributes[0].Value == "brandarea") //search in subcategory
                     {
                         int index = linkNode.Attributes[0].Value.IndexOf('/');
                         if (index != -1)
@@ -145,16 +187,16 @@ namespace WebScraper
                             ParseCategory(company, false, pathFile, null, mainCategory);
                         }
                     }
-                    else if (categoryGroups.Count() == 1)
+                    else if (categoryGroups.Count() == 1) //get products
                     {
                         Product product = new Product(category, company)
                         {
                             Name = categoryGroups[0],
                         };
-                        int index = linkNode.Attributes[0].Value.IndexOf('/');
-                        if (index != -1)
+                        int indexMainCat = linkNode.Attributes[0].Value.IndexOf('/'); //check if link contain main category e.g speaker/E-101.html
+                        if (indexMainCat != -1)
                         {
-                            if (category.ParentId == 0) //e.g category other is in category other, Audiotechnika Other booster -> other
+                            if (category.ParentId == 0) //category other is in category other, e.g Audiotechnika Other booster -> other
                             {
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                                 product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
@@ -162,46 +204,26 @@ namespace WebScraper
                             }
                             else
                             {
-                                string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                                string mainCategory = linkNode.Attributes[0].Value.Substring(0, indexMainCat);
                                 if (mainCategory == "..")
                                 {
                                     linkNode.Attributes[0].Value = linkNode.Attributes[0].Value.Replace("../", "");
                                     linkNode.FirstChild.Attributes[0].Value = linkNode.FirstChild.Attributes[0].Value.Replace("../", "");
+                                    indexMainCat = linkNode.Attributes[0].Value.IndexOf('/');
+                                    mainCategory = linkNode.Attributes[0].Value.Substring(0, indexMainCat);
                                 }
-                                index = linkNode.Attributes[0].Value.IndexOf('/');
-                                mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
 
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                                 product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
 
-                                Category cat = categories.FirstOrDefault(x => x.Name == MainCategory(ref mainCategory));
-
-                                if (cat == null)
-                                {
-                                    if (Enum.TryParse(mainCategory.ToLower(), out Category_t mainCat))
-                                    {
-                                        cat = new(mainCategory)
-                                        {
-                                            Id = (int)mainCat,
-                                            ParentId = 0,
-                                        };
-                                        categories.Add(cat);
-                                    }
-                                }
-                                if (cat != null)
-                                {
-                                    category.ParentId = cat.Id;
-                                    category.Products.Add(product);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("1. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
-                                }
+                                Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
+                                mainCat ??= AddMainCategory(mainCategory.ToLower());
+                                FillCategory(category, product, mainCat?.Id);
                             }
                         }
                         else
                         {
-                            if (category.ParentId == 0) //e.g category other is in category other, Audiotechnika Other booster -> other
+                            if (category.ParentId == 0) //category other is in category other, e.g Audiotechnika Other booster -> other
                             {
                                 product.Link = category.BaseLink + '/' + category.Name + '/' + linkNode.Attributes[0].Value;
                                 product.PictureLink = category.BaseLink + '/' + category.Name + '/' + linkNode.FirstChild.Attributes[0].Value;
@@ -209,46 +231,26 @@ namespace WebScraper
                             }
                             else
                             {
-                                if (category.BaseLink == null)
+                                if (category.BaseLink == null) //exitst category in categories
                                 {
                                     category.BaseLink = company.BaseLink.Remove(company.BaseLink.Length - 1);
                                 }
                                 product.Link = category.BaseLink + '/' + linkNode.Attributes[0].Value;
                                 product.PictureLink = category.BaseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
 
-                                int index2 = category.BaseLink.LastIndexOf('/');
-                                string mainCategory2;
+                                string mainCategory;
                                 if (category.ParentId == -1)
                                 {
-                                    mainCategory2 = category.BaseLink.Substring(index2 + 1);
+                                    int index = category.BaseLink.LastIndexOf('/');
+                                    mainCategory = category.BaseLink.Substring(index + 1);
                                 }
                                 else
                                 {
-                                    mainCategory2 = ((Category_t)category.ParentId).ToString();
+                                    mainCategory = ((Category_t)category.ParentId).ToString();
                                 }
-                                Category cat = categories.FirstOrDefault(x => x.Name == MainCategory(ref mainCategory2));
-
-                                if (cat == null)
-                                {
-                                    if (Enum.TryParse(mainCategory2.ToLower(), out Category_t mainCat))
-                                    {
-                                        cat = new(mainCategory2)
-                                        {
-                                            Id = (int)mainCat,
-                                            ParentId = 0,
-                                        };
-                                        categories.Add(cat);
-                                    }
-                                }
-                                if (cat != null)
-                                {
-                                    category.ParentId = cat.Id;
-                                    category.Products.Add(product);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("2. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
-                                }
+                                Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
+                                mainCat ??= AddMainCategory(mainCategory.ToLower());
+                                FillCategory(category, product, mainCat?.Id);
                             }
                         }
                     }
@@ -263,15 +265,23 @@ namespace WebScraper
             }
         }
 
-        private string MainCategory(ref string name)
+        private bool checkCatNames(ref string catName, string existCatName)
         {
-            name = name.ToLower();
-            string mainCategory = Translation.ResourceManager.GetString(name);
+            catName = catName.ToLower();
+            if (existCatName == catName)
+            {
+                return true;
+            }
+            string mainCategory = Translation.ResourceManager.GetString(catName);
             if (mainCategory is not null)
             {
-                name = mainCategory;
+                catName = mainCategory;
+                if (existCatName == catName)
+                {
+                    return true;
+                }
             }
-            return name;
+            return false;
         }
 
         private List<Category> ParseHtmlCategory(string html, Company company, string mainCategory = null)
@@ -291,7 +301,7 @@ namespace WebScraper
                     {
                         catName = nodeAreaItem.PreviousSibling.InnerText;
                     }
-                    Category category = categories.FirstOrDefault(x => x.Name == MainCategory(ref catName));
+                    Category category = categories.FirstOrDefault(x => checkCatNames(ref catName, x.Name));
 
                     if (nodeAreaItem.Attributes[0].Value != "brandarea" && linkNodes != null)
                     {
