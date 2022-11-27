@@ -49,7 +49,7 @@ namespace WebScraper
     public class Category
     {
         public int Id { get; set; }
-        public int ParentId { get; set; }
+        public int ParentId { get; set; } = -1;
         public string Name { get; set; }
         public string Link { get; set; }
         public string PictureLink { get; set; }
@@ -57,7 +57,7 @@ namespace WebScraper
         public string FileName { get; set; }
         public List<Product> Products { get; set; } = new List<Product>();
 
-    public Category(string name)
+        public Category(string name)
         {
             Name = name;
         }

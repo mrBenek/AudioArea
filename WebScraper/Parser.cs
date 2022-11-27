@@ -27,7 +27,13 @@ namespace WebScraper
         portable,
         radio,
         headphone,
-        kit
+        kit,
+        boombox,
+        photo,
+        professional,
+        diatoneds,
+        diatonesp,
+        speaker_unit,
     }
 
     class Parser
@@ -48,10 +54,9 @@ namespace WebScraper
 
             string filePath = Path.Combine(projPath, "data", "Categories.json");
             string jsonString = JsonSerializer.Serialize(categories, options);
-            File.WriteAllText("Categories.json", jsonString);
+            File.WriteAllText(filePath, jsonString);
 
             return companies;
-
         }
 
         public List<Company> ParseCompanies(string url, string fileName = null)
@@ -149,83 +154,101 @@ namespace WebScraper
                         int index = linkNode.Attributes[0].Value.IndexOf('/');
                         if (index != -1)
                         {
-                            string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
-                            if (mainCategory == "..")
+                            if (category.ParentId == 0) //e.g category other is in category other, Audiotechnika Other booster -> other
                             {
-                                linkNode.Attributes[0].Value = linkNode.Attributes[0].Value.Replace("../", "");
-                                linkNode.FirstChild.Attributes[0].Value = linkNode.FirstChild.Attributes[0].Value.Replace("../", "");
-                            }
-                            index = linkNode.Attributes[0].Value.IndexOf('/');
-                            mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
-
-                            product.Link = company.BaseLink + linkNode.Attributes[0].Value;
-                            product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
-
-                            Category cat = categories.FirstOrDefault(x => x.Name == mainCategory);
-
-                            if (cat == null)
-                            {
-                                if (Enum.TryParse(mainCategory.ToLower(), out Category_t mainCat))
-                                {
-                                    cat = new(mainCategory)
-                                    {
-                                        Id = (int)mainCat,
-                                        ParentId = 0,
-                                    };
-                                    categories.Add(cat);
-                                }
-                            }
-                            if (cat != null)
-                            {
-                                category.ParentId = cat.Id;
+                                product.Link = company.BaseLink + linkNode.Attributes[0].Value;
+                                product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
                             }
                             else
                             {
-                                Console.WriteLine("1. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                                string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                                if (mainCategory == "..")
+                                {
+                                    linkNode.Attributes[0].Value = linkNode.Attributes[0].Value.Replace("../", "");
+                                    linkNode.FirstChild.Attributes[0].Value = linkNode.FirstChild.Attributes[0].Value.Replace("../", "");
+                                }
+                                index = linkNode.Attributes[0].Value.IndexOf('/');
+                                mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+
+                                product.Link = company.BaseLink + linkNode.Attributes[0].Value;
+                                product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
+
+                                Category cat = categories.FirstOrDefault(x => x.Name == MainCategory(ref mainCategory));
+
+                                if (cat == null)
+                                {
+                                    if (Enum.TryParse(mainCategory.ToLower(), out Category_t mainCat))
+                                    {
+                                        cat = new(mainCategory)
+                                        {
+                                            Id = (int)mainCat,
+                                            ParentId = 0,
+                                        };
+                                        categories.Add(cat);
+                                    }
+                                }
+                                if (cat != null)
+                                {
+                                    category.ParentId = cat.Id;
+                                    category.Products.Add(product);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("1. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                                }
                             }
                         }
                         else
                         {
-                            if (category.BaseLink == null)
+                            if (category.ParentId == 0) //e.g category other is in category other, Audiotechnika Other booster -> other
                             {
-                                category.BaseLink = company.BaseLink.Remove(company.BaseLink.Length - 1);
-                            }
-                            product.Link = category.BaseLink + '/' + linkNode.Attributes[0].Value;
-                            product.PictureLink = category.BaseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
-
-                            int index2 = category.BaseLink.LastIndexOf('/');
-                            string mainCategory2;
-                            if (category.ParentId == 0)
-                            {
-                                mainCategory2 = category.BaseLink.Substring(index2 + 1);
-                            }
-                            else
-                            {
-                                mainCategory2 = ((Category_t)category.ParentId).ToString();
-                            }
-                            Category cat = categories.FirstOrDefault(x => x.Name == mainCategory2);
-                                
-                            if (cat == null)
-                            {
-                                if (Enum.TryParse(mainCategory2.ToLower(), out Category_t mainCat))
-                                {
-                                    cat = new(mainCategory2)
-                                    {
-                                        Id = (int)mainCat,
-                                        ParentId = 0,
-                                    };
-                                    categories.Add(cat);
-                                }
-                            }
-                            if (cat != null)
-                            {
-                                category.ParentId = cat.Id;
+                                product.Link = category.BaseLink + '/' + category.Name + '/' + linkNode.Attributes[0].Value;
+                                product.PictureLink = category.BaseLink + '/' + category.Name + '/' + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
                             }
                             else
                             {
-                                Console.WriteLine("2. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                                if (category.BaseLink == null)
+                                {
+                                    category.BaseLink = company.BaseLink.Remove(company.BaseLink.Length - 1);
+                                }
+                                product.Link = category.BaseLink + '/' + linkNode.Attributes[0].Value;
+                                product.PictureLink = category.BaseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
+
+                                int index2 = category.BaseLink.LastIndexOf('/');
+                                string mainCategory2;
+                                if (category.ParentId == -1)
+                                {
+                                    mainCategory2 = category.BaseLink.Substring(index2 + 1);
+                                }
+                                else
+                                {
+                                    mainCategory2 = ((Category_t)category.ParentId).ToString();
+                                }
+                                Category cat = categories.FirstOrDefault(x => x.Name == MainCategory(ref mainCategory2));
+
+                                if (cat == null)
+                                {
+                                    if (Enum.TryParse(mainCategory2.ToLower(), out Category_t mainCat))
+                                    {
+                                        cat = new(mainCategory2)
+                                        {
+                                            Id = (int)mainCat,
+                                            ParentId = 0,
+                                        };
+                                        categories.Add(cat);
+                                    }
+                                }
+                                if (cat != null)
+                                {
+                                    category.ParentId = cat.Id;
+                                    category.Products.Add(product);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("2. company.BaseLink: " + company.BaseLink + ", Attribute value: " + linkNode.Attributes[0].Value);
+                                }
                             }
                         }
                     }
@@ -242,7 +265,8 @@ namespace WebScraper
 
         private string MainCategory(ref string name)
         {
-            string mainCategory = Translation.ResourceManager.GetString(name.ToLower());
+            name = name.ToLower();
+            string mainCategory = Translation.ResourceManager.GetString(name);
             if (mainCategory is not null)
             {
                 name = mainCategory;
