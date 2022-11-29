@@ -1,5 +1,130 @@
-Main category: boombox doesn't exist
-Main category: photo doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Arts(England)_amphora.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae1.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae1signature.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae1mk3.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae2.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae2signature.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acoustic Energy_ae3mk2.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Acustik-Lab_bolero-limited-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\Air Tight-Acoustic Masterpiece_m-101.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_604valencia-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_612cmonitor-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_612jmonitor-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_612lceaster.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_620amonitor-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_620bmonitor.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_620bcustom.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_620jmonitor-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_medina.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_829a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_846a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_846b.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_847a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_848a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_871a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_873a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_875a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_878a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_878b.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_879a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_santanaii-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_890c.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_891v.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_892a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_893a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_1207c.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_1211a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_1217a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_1221a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_6041.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_9842-8d-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_9846-8a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_a2-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_a4-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_a5-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_a7.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mantarayhornsystem(mr-94a)+817a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_a7-500wii.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_magnificent-ii.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mini7.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_malaga.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_crescendo.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_dig.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_digmk2.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_minimonitor8a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_stonehengeii.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_trieste.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_ds912-8a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_el-7000.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_milestone405-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_milestone604.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_milestone950-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mk-1a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mk-4.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mk-5.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model4.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model6.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model7-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model8.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model9-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model14.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model15-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model19-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model55.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model85.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model95.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model105.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model205.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model305.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model505.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model508.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model510.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model511.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model9861-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_model9862iim-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_mk-2a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_sw-66.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_bias550.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Altec Lansing_system-3.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Altec Lansing_full-range unit,Coaxial Unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Altec Lansing_woofer unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Altec Lansing_Tweeter Unit,Driver Unit,horn.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Altec Lansing_network,enclosure,line transformer,Car audio units.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Altec Lansing_Mixing consoles,active equalizer,Limiter Amplifier,frequency shifter,Microphones.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Arcam_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\Arcam_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Arcam_index.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Ashidavox_Speaker System.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Ashidavox_Speaker Unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Audio Interface_cst-80ii.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Audio Research_sp-14.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Audio Research_sp-15.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Audio-Technica_headshell.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Aurex-Toshiba_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Aurex-Toshiba_s-r22.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_arcus-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_ascendant.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_avatar-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_diamond.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_eclipse-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_monitor-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_osiris-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_radian-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_radianhc-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Avalon Acoustics_symbol-ii.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\BNS_sci.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\BNS_sciii.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\photo\Bose_nasa.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Boulder_index.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Bozak_Speaker System.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Bozak_Woofer unit,Midrange unit,Tweeter unit,Network.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_310x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_610x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_710x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_810x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_1000x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_6500x.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\BSR_ht-70mkii.html doesn't exist
 Wrong element:
 Company: B&W-Solid
 Name: LM1 / LM1-PM,Micro Monitor
@@ -30,81 +155,259 @@ Name: Matrix805V,M805V
 Link: https://audio-database.com/BandW/m805v.html
 
 
-Wrong element:
-Company: Coral
-Name: Headphones,Cartridge,step-up transformer,Microphone,headshell, stand
-Link: https://audio-database.com/CORAL/etc/index.html
-
-
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cabasse_brigantin.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cabasse_dinghy2.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cabasse_galion.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cabasse_sampanleger.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cabasse_sampanlourd.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ct80n.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ct90.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ct100n.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ct120.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ergo70.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ergo90.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ergo120.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_fonum300.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat20.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat30.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat30n.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat40.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat60.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat60n.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_karat920.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_plusd.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_pluss.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_plusc.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_pluse.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Canton_ca30n.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_d-1.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_250se.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_280se.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_380se.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_ve-5m.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_ve-8.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Cerwin Vega_ve-15.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Copland_Integrated Amplifier,Control Amplifier,Power Amplifier.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Coral_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Coral_s-r22.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_ad-1.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_ad-2.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_ad-3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_hornaccessory.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_othernetwork.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Coral_levelcontrol.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\Coral_8sa-7.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\Coral_10sa-7.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\Coral_12sa-7.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Coral_otherenclosure.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Coral_Headphones,Cartridge,step-up transformer,Microphone,headshell, stand.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Cotter_mark2-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\Crown(JPN)_ctd-1300.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\Crown(JPN)_ctd-1500.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Cyrus-Mission_774sm.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Daiken_craft-alpha9000.html doesn't exist
 Wrong element:
 Company: DBX
 Name: SF-ONE,SFX-1/SFC-1
 Link: https://audio-database.com/DBX/sf-one-e.html
 
 
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Decca_londoninternationalarm.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Decca_speakeraccessory.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Decca_recordaccessory.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-700.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-1000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-1020.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-1030g.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-2000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-2020.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-2030g.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-2800g.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-3000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_avc-3030.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_dra-75vr.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_7at-20.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_ma-20.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_ma-30.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_ma-400.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_tua-600.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_dc-7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Denon-Columbia_dc-9.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-100-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-106-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-11-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-101-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-103-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-104-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-105-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-107-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-108-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-109-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-109V-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-1000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Denon-Columbia_T-110CS.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_d-5-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_d-9-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_s-77-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_s-170mkii-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_s-270mkii-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-l10-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-l30-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-l50-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_vs-370-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-131-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-201sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-777sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a11r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a11xg-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a33-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a50-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a77xg-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-a555sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-cx101-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-e717r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-e727r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-f100-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-f101-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-f102sg-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-f103sg-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-m33-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-m53-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-t11r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-t33-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-t555sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-t777sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-v11-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_usc-m30-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_usc-m50-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-c11r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-c33-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-c555sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-c777sa-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-v11c-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-v505c-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-03-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-5-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-11-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-11r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-33-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-555-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_dsw-777-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Denon-Columbia_sc-p7-e.html
 Wrong element:
 Company: Denon-Columbia
 Name: System-5,SC-5/DSW-5
 Link: https://audio-database.com/DENON-COLUMBIA/system-5-e.html
 
 
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Denon-Columbia_headshell.html
 Wrong element:
 Company: Denon-Columbia
 Name: Turntable Seat,Stabilizer,Shell Stand
 Link: https://audio-database.com/DENON-COLUMBIA/analogaccessory.html
 
 
-Main category: photo doesn't exist
 Wrong element:
 Company: Denon-Columbia
 Name:
 Link: https://audio-database.com/DENON-COLUMBIA/dp-2700photo.html
 
 
-Main category: professional doesn't exist
-2. company.BaseLink: https://audio-database.com/MITSUBISHI-DIATONE/, Attribute value: ma-300p-e.html
-2. company.BaseLink: https://audio-database.com/MITSUBISHI-DIATONE/, Attribute value: ma-601p-e.html
-Main category: diatoneds doesn't exist
-Main category: diatoneds doesn't exist
-Main category: diatoneds doesn't exist
-Main category: diatonesp doesn't exist
-Main category: diatonesp doesn't exist
-Main category: diatonesp doesn't exist
-Main category: diatonesp doesn't exist
-Main category: diatonesp doesn't exist
-1. company.BaseLink: https://audio-database.com/MITSUBISHI-DIATONE/, Attribute value: diatonesp/kb-610s.html
-1. company.BaseLink: https://audio-database.com/MITSUBISHI-DIATONE/, Attribute value: diatonesp/kb-610h.html
-Wrong element:
-Company: Foster-Fostex
-Name: Midrange Unit,Tweeter Unit
-Link: https://audio-database.com/FOSTER-FOSTEX/unit/index3.html
-
-
-Wrong element:
-Company: Foster-Fostex
-Name: Driver unit,Horn
-Link: https://audio-database.com/FOSTER-FOSTEX/unit/index4.html
-
-
-Wrong element:
-Company: Foster-Fostex
-Name: Enclosure,Speaker kit,Other
-Link: https://audio-database.com/FOSTER-FOSTEX/unit/index5.html
-
-
-Wrong element:
-Company: Foster-Fostex
-Name: Car speakers,In-vehicle speaker unit
-Link: https://audio-database.com/FOSTER-FOSTEX/unit/index6.html
-
-
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\professional\DIATONE-Mitsubishi_2s-660-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\DIATONE-Mitsubishi_ma-300p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\DIATONE-Mitsubishi_ma-601p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\DIATONE-Mitsubishi_dz-50-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\DIATONE-Mitsubishi_op-5op-10-e.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\DIATONE-Mitsubishi_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\DIATONE-Mitsubishi_s-r22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\diatoneds\DIATONE-Mitsubishi_ds-32bmkII-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\diatoneds\DIATONE-Mitsubishi_ds-53dii-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\diatoneds\DIATONE-Mitsubishi_ds-3000-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-c1-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-c3-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-c1000zv-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_d-80-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_d-80m-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_d-80s-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_d-80e-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_d-160-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-w3-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-w5-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-w30-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-w461-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-10p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-14p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-31p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-51p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-71p-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_ds-101am-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_m-s03-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_vs-15a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\DIATONE-Mitsubishi_vs-30a-e.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\DIATONE-Mitsubishi_p-62f-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\DIATONE-Mitsubishi_2u-208-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\diatonesp\DIATONE-Mitsubishi_kb-610s.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\diatonesp\DIATONE-Mitsubishi_kb-610h.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\DIATONE-Mitsubishi_mic.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\DIATONE-Mitsubishi_stand.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\DIATONE-Mitsubishi_Technology.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\DIATONE-Mitsubishi_About DS-10000 Klavier.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\DIATONE-Mitsubishi_Photo.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Dokorder_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\Dual_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Dual_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Dynaco-Scandyna_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Dynaco-Scandyna_s-r22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Dynavector_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Dynavector_index.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_x8.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_x36.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_x1020.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_x1835.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_smh-1.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_str.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Electro Voice_xt1.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\ESS_hs-200.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\ESS_hs-300.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\ESS_hs-400.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\ESS_hs-500.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Fisher_index.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Power Amplifier.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Speaker System.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Active Speaker.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Subwoofer.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Full Range Unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Woofer Unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Midrange Unit,Tweeter Unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Driver unit,Horn.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Enclosure,Speaker kit,Other.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Car speakers,In-vehicle speaker unit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Headphones.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_Channel Divider.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Foster-Fostex_In-vehicle amplifiers and devices.html doesn't exist
 Wrong element:
 Company: GOTO UNIT
 Name: SD-4000?SD-4300A/B,SD-4500?SD-4600
 Link: https://audio-database.com/GOTOUNIT/sd-4000-e.html
 
 
-Main category: photo doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hl-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hltypeiv-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hl5-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_superhl5-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hlcompact-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hlcompact7-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hlcompact7es-2-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hlcompact7es-3-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hl-p3es-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_hl-p3es-2-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_ls3_5a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_ls5_12a-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_masteringmonitor20.-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARBETH_masteringmonitor30-e.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\HARMAN-KARDON_index.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\HARMAN-KARDON_index.html
 Wrong element:
 Company: JBL
 Name:
@@ -129,7 +432,36 @@ Name:
 Link: https://audio-database.com/JBL/pa.html
 
 
-1. company.BaseLink: https://audio-database.com/KEF/, Attribute value: https://www.audio-heritage.jp/KEF/speaker/k120.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_ut-025.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_ut-045be.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_ut-405.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_adaptor.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_2901.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_2901a.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\JBL_2902.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\JBL_Mixer, Transformer.html doesn't exist
+Product: https://audio-database.com/KEF/https://www.audio-heritage.jp/KEF/speaker/k120.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\KEF_ls3_5asignature.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\KLIPSCH_klipschorn-3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\KRELL_pam-3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_l-308-.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_L-505u-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\LUXMAN_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\LUXMAN_s-r22.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\LUXMAN_xc1012.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\LUXMAN_accessory.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\LUXMAN_book.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_e-1-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_e-03.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_e-06.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_e-06a.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_le-109.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\LUXMAN_le-117.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\MARANTZ_sd50-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\MARANTZ_ph-1-e.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\MARANTZ_AV251-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\MARANTZ_AV251II-e.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\MARANTZ_rha-1-e.html
 Wrong element:
 Company: MARK LEVINSON
 Name:
@@ -166,8 +498,16 @@ Name:
 Link: https://audio-database.com/MARK_LEVINSON/no27l-e.html
 
 
-Main category: speaker_unit doesn't exist
-Main category: speaker_unit doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\MARK LEVINSON_lnc-2l.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\MAXONIC_ale71.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\MAXONIC_ale81.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\MAXONIC_alh45.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\MAXONIC_hc501.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\MCINTOSH_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\MCINTOSH_s-r22.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\MERIDIAN_209-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\NAKAMICHI_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\NAKAMICHI_s-r22.html
 Wrong element:
 Company: NEC-AUTHENTIC
 Name: A-10XXP,typeI/typeII/typeIII
@@ -180,16 +520,99 @@ Name: D-202,cafe classics
 Link: https://audio-database.com/ONKYO/d-202-e.html
 
 
-2. company.BaseLink: https://audio-database.com/ONKYO/, Attribute value: dht-l1-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\ONKYO_MC Head Amplifier,Graphic Equalizer,Surround Processor,Channel Divider,Other.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\ONKYO_system component.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_lhh300b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_lhh600b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_lhh700.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_lhh1000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_cdplayer.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_cdr560s.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_cdr765s.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\player\PHILIPS_cdr880s.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PHILIPS_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PHILIPS_s-r22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\PHILIPS_el-7032-01.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\PIONEER-EXCLUSIVE-TAD_a-uk1.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\PIONEER-EXCLUSIVE-TAD_c-73-.html
 Wrong element:
 Company: PIONEER-EXCLUSIVE-TAD
 Name: CT-3030A/CT-3030AD,CT-3030S
 Link: https://audio-database.com/PIONEER-EXCLUSIVE/ct-3030a-e.html
 
 
-2. company.BaseLink: https://audio-database.com/SONY-ESPRIT/, Attribute value: sa-va3.html
-2. company.BaseLink: https://audio-database.com/SONY-ESPRIT/, Attribute value: sava-7.html
-2. company.BaseLink: https://audio-database.com/SONY-ESPRIT/, Attribute value: sa-va10.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-30-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-200-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-320r-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-380-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-400-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-420-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-620-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-4700-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ft-5000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ftm-3000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ftm-4000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ftm-4500-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\PIONEER-EXCLUSIVE-TAD_ttm-4400-e.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\PIONEER-EXCLUSIVE-TAD_pp-501-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\PIONEER-EXCLUSIVE-TAD_pim-16kt-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\PIONEER-EXCLUSIVE-TAD_Portable DAT.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\PRECISION FIDELITY_c7a-e.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\PROCEED_mda1000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\PROCEED_mcp1-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Roksan_mda1000-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Roksan_mcp1-e.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-02.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-211.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-311.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-315.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-611.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-810.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra931.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra980bx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra985bx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra1062.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra1070.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-1210.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-2020.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-2030.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_ra-2040.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rc995.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rc1070.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rc1090.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rc-2000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rha10.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rb991.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rb1080.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rb1090.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rb-2000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rhb05.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rx-150.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rx-150a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rx-200a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rx-400a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Rotel_rx-450.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Rotel_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Rotel_s-r22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Sansui_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Sansui_s-r22.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-10-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-11-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-12-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-20-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-21-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-30-e.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-138.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-146.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\Sansui_ec-246.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Sansui_l-1010-e.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Sansui_ps-01-e.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Sansui_sw-au2-e.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Sansui_Picture.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Teac-Esoteric-Tascam_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Teac-Esoteric-Tascam_s-r22.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Teac-Esoteric-Tascam_ax-300.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Teac-Esoteric-Tascam_tapedeckoption.html
 Wrong element:
 Company: Technics-Panasonic
 Name: EAA-2010/SU-2010/SU-50A,Technics 50A
@@ -214,6 +637,187 @@ Name: EAA-2009/SU-2009/SU-40A,Technics 40A
 Link: https://audio-database.com/TechnicsPanasonic/su-40a-e.html
 
 
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\kit\Technics-Panasonic_eab-k1210.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Technics-Panasonic_sh-p80ap.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Technics-Panasonic_rfkz0088kit.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Technics-Panasonic_HeadphoneEarphone.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Technics-Panasonic_System componentStereo set.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Trio-Kenwood_s-r7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Trio-Kenwood_s-r22.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Trio-Kenwood_ga-800.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Trio-Kenwood_cr-500.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Trio-Kenwood_ds-20.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Trio-Kenwood_kh-41.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Trio-Kenwood_kh-51.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Trio-Kenwood_kh-71.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-1950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-3950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-4950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5055a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5066.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5070.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5090.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5130.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5140.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5150.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5150d.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5300.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a4.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a7b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a35.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a40.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-j55.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-j60.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-j75.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx2.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx4.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx8.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx44.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx200.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx300.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-jx500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-p7j.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s1.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s510.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s3000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s222esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333esxii.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333esg.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333esa.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s333esj.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s555esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-sa5es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-sa50es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-tx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-v3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-v5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-v7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-yx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-yx7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-5000f.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-a6b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-j88.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s555es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-90.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s222esr.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-s222esa.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-av900.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-30.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-50.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-59.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_st-79a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_vt-x1r.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_vt-x2r.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_vt-x10.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_vt-m5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_sat-333es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\Victor-JVC_sat-333esg.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-a10.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-a30.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-a50.html doesn't exist
 Main category: speaker(etc) doesn't exist
-2. company.BaseLink: https://audio-database.com/YAMAHA/, Attribute value: av-1.html
-2. company.BaseLink: https://audio-database.com/YAMAHA/, Attribute value: av-s7.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sx-pro3.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_xs-av5.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sx-av500.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\surround\Victor-JVC_sp-x100.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-x103.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-xf10.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sp-se100.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\Victor-JVC_sx-st1.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\Victor-JVC_eq-7070.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\Victor-JVC_headshell.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\categoryGroup\Victor-JVC_System component.html doesn't exist
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-1950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-3950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-4950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5055a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5066.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5070.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5090.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5130.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5140.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5150.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5150d.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5300.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5950.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a4.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a7b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a35.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a40.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-j55.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-j60.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-j75.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx2.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx4.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx8.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx22.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx44.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx200.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx300.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-jx500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-p7j.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s1.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s500.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s510.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s3000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s222esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333esxii.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333esg.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333esa.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s333esj.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s555esx.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-sa5es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-sa50es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-tx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-v3.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-v5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-v7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-yx5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-yx7.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5000.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-5000f.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-a6b.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-j88.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s555es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-90.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s222esr.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-s222esa.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-av900.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-30.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-50.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-59.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_st-79a.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_vt-x1r.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_vt-x2r.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_vt-x10.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_vt-m5.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_sat-333es.html
+No commentary! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\tuner\YAMAHA_sat-333esg.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\unit\YAMAHA_hl-1.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\YAMAHA_dn-2600.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\YAMAHA_dn-3550.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\YAMAHA_big10.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\speaker\YAMAHA_ns-p300.html doesn't exist
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\YAMAHA_mrx-100.html
+No Specification! htmlPath: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\etc\YAMAHA_yt-9sp.html
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\YAMAHA_ha-5.html doesn't exist
+File: D:\Moje\Projects\C#\WebScraper\WebScraper\test\products\amp\YAMAHA_hx-10000.html doesn't exist
+categories are not the same

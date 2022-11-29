@@ -40,6 +40,7 @@ namespace WebScraper
     class Parser
     {
         private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
+        private int productId;
         List<Category> categories = new List<Category>();
         readonly string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         public List<Company> GetCompanies(string url, string fileName = null)
@@ -48,8 +49,8 @@ namespace WebScraper
             int i = 0;
             foreach (var company in companies)
             {
-                ParseCategory(company, false);
                 company.Id = i++;
+                ParseCategory(company, false);
             }
             var options = new JsonSerializerOptions { WriteIndented = true };
             string filePath = Path.Combine(projPath, "data", "Categories.json");
@@ -150,12 +151,37 @@ namespace WebScraper
             return cat;
         }
 
+        private void FillProducts(Category category, Product product)
+        {
+            string mainCategory;
+            if (category.ParentId != 0)
+            {
+                mainCategory = ((Category_t)category.ParentId).ToString();
+            }
+            else
+            {
+                mainCategory = ((Category_t)category.Id).ToString();
+            }
+            int index = product.Link.LastIndexOf('/'); //sometimes product.Name != link
+            if (index != -1)
+            {
+                string fileName = Path.GetFileName(product.Company.Name + '_' + product.Link.Substring(index + 1));
+                string pathFile = Path.Combine(projPath, "test", "products", mainCategory, fileName);
+                ParseHtmlProducts(product, pathFile);
+            }
+            else
+            {
+                Console.WriteLine("Product: " + product.Name + " link: " + product.Link);
+            }
+        }
+
         private void FillCategory(Category category, Product product, int? mainCatID)
         {
             if (mainCatID != null)
             {
                 category.ParentId = (int)mainCatID;
                 category.Products.Add(product);
+                FillProducts(category, product);
             }
             else
             {
@@ -192,6 +218,7 @@ namespace WebScraper
                         Product product = new Product(category, company)
                         {
                             Name = categoryGroups[0],
+                            Id = productId++,
                         };
                         int indexMainCat = linkNode.Attributes[0].Value.IndexOf('/'); //check if link contain main category e.g speaker/E-101.html
                         if (indexMainCat != -1)
@@ -201,6 +228,7 @@ namespace WebScraper
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                                 product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
+                                FillProducts(category, product);
                             }
                             else
                             {
@@ -228,6 +256,7 @@ namespace WebScraper
                                 product.Link = category.BaseLink + '/' + category.Name + '/' + linkNode.Attributes[0].Value;
                                 product.PictureLink = category.BaseLink + '/' + category.Name + '/' + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
+                                FillProducts(category, product);
                             }
                             else
                             {
@@ -342,38 +371,49 @@ namespace WebScraper
             return categories;
         }
 
-        public List<Company> ParseHtmlProducts(Product product, string htmlPath, string baseLink)
+        public List<Company> ParseHtmlProducts(Product product, string htmlPath)
         {
             string html = GetHtml(product?.Link, htmlPath, true, false);
 
-            HtmlDocument htmlDoc = new HtmlDocument();
-            htmlDoc.LoadHtml(html);
-
-            var commentaryNode = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"detailarea\"]/p[@class=\"detail\"]");
-            var specNodes = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"specarea\"]/table[@class=\"spec\"]/tr");
-
-            if (commentaryNode != null)
+            if (!string.IsNullOrEmpty(html))
             {
-                string commentary = string.Join(Environment.NewLine, commentaryNode[0].InnerHtml.Trim().Split('\n').Select(s => s.Trim().Replace(" <br><br>", Environment.NewLine).Replace(" <br>", "")));
-                if (specNodes != null)
+                HtmlDocument htmlDoc = new HtmlDocument();
+                htmlDoc.LoadHtml(html);
+
+                var commentaryNode = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"detailarea\"]/p[@class=\"detail\"]");
+                var specNodes = htmlDoc.DocumentNode.SelectNodes("//main[@id=\"contents\"]/div[@id=\"specarea\"]/table[@class=\"spec\"]/tr");
+
+                if (commentaryNode != null)
                 {
-                    foreach (HtmlNode propiertyNode in specNodes)
+                    product.Description = string.Join(Environment.NewLine, commentaryNode[0].InnerHtml.Trim().Split('\n').Select(s => s.Trim().Replace(" <br><br>", Environment.NewLine).Replace(" <br>", "")));
+                    if (specNodes != null)
                     {
-                        if (propiertyNode.ChildNodes.Count == 2)
+                        foreach (HtmlNode propiertyNode in specNodes)
                         {
-                            string propierty = string.Join(Environment.NewLine, propiertyNode.ChildNodes[0].InnerText.Trim().Split('\n').Select(s => s.Trim()));
-                            string value = string.Join(Environment.NewLine, propiertyNode.ChildNodes[1].InnerText.Trim().Split('\n').Select(s => s.Trim()));
+                            if (propiertyNode.ChildNodes.Count == 2)
+                            {
+                                string propierty = string.Join(Environment.NewLine, propiertyNode.ChildNodes[0].InnerText.Trim().Split('\n').Select(s => s.Trim()));
+                                string value = string.Join(Environment.NewLine, propiertyNode.ChildNodes[1].InnerText.Trim().Split('\n').Select(s => s.Trim()));
+                                if (product.Propierties.ContainsKey(propierty))
+                                {
+                                    product.Propierties[propierty] += Environment.NewLine + value;
+                                }
+                                else
+                                {
+                                    product.Propierties.Add(propierty, value);
+                                }
+                            }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No Specification! htmlPath: " + htmlPath);
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No Specification! htmlPath: " + htmlPath);
+                    Console.WriteLine("No commentary! htmlPath: " + htmlPath);
                 }
-            }
-            else
-            {
-                Console.WriteLine("No commentary! htmlPath: " + htmlPath);
             }
 
             return null;
@@ -395,6 +435,11 @@ namespace WebScraper
                 if (File.Exists(filePath))
                 {
                     response = File.ReadAllText(filePath);
+                }
+                else
+                {
+                    Console.WriteLine("File: " + filePath + " doesn't exist");
+                    return response;
                 }
             }
             else

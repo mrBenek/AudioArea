@@ -70,7 +70,7 @@ namespace WebScraper
         public string Link { get; set; }
         public string PictureLink { get; set; }
         public string Description { get; set; }
-        public string Propierties { get; set; } //json
+        public Dictionary<string, string> Propierties { get; set; } = new(); //json
 
         public int CategoryId { get; set; }
         
