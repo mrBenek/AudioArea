@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,11 @@ using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
+using System.Xml.Schema;
 
 namespace WebScraper
 {
@@ -42,36 +45,68 @@ namespace WebScraper
         private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
         private int productId;
         List<Category> categories = new List<Category>();
-        readonly string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+        static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+        string filePathJson = Path.Combine(projPath, "data", "Categories.json");
         public List<Company> GetCompanies(string url, string fileName = null)
         {
             var companies = ParseCompanies(url, "links");
             int i = 0;
+
+            var serializerSettings = new JsonSerializerSettings {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects
+            };
+
+            //List<Company> xx = new List<Company>();
+            string jsonString = null;
             foreach (var company in companies)
             {
                 company.Id = i++;
                 ParseCategory(company, false);
+                //xx.Add(company);
+                if (i == 5)
+                {
+                    jsonString = JsonConvert.SerializeObject(categories, Formatting.Indented, serializerSettings);
+                    File.WriteAllText(filePathJson, jsonString);
+                    break;
+                }
             }
-            var options = new JsonSerializerOptions { WriteIndented = true };
-            string filePath = Path.Combine(projPath, "data", "Categories.json");
-            string jsonStringOld = File.ReadAllText(filePath);
+            //jsonString = JsonConvert.SerializeObject(companies, Formatting.Indented, serializerSettings);
+            //string jsonStringOld = File.ReadAllText(filePathJson);
 
-            string jsonString = JsonSerializer.Serialize(categories, options);
+            //JValue s1 = new JValue(jsonStringOld);
+            //JValue s2 = new JValue(jsonString);
 
-            JValue s1 = new JValue(jsonStringOld);
-            JValue s2 = new JValue(jsonString);
-
-            if (!JToken.DeepEquals(s1, s2))
-            {
-                Console.WriteLine("categories are not the same");
-                File.WriteAllText(filePath, jsonString);
-            }
-            else
-            {
-                Console.WriteLine("categories are the same");
-            }
+            //if (!JToken.DeepEquals(s1, s2))
+            //{
+            //    Console.WriteLine("categories are not the same");
+            //File.WriteAllText(filePathJson, jsonString);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("categories are the same");
+            //}
 
             return companies;
+        }
+
+        public List<Category> LoadProductsJsonFile() //TODO some product are null
+        {
+            var options = new JsonSerializerOptions
+            {
+                WriteIndented = true,
+                ReferenceHandler = ReferenceHandler.Preserve,
+            };
+            string jsonString = File.ReadAllText(filePathJson);
+            
+            var serializerSettings = new JsonSerializerSettings
+            {
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+            };
+            var categoriesJson = (List<Category>)JsonConvert.DeserializeObject(jsonString, typeof(List<Category>), serializerSettings);
+            categoriesJson.ForEach(xx => xx.Products.ForEach(x => { if (x != null) x.Category = xx; }));
+            //categoriess.ForEach(xx => xx.Products.ForEach(x => x.Category.Products.ForEach(y => { if (y != null) y.Category = x.Category; })));
+
+            return categoriesJson;
         }
 
         public List<Company> ParseCompanies(string url, string fileName = null)
@@ -181,6 +216,7 @@ namespace WebScraper
             {
                 category.ParentId = (int)mainCatID;
                 category.Products.Add(product);
+                product.Company.Products.Add(product);
                 FillProducts(category, product);
             }
             else
@@ -228,6 +264,7 @@ namespace WebScraper
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
                                 product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
+                                company.Products.Add(product);
                                 FillProducts(category, product);
                             }
                             else
@@ -256,6 +293,7 @@ namespace WebScraper
                                 product.Link = category.BaseLink + '/' + category.Name + '/' + linkNode.Attributes[0].Value;
                                 product.PictureLink = category.BaseLink + '/' + category.Name + '/' + linkNode.FirstChild.Attributes[0].Value;
                                 category.Products.Add(product);
+                                company.Products.Add(product);
                                 FillProducts(category, product);
                             }
                             else
@@ -396,7 +434,7 @@ namespace WebScraper
                                 string value = string.Join(Environment.NewLine, propiertyNode.ChildNodes[1].InnerText.Trim().Split('\n').Select(s => s.Trim()));
                                 if (product.Propierties.ContainsKey(propierty))
                                 {
-                                    product.Propierties[propierty] += Environment.NewLine + value;
+                                    product.Propierties[propierty] += Environment.NewLine + value; //rows with the same propierty
                                 }
                                 else
                                 {

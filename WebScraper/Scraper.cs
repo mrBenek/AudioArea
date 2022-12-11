@@ -1,4 +1,5 @@
 ﻿using HtmlAgilityPack;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,12 +23,8 @@ namespace WebScraper
         {
             Parser parser = new Parser();
             //ClearCSVFiles();
-            var companies = parser.GetCompanies(url, "links");
-
-            //foreach (string htmlFile in Directory.GetFiles(Path.Combine(projPath, "test", "products", "amp")))
-            //{
-            //    parser.ParseHtmlProducts(null, htmlFile, "");
-            //}
+            //var companies = parser.GetCompanies(url, "links");
+            var products = parser.LoadProductsJsonFile();
         }
 
         static void ClearCSVFiles()
@@ -73,22 +70,24 @@ namespace WebScraper
         public Dictionary<string, string> Propierties { get; set; } = new(); //json
 
         public int CategoryId { get; set; }
-        
-        [JsonIgnore]
         public Category Category { get; set; }
-
+        
         public int CompanyId { get; set; }
-
-        [JsonIgnore]
         public Company Company { get; set; }
+
 
         public Product(Category category, Company company)
         {
-            Category = category;
-            CategoryId = category.Id;
-
-            Company = company;
-            CompanyId = company.Id;
+            if (category != null)
+            {
+                Category = category;
+                CategoryId = category.Id;
+            }
+            if (company != null)
+            {
+                Company = company;
+                CompanyId = company.Id;
+            }
         }
     }
 }
