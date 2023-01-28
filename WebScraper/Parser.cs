@@ -1,20 +1,13 @@
 ﻿using HtmlAgilityPack;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net.Http;
-using System.Reflection;
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
-using System.Xml.Schema;
 
 namespace WebScraper
 {
@@ -42,33 +35,29 @@ namespace WebScraper
 
     class Parser
     {
+        JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
+        {
+            PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+            MaxDepth = 300
+        };
         private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
         private int productId;
-        List<Category> categories = new List<Category>();
+        public List<Category> categories { get; } = new List<Category>(); 
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+
         string filePathJson = Path.Combine(projPath, "data", "Categories.json");
-        public List<Company> GetCompanies(string url, string fileName = null)
+        public void SaveCategoriesToJson(string url, string fileName = null)
         {
             var companies = ParseCompanies(url, "links");
-            int i = 0;
 
-            var serializerSettings = new JsonSerializerSettings {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects
-            };
-
-            //List<Company> xx = new List<Company>();
-            string jsonString = null;
-            foreach (var company in companies)
+            //foreach (Company company in companies)
+            for (int i = 0; i < 165; i++) //number of companies is reduce due to deserialize error: stack overflow (all companies: 171)
             {
-                ParseCategory(company, false);
-                //xx.Add(company);
-                if (i == 5)
-                {
-                    jsonString = JsonConvert.SerializeObject(categories, Formatting.Indented, serializerSettings);
-                    File.WriteAllText(filePathJson, jsonString);
-                    break;
-                }
+                ParseCategory(companies[i], false);
             }
+            string jsonString = JsonConvert.SerializeObject(categories.SelectMany(x => x.Products), Formatting.None, jsonSerializerSettings);
+            File.WriteAllText(filePathJson, jsonString);
+
             //jsonString = JsonConvert.SerializeObject(companies, Formatting.Indented, serializerSettings);
             //string jsonStringOld = File.ReadAllText(filePathJson);
 
@@ -84,28 +73,12 @@ namespace WebScraper
             //{
             //    Console.WriteLine("categories are the same");
             //}
-
-            return companies;
         }
 
-        public List<Category> LoadProductsJsonFile() //TODO some product are null
+        public List<Product> LoadProductsJsonFile()
         {
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                ReferenceHandler = ReferenceHandler.Preserve,
-            };
             string jsonString = File.ReadAllText(filePathJson);
-            
-            var serializerSettings = new JsonSerializerSettings
-            {
-                PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-            };
-            var categoriesJson = (List<Category>)JsonConvert.DeserializeObject(jsonString, typeof(List<Category>), serializerSettings);
-            categoriesJson.ForEach(xx => xx.Products.ForEach(x => { if (x != null) x.Category = xx; }));
-            //categoriess.ForEach(xx => xx.Products.ForEach(x => x.Category.Products.ForEach(y => { if (y != null) y.Category = x.Category; })));
-
-            return categoriesJson;
+            return (List<Product>)JsonConvert.DeserializeObject(jsonString, typeof(List<Product>), jsonSerializerSettings);
         }
 
         public List<Company> ParseCompanies(string url, string fileName = null)

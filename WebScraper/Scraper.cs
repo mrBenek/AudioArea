@@ -1,17 +1,9 @@
-﻿using HtmlAgilityPack;
-using Newtonsoft.Json;
+﻿//#define SAVE_DATA_TO_JSON
+
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json.Serialization;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Web;
-
 
 namespace WebScraper
 {
@@ -23,8 +15,10 @@ namespace WebScraper
         {
             Parser parser = new Parser();
             //ClearCSVFiles();
-            //var companies = parser.GetCompanies(url, "links");
-            var products = parser.LoadProductsJsonFile();
+#if SAVE_DATA_TO_JSON
+            parser.SaveCategoriesToJson(url, "links");
+#endif
+            var categories = parser.LoadProductsJsonFile();
         }
 
         static void ClearCSVFiles()
@@ -54,6 +48,8 @@ namespace WebScraper
         public string FileName { get; set; }
         public List<Product> Products { get; set; } = new List<Product>();
 
+        public Category() { } //need for json deserialize
+
         public Category(string name)
         {
             Name = name;
@@ -67,6 +63,8 @@ namespace WebScraper
         public string Link { get; set; }
         public string PictureLink { get; set; }
         public string Description { get; set; }
+        
+        [NotMapped] //need for deserialize json file
         public Dictionary<string, string> Propierties { get; set; } = new(); //json
 
         public int CategoryId { get; set; }
@@ -75,6 +73,7 @@ namespace WebScraper
         public int CompanyId { get; set; }
         public Company Company { get; set; }
 
+        public Product() { } //need for json deserialize
 
         public Product(Category category, Company company)
         {
