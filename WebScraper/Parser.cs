@@ -60,7 +60,6 @@ namespace WebScraper
             string jsonString = null;
             foreach (var company in companies)
             {
-                company.Id = i++;
                 ParseCategory(company, false);
                 //xx.Add(company);
                 if (i == 5)
@@ -135,14 +134,15 @@ namespace WebScraper
 
             var links = htmlDoc.DocumentNode.SelectNodes("//li/a");
 
-            foreach (var link in links)
+            for (int i = 0; i < links.Count; i++)
             {
-                if (link.Attributes.Count > 0)
+                if (links[i].Attributes.Count > 0)
                 {
                     Company company = new Company
                     {
-                        Name = link.InnerText.Replace('/', '-'),
-                        Link = baseLink + '/' + link.Attributes[0].Value,
+                        Name = links[i].InnerText.Replace('/', '-'),
+                        Link = baseLink + '/' + links[i].Attributes[0].Value,
+                        Id = i
                     };
                     company.BaseLink = company.Link.Substring(0, company.Link.Length - 10);
                     companies.Add(company);
