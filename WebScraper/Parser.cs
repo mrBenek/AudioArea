@@ -45,10 +45,8 @@ namespace WebScraper
         public List<Category> categories { get; } = new List<Category>(); 
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
-        string filePathJson = Path.Combine(projPath, "data", "Categories.json");
-
         //Categories are save to JSON file, because only they contain main categories
-        public void SaveCategoriesToJson(string url, string fileName = null)
+        public void SaveCategoriesToJson(string url, string filePath)
         {
             var companies = ParseCompanies(url, "links");
 
@@ -58,7 +56,7 @@ namespace WebScraper
                 ParseCategory(companies[i], false);
             }
             string jsonString = JsonConvert.SerializeObject(categories, Formatting.None, jsonSerializerSettings);
-            File.WriteAllText(filePathJson, jsonString);
+            File.WriteAllText(filePath, jsonString);
 
             //jsonString = JsonConvert.SerializeObject(companies, Formatting.Indented, serializerSettings);
             //string jsonStringOld = File.ReadAllText(filePathJson);
@@ -77,9 +75,9 @@ namespace WebScraper
             //}
         }
 
-        public List<Category> LoaCategoriesJsonFile()
+        public List<Category> LoadCategoriesJsonFile(string filePath)
         {
-            string jsonString = File.ReadAllText(filePathJson);
+            string jsonString = File.ReadAllText(filePath);
             return (List<Category>)JsonConvert.DeserializeObject(jsonString, typeof(List<Category>), jsonSerializerSettings);
         }
 

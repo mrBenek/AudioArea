@@ -14,14 +14,17 @@ namespace WebScraper
     {
         public const string url = "https://audio-database.com";
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
+        static string filePathJson = Path.Combine(projPath, "data", "Categories.json");
+        static string filePathJsonTest = Path.Combine(projPath, "data", "Categories_test.json");
+
         static void Main(string[] args)
         {
             Parser parser = new Parser();
             //ClearCSVFiles();
 #if SAVE_DATA_TO_JSON
-            parser.SaveCategoriesToJson(url, "links");
+            parser.SaveCategoriesToJson(url, filePathJsonTest);
 #endif
-            var categories = parser.LoaCategoriesJsonFile();
+            var categories = parser.LoadCategoriesJsonFile(filePathJsonTest);
 
             using (var db = new AudioContext())
             {
