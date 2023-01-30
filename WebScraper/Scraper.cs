@@ -31,6 +31,10 @@ namespace WebScraper
                 db.Database.OpenConnection();
                 try
                 {
+                    //db.Categories.ExecuteDelete();
+                    //db.Products.ExecuteDelete();
+                    //db.Companies.ExecuteDelete();
+
                     db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Categories ON"); //allow insert primary key to db
                     db.Categories.AddRange(categories);
                     db.SaveChanges(true);
@@ -88,9 +92,8 @@ namespace WebScraper
         public string Link { get; set; }
         public string PictureLink { get; set; }
         public string Description { get; set; }
-        
-        [NotMapped] //need for deserialize json file
-        public Dictionary<string, string> Propierties { get; set; } = new(); //json
+
+        public Dictionary<string, string> Properties { get; set; } = new(); //json
 
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }

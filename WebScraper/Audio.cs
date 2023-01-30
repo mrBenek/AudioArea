@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -24,10 +25,17 @@ namespace WebScraper
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //configures one-to - many relationship
-            modelBuilder.Entity<Product>()
-                .HasOne(e => e.Category)
+            modelBuilder.Entity<Product>( b =>
+            {
+                b.HasOne(e => e.Category)
                 .WithMany(e => e.Products)
                 .HasForeignKey(e => e.CategoryId);
+
+                b.Property(b => b.Properties)
+                .HasConversion(
+                    v => JsonConvert.SerializeObject(v),
+                    v => JsonConvert.DeserializeObject<Dictionary<string, string>>(v));
+            });
         }
     }
 }

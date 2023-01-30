@@ -405,13 +405,13 @@ namespace WebScraper
                             {
                                 string propierty = string.Join(Environment.NewLine, propiertyNode.ChildNodes[0].InnerText.Trim().Split('\n').Select(s => s.Trim()));
                                 string value = string.Join(Environment.NewLine, propiertyNode.ChildNodes[1].InnerText.Trim().Split('\n').Select(s => s.Trim()));
-                                if (product.Propierties.ContainsKey(propierty))
+                                if (product.Properties.ContainsKey(propierty))
                                 {
-                                    product.Propierties[propierty] += Environment.NewLine + value; //rows with the same propierty
+                                    product.Properties[propierty] += Environment.NewLine + value; //rows with the same propierty
                                 }
                                 else
                                 {
-                                    product.Propierties.Add(propierty, value);
+                                    product.Properties.Add(propierty, value);
                                 }
                             }
                         }
