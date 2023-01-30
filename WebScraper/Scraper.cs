@@ -1,7 +1,10 @@
 ﻿//#define SAVE_DATA_TO_JSON
 
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Linq;
 
@@ -18,7 +21,23 @@ namespace WebScraper
 #if SAVE_DATA_TO_JSON
             parser.SaveCategoriesToJson(url, "links");
 #endif
-            var categories = parser.LoadProductsJsonFile();
+            var categories = parser.LoaCategoriesJsonFile();
+
+            using (var db = new AudioContext())
+            {
+                db.Database.OpenConnection();
+                try
+                {
+                    db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Categories ON"); //allow insert primary key to db
+                    db.Categories.AddRange(categories);
+                    db.SaveChanges(true);
+                    db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Categories OFF");
+                }
+                finally
+                {
+                    db.Database.CloseConnection();
+                }
+            }
         }
 
         static void ClearCSVFiles()
@@ -30,15 +49,17 @@ namespace WebScraper
 
     public class Company
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
         public string BaseLink { get; set; }
-        public List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 
     public class Category
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int ParentId { get; set; } = -1;
         public string Name { get; set; }
@@ -46,7 +67,7 @@ namespace WebScraper
         public string PictureLink { get; set; }
         public string BaseLink { get; set; }
         public string FileName { get; set; }
-        public List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Product> Products { get; set; } = new List<Product>();
 
         public Category() { } //need for json deserialize
 
@@ -58,6 +79,7 @@ namespace WebScraper
 
     public class Product
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
@@ -68,10 +90,10 @@ namespace WebScraper
         public Dictionary<string, string> Propierties { get; set; } = new(); //json
 
         public int CategoryId { get; set; }
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
         
         public int CompanyId { get; set; }
-        public Company Company { get; set; }
+        public virtual Company Company { get; set; }
 
         public Product() { } //need for json deserialize
 
