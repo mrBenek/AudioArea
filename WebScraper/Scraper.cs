@@ -22,18 +22,19 @@ namespace WebScraper
             Parser parser = new Parser();
             //ClearCSVFiles();
 #if SAVE_DATA_TO_JSON
-            parser.SaveCategoriesToJson(url, filePathJsonTest);
+            parser.SaveCategoriesToJson(url, filePathJson);
 #endif
-            var categories = parser.LoadCategoriesJsonFile(filePathJsonTest);
+            var categories = parser.LoadCategoriesJsonFile(filePathJson);
+            //parser.DownloadImage();
 
             using (var db = new AudioContext())
             {
                 db.Database.OpenConnection();
                 try
                 {
-                    //db.Categories.ExecuteDelete();
-                    //db.Products.ExecuteDelete();
-                    //db.Companies.ExecuteDelete();
+                    db.Categories.ExecuteDelete();
+                    db.Products.ExecuteDelete();
+                    db.Companies.ExecuteDelete();
 
                     db.Database.ExecuteSqlRaw("SET IDENTITY_INSERT Categories ON"); //allow insert primary key to db
                     db.Categories.AddRange(categories);
@@ -71,10 +72,20 @@ namespace WebScraper
         public int ParentId { get; set; } = -1;
         public string Name { get; set; }
         public string Link { get; set; }
-        public string PictureLink { get; set; }
+        public string ImageName { get; set; }
+        public string ImageLink { get; set; }
         public string BaseLink { get; set; }
         public string FileName { get; set; }
         public virtual List<Product> Products { get; set; } = new List<Product>();
+        [NotMapped]
+        public string MainCategoryId { get {
+                int id = ParentId;
+                if (ParentId == 0)
+                {
+                    id = Id;
+                }
+                return ((Category_t)id).ToString();
+            } }
 
         public Category() { } //need for json deserialize
 
@@ -90,7 +101,8 @@ namespace WebScraper
         public int Id { get; set; }
         public string Name { get; set; }
         public string Link { get; set; }
-        public string PictureLink { get; set; }
+        public string ImageName { get; set; }
+        public string ImageLink { get; set; }
         public string Description { get; set; }
 
         public Dictionary<string, string> Properties { get; set; } = new(); //json

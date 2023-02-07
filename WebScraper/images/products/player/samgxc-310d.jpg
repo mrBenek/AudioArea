@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<HTML>
+<HEAD>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords"content="Amplifier,Loudspeaker,Player,Deck,Tuner,Cassette,Audio Equipment">
+<link href="https://audio-database.com/style1.css" rel="stylesheet" media="all">
+<TITLE>Audio Database</TITLE>
+</HEAD>
+<BODY>
+
+<div id="wrap">
+
+	<!-- ヘッダー -->
+	<header>
+	</header>
+
+	<!-- メインコンテンツ -->
+	<main id="contents">
+		          
+		<ul class="brandtitle">
+			<li><h1>Audio Database</h1></li>
+			<li><p class="syurui">This homepage posts data of audio equipment released in the past.</p></li>
+		</ul>
+		
+		<div class="double-rect-ads-group">
+			<div class="category_ad_01">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- レスポンシブ広告2(メーカーカテゴリ) -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-0298264792816716"
+					 data-ad-slot="2988674704"
+					 data-ad-format="rectangle, horizontal"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+		
+		<hr class="style13">
+		
+		<div class="container">
+		
+		<div class="main">
+		
+		<p class="roma">
+			Update<br>
+		</p>
+		
+		<p class="kousin">
+			Update 09/20/2022<br>
+			　FidelityResearch Fisher FMAcoustics Focal/JMlab ForteAudio Foster/Fostex<br>
+			<br>
+			Update 09/16/2022<br>
+			　DPA DRG Dual Dynavector EAR ELAC ElectroResearch ElectroVoice Ensemble EPI Eroica ESS<br>
+			<br>
+			Update 09/06/2022<br>
+			　Backs&amp;Muller Ballad Bang&amp;Olufsen Beard Beltek Beveridge BGW Bladelius BNS Bose Boulder BowTechnologies Boxer Bozak Braun Bryston BSR Burmester B&amp;W Cabasse Cairn CambridgeAudio CambridgeSoundworks Canton Carver Casio CEC Celestion Cello Cerwinvega Chario Clarion Classe Conclusion Conisis Copland Coral Cotter Counterpoint Creek Crown Crysler Cyrus/Mission Daiken Dali DBSystems DBX DCS Decca Delcatec DesignAcoustics Diapason Diatone EMT/Barco Nakamichi Philips Teac/Esoteric/Tascam Trio/Kenwood<br>
+			<br>
+			Update 09/05/2022<br>
+			　AudioAnalogue AudioCraft AudioCurrent AudioInterface Audiolab Audionix AudioResearch AudioStyle Audio-technica Aura Aurasound Auratone Avalon AVInternational Ayre Victor/JVC<br>
+			<br>
+			Update 09/04/2022<br>
+			　Ampliton Apogee AR Arcam ArtAudio Ashidavox ATC AudioAlchemy AudioDevices AudioOfOregon Crown <br>
+			<br>
+			Update 08/31/2022<br>
+			　AGI Airtight Aiwa ALR Altec Aurex Denon Marantz<br>
+			<br>
+			Update 08/30/2022<br>
+			　Aerial Acoustics LUXMAN<br>
+			<br>
+			Update 08/27/2022<br>
+			　Pioneer<br>
+			<br>
+			Update 08/24/2022<br>
+			　JBL ONKYO<br>
+			<br>
+			Update 08/23/2022<br>
+			　Accuphase Acoustat AcousticArts AcousticEnergy Acustik-Lab ADC Advent JBL<br>
+			<br>
+			Update 08/21/2022<br>
+			　SANSUI<br>
+			<br>
+		</p>
+		
+		<hr class="roma">
+		
+		<p class="roma">
+			<br>About this site<br>
+		</p>
+			
+			<p class="kousin">This homepage is created using translation software.<br>
+				<a href="https://audio-heritage.jp/">The original site is here</a><br>
+				Please do not use images on the site without permission.<br>
+				This site is not a shopping site. --- <a href="about.html">More</a><br>
+				Audio data is updated little by little.<br>
+				The information is based on the catalog distributed at the time.<br>
+				The price listed is the price in those days in Japan.</p>
+				</li>
+			</ul>
+		
+		<hr class="style13space">
+		
+		<p class="roma">Database</p>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">A</p></li><br>
+			<li><a href="AAD/index.html"><p class="syurui">AAD</p></a></li>
+			<li><a href="ACAPELLA-ATR/index.html"><p class="syurui">Acapella/ATR</p></a></li>
+			<li><a href="Accuphase-kensonic/index.html"><p class="syurui">Accuphase/Kensonic</p></a></li>
+			<li><a href="ACOUSTAT/index.html"><p class="syurui">Acoustat</p></a></li>
+			<li><a href="ACOUSTICARTS(eng)/speaker/index.html"><p class="syurui">Acoustic Arts(England)</p></a></li>
+			<li><a href="ACOUSTICENERGY/speaker/index.html"><p class="syurui">Acoustic Energy</p></a></li>
+			<li><a href="ACUSTIK-LAB/index.html"><p class="syurui">Acustik-Lab</p></a></li>
+			<li><a href="ADC/index.html"><p class="syurui">ADC</p></a></li>
+			<li><a href="ADVENT/index.html"><p class="syurui">Advent</p></a></li>
+			<li><a href="AERIALACOUSTICS/index.html"><p class="syurui">Aerial Acoustics</p></a></li>
+			<li><a href="AGI/index.html"><p class="syurui">AGI</p></a></li>
+			<li><a href="AIRTIGHT/index.html"><p class="syurui">Air Tight/Acoustic Masterpiece</p></a></li>
+			<li><a href="AIWA/index.html"><p class="syurui">Aiwa/Excelia</p></a></li>
+			<li><a href="AKAI/index.html"><p class="syurui">AKAI/A&amp;D</p></a></li>
+			<li><a href="ALR/index.html"><p class="syurui">ALR</p></a></li>
+			<li><a href="ALTEC/index.html"><p class="syurui">Altec Lansing</p></a></li>
+			<li><a href="AMPLITON/index.html"><p class="syurui">Ampliton</p></a></li>
+			<li><a href="APOGEE/index.html"><p class="syurui">Apogee</p></a></li>
+			<li><a href="AR/index.html"><p class="syurui">AR(Acoustic Research)</p></a></li>
+			<li><a href="ARCAM/index.html"><p class="syurui">Arcam</p></a></li>
+			<li><a href="ARTAUDIO/index.html"><p class="syurui">Art Audio</p></a></li>
+			<li><a href="ASHIDAVOX/index.html"><p class="syurui">Ashidavox</p></a></li>
+			<li><a href="ATC/index.html"><p class="syurui">ATC</p></a></li>
+			<li><a href="AUDIOALCHEMY/index.html"><p class="syurui">Audio Alchemy</p></a></li>
+			<li><a href="AUDIOANALOGUE/index.html"><p class="syurui">Audio Analogue</p></a></li>
+			<li><a href="AUDIOCRAFT/index.html"><p class="syurui">Audio Craft</p></a></li>
+			<li><a href="AUDIOCURRENT/index.html"><p class="syurui">Audio Current</p></a></li>
+			<li><a href="AUDIO-DEVICES/index.html"><p class="syurui">Audio Devices</p></a></li>
+			<li><a href="AUDIOINTERFACE/etc/index.html"><p class="syurui">Audio Interface</p></a></li>
+			<li><a href="AUDIOLAB/index.html"><p class="syurui">Audiolab</p></a></li>
+			<li><a href="AUDIONIX/index.html"><p class="syurui">Audionix</p></a></li>
+			<li><a href="AUDIO_OF_OREGON/index.html"><p class="syurui">Audio of Oregon</p></a></li>
+			<li><a href="AUDIORESEARCH/index.html"><p class="syurui">Audio Research</p></a></li>
+			<li><a href="AUDIO-STYLE/index.html"><p class="syurui">Audio Style</p></a></li>
+			<li><a href="AUDIO-TECHNICA/index.html"><p class="syurui">Audio-Technica</p></a></li>
+			<li><a href="AURA/index.html"><p class="syurui">Aura</p></a></li>
+			<li><a href="AURASOUND/index.html"><p class="syurui">Aurasound</p></a></li>
+			<li><a href="AURATONE/index.html"><p class="syurui">Auratone</p></a></li>
+			<li><a href="AUREX/index.html"><p class="syurui">Aurex/Toshiba</p></a></li>
+			<li><a href="AVALON/speaker/index.html"><p class="syurui">Avalon Acoustics</p></a></li>
+			<li><a href="AVINTERNATIONAL/index.html"><p class="syurui">AV International</p></a></li>
+			<li><a href="AYRE/index.html"><p class="syurui">Ayre</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">B</p></li><br>
+			<li><a href="BACKESandMULLER/index.html"><p class="syurui">Backes&amp;Muller</p></a></li>
+			<li><a href="BALLAD/index.html"><p class="syurui">Ballad</p></a></li>
+			<li><a href="BANGandOLUFSEN/index.html"><p class="syurui">Bang&amp;Olufsen</p></a></li>
+			<li><a href="BEARD/index.html"><p class="syurui">Beard</p></a></li>
+			<li><a href="BELTEK/index.html"><p class="syurui">Beltek</p></a></li>
+			<li><a href="BEVERIDGE/index.html"><p class="syurui">Beveridge</p></a></li>
+			<li><a href="BGW/index.html"><p class="syurui">BGW</p></a></li>
+			<li><a href="BLADELIUS/index.html"><p class="syurui">Bladelius</p></a></li>
+			<li><a href="BNS/speaker/index.html"><p class="syurui">BNS</p></a></li>
+			<li><a href="BOSE/index.html"><p class="syurui">Bose</p></a></li>
+			<li><a href="BOULDER/index.html"><p class="syurui">Boulder</p></a></li>
+			<li><a href="BOWTECHNOLOGIES/index.html"><p class="syurui">Bow Technologies</p></a></li>
+			<li><a href="BOXER/index.html"><p class="syurui">Boxer</p></a></li>
+			<li><a href="BOZAK/index.html"><p class="syurui">Bozak</p></a></li>
+			<li><a href="BRAUN/index.html"><p class="syurui">Braun</p></a></li>
+			<li><a href="BRYSTON/index.html"><p class="syurui">Bryston</p></a></li>
+			<li><a href="BSR/player/index.html"><p class="syurui">BSR</p></a></li>
+			<li><a href="BURMESTER/index.html"><p class="syurui">Burmester</p></a></li>
+			<li><a href="BandW/index.html"><p class="syurui">B&amp;W/Solid</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">C</p></li><br>
+			<li><a href="CABASSE/speaker/index.html"><p class="syurui">Cabasse</p></a></li>
+			<li><a href="CAIRN/index.html"><p class="syurui">Cairn</p></a></li>
+			<li><a href="CAMBRIDGE-AUDIO/index.html"><p class="syurui">Cambridge Audio</p></a></li>
+			<li><a href="CAMBRIDGESOUNDWORKS/index.html"><p class="syurui">Cambridge Soundworks</p></a></li>
+			<li><a href="CANTON/speaker/index.html"><p class="syurui">Canton</p></a></li>
+			<li><a href="CARVER/index.html"><p class="syurui">Carver</p></a></li>
+			<li><a href="CASIO/index.html"><p class="syurui">Casio</p></a></li>
+			<li><a href="CEC/index.html"><p class="syurui">CEC</p></a></li>
+			<li><a href="CELESTION/index.html"><p class="syurui">Celestion</p></a></li>
+			<li><a href="CELLO/index.html"><p class="syurui">Cello</p></a></li>
+			<li><a href="CERWINVEGA/speaker/index.html"><p class="syurui">Cerwin Vega</p></a></li>
+			<li><a href="CHARIO/index.html"><p class="syurui">Chario</p></a></li>
+			<li><a href="CLARION/index.html"><p class="syurui">Clarion</p></a></li>
+			<li><a href="CLASSE/index.html"><p class="syurui">Classe</p></a></li>
+			<li><a href="CONCLUSION/index.html"><p class="syurui">Conclusion</p></a></li>
+			<li><a href="CONISIS/index.html"><p class="syurui">Conisis</p></a></li>
+			<li><a href="COPLAND/index.html"><p class="syurui">Copland</p></a></li>
+			<li><a href="CORAL/index.html"><p class="syurui">Coral</p></a></li>
+			<li><a href="COTTER/etc/index.html"><p class="syurui">Cotter</p></a></li>
+			<li><a href="COUNTERPOINT/index.html"><p class="syurui">Counterpoint</p></a></li>
+			<li><a href="CREEK/index.html"><p class="syurui">Creek</p></a></li>
+			<li><a href="CROWN/player/index.html"><p class="syurui">Crown(JPN)</p></a></li>
+			<li><a href="AMCRON/index.html"><p class="syurui">Crown/Amcron</p></a></li>
+			<li><a href="CRYSLER/index.html"><p class="syurui">Crysler</p></a></li>
+			<li><a href="CYRUS-MISSION/index.html"><p class="syurui">Cyrus/Mission</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">D</p></li><br>
+			<li><a href="DAIKEN/speaker/index.html"><p class="syurui">Daiken</p></a></li>
+			<li><a href="DALI/index.html"><p class="syurui">Dali</p></a></li>
+ 			<li><a href="DBSYSTEMS/index.html"><p class="syurui">DB Systems</p></a></li>
+ 			<li><a href="DBX/index.html"><p class="syurui">DBX</p></a></li>
+ 			<li><a href="DCS/index.html"><p class="syurui">DCS</p></a></li>
+ 			<li><a href="DECCA/index.html"><p class="syurui">Decca</p></a></li>
+ 			<li><a href="DELCATEC/index.html"><p class="syurui">Delcatec</p></a></li>
+			<li><a href="DENON-COLUMBIA/index.html"><p class="syurui">Denon/Columbia</p></a></li>
+			<li><a href="DESIGNACOUSTICS/index.html"><p class="syurui">Design Acoustics</p></a></li>
+			<li><a href="DIAPASON/index.html"><p class="syurui">Diapason</p></a></li>
+			<li><a href="MITSUBISHI-DIATONE/index.html"><p class="syurui">DIATONE/Mitsubishi</p></a></li>
+			<li><a href="DOKORDER/index.html"><p class="syurui">Dokorder</p></a></li>
+			<li><a href="DPA/index.html"><p class="syurui">DPA</p></a></li>
+			<li><a href="DRG/index.html"><p class="syurui">DRG</p></a></li>
+ 			<li><a href="DUAL/index.html"><p class="syurui">Dual</p></a></li>
+ 			<li><a href="DYNACO-SCANDYNA/index.html"><p class="syurui">Dynaco/Scandyna</p></a></li>
+ 			<li><a href="DYNAVECTOR/index.html"><p class="syurui">Dynavector</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">E</p></li><br>
+			<li><a href="EAR/index.html"><p class="syurui">EAR</p></a></li>
+			<li><a href="ELAC/index.html"><p class="syurui">ELAC</p></a></li>
+			<li><a href="ELECTRORESEARCH/index.html"><p class="syurui">Electro Research</p></a></li>
+ 			<li><a href="ELECTRO-VOICE/index.html"><p class="syurui">Electro Voice</p></a></li>
+			<li><a href="BARCO/index.html"><p class="syurui">EMT/Barco</p></a></li>
+			<li><a href="ENSEMBLE/index.html"><p class="syurui">Ensemble</p></a></li>
+			<li><a href="EPI/index.html"><p class="syurui">EPI</p></a></li>
+			<li><a href="EROICA/index.html"><p class="syurui">Eroica</p></a></li>
+			<li><a href="ESS/index.html"><p class="syurui">ESS</p></a></li>
+			<li><a href="ETONE/index.html"><p class="syurui">Etone</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">F</p></li><br>
+ 			<li><a href="FERROGRAPH/index.html"><p class="syurui">Ferrograph</p></a></li>
+ 			<li><a href="FIDELITYRESEARCH/index.html"><p class="syurui">Fidelity Research</p></a></li>
+ 			<li><a href="FISHER/index.html"><p class="syurui">Fisher</p></a></li>
+ 			<li><a href="FMACOUSTICS/index.html"><p class="syurui">FM Acoustics</p></a></li>
+ 			<li><a href="FOCAL-JMLAB/index.html"><p class="syurui">Focal/JMlab</p></a></li>
+ 			<li><a href="FORTEAUDIO/index.html"><p class="syurui">Forte Audio</p></a></li>
+			<li><a href="FOSTER-FOSTEX/index.html"><p class="syurui">Foster/Fostex</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">G</p></li><br>
+ 			<li><a href="GOLDMUND-STELLAVOX/index.html"><p class="syurui">GOLDMUND/STELLAVOX</p></a></li>
+ 			<li><a href="GRANTLUMLEY/index.html"><p class="syurui">GRANT LUMLEY</p></a></li>
+			<li><a href="GOTOUNIT/index.html"><p class="syurui">GOTO UNIT</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">H</p></li><br>
+			<li><a href="HARBETH/speaker/index.html"><p class="syurui">HARBETH</p></a></li>
+			<li><a href="HARMAN_KARDON/index.html"><p class="syurui">HARMAN/KARDON</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">I</p></li><br>
+			<li><a href="INAX/index.html"><p class="syurui">INAX</p></a></li>
+ 			<li><a href="INFINITY/index.html"><p class="syurui">INFINITY</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">J</p></li><br>
+ 			<li><a href="JBL/index.html"><p class="syurui">JBL</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">K</p></li><br>
+ 			<li><a href="KEF/index.html"><p class="syurui">KEF</p></a></li>
+ 			<li><a href="KLIPSCH/index.html"><p class="syurui">KLIPSCH</p></a></li>
+ 			<li><a href="KRELL/index.html"><p class="syurui">KRELL</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">L</p></li><br>
+ 			<li><a href="LEAK/index.html"><p class="syurui">LEAK</p></a></li>
+ 			<li><a href="LINN/index.html"><p class="syurui">LINN</p></a></li>
+			<li><a href="Lo-D-HITACHI/index.html"><p class="syurui">Lo-D/HITACHI</p></a></li>
+			<li><a href="LUXMAN/index.html"><p class="syurui">LUXMAN</p></a></li>
+			<li><a href="LandB/index.html"><p class="syurui">L&amp;B</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">M</p></li><br>
+			<li><a href="MACTONE/index.html"><p class="syurui">MACTONE</p></a></li>
+			<li><a href="MARANTZ/index.html"><p class="syurui">MARANTZ</p></a></li>
+ 			<li><a href="MARK_LEVINSON/index.html"><p class="syurui">MARK LEVINSON</p></a></li>
+ 			<li><a href="MAGNAT/index.html"><p class="syurui">MAGNAT</p></a></li>
+			<li><a href="MAXONIC/index.html"><p class="syurui">MAXONIC</p></a></li>
+ 			<li><a href="MCINTOSH/index.html"><p class="syurui">MCINTOSH</p></a></li>
+ 			<li><a href="MERIDIAN/index.html"><p class="syurui">MERIDIAN</p></a></li>
+			<li><a href="MICRO/index.html"><p class="syurui">MICRO</p></a></li>
+ 			<li><a href="MIRAGE/index.html"><p class="syurui">MIRAGE</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">N</p></li><br>
+ 			<li><a href="NAIMAUDIO/index.html"><p class="syurui">NAIM AUDIO</p></a></li>
+			<li><a href="NAKAMICHI/index.html"><p class="syurui">NAKAMICHI</p></a></li>
+			<li><a href="NEC/index.html"><p class="syurui">NEC/AUTHENTIC</p></a></li>
+			<li><a href="NIKKA/index.html"><p class="syurui">NIKKA</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">O</p></li><br>
+			<li><a href="ONKYO/index.html"><p class="syurui">ONKYO</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">P</p></li><br>
+ 			<li><a href="PARAGONACOUSTICS/index.html"><p class="syurui">PARAGON ACOUSTICS</p></a></li>
+ 			<li><a href="PHILIPS/index.html"><p class="syurui">PHILIPS</p></a></li>
+			<li><a href="PIONEER-EXCLUSIVE/index.html"><p class="syurui">PIONEER/EXCLUSIVE/TAD</p></a></li>
+ 			<li><a href="PICKERING/index.html"><p class="syurui">PICKERING</p></a></li>
+ 			<li><a href="PLATINUM/index.html"><p class="syurui">PLATINUM</p></a></li>
+ 			<li><a href="PMC/index.html"><p class="syurui">PMC</p></a></li>
+ 			<li><a href="PRECISIONFIDELITY/index.html"><p class="syurui">PRECISION FIDELITY</p></a></li>
+ 			<li><a href="PRIMARE/index.html"><p class="syurui">PRIMARE</p></a></li>
+ 			<li><a href="PROCEED/index.html"><p class="syurui">PROCEED</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">Q</p></li><br>
+ 			<li><a href="QUAD/index.html"><p class="syurui">QUAD</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">R</p></li><br>
+ 			<li><a href="ROKSAN/index.html"><p class="syurui">Roksan</p></a></li>
+			<li><a href="ROR/index.html"><p class="syurui">ROR</p></a></li>
+			<li><a href="ROTEL/index.html"><p class="syurui">Rotel</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">S</p></li><br>
+ 			<li><a href="SAE/index.html"><p class="syurui">SAE</p></a></li>
+			<li><a href="SANSUI/index.html"><p class="syurui">Sansui</p></a></li>
+			<li><a href="SONY-ESPRIT/index.html"><p class="syurui">Sony</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">T</p></li><br>
+			<li><a href="TEAC-ESOTERIC/index.html"><p class="syurui">Teac/Esoteric/Tascam</p></a></li>
+			<li><a href="TechnicsPanasonic/index.html"><p class="syurui">Technics/Panasonic</p></a></li>
+			<li><a href="TRIO-KENWOOD/index.html"><p class="syurui">Trio/Kenwood</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">V</p></li><br>
+			<li><a href="VICTOR/index.html"><p class="syurui">Victor/JVC</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+		
+		<ul class="brandarea">
+			<li><p class="roma">Y</p></li><br>
+			<li><a href="YAMAHA/index.html"><p class="syurui">YAMAHA</p></a></li>
+		</ul>
+		
+		<hr class="roma">
+			
+		</div>
+			
+		<div class="side">
+			<div class="category_ad_03">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- レスポンシブ広告(サイドバー上段) -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-0298264792816716"
+					 data-ad-slot="2988674704"
+					 data-ad-format="rectangle"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+					
+			<hr class="roma2">
+			
+			<ul class="sidetext">
+				<li><p class="side">
+					Valuable audio equipment is never made again.<br>
+Even if there is a breakdown, some people are necessary.<br>
+Do not discard them easily, let them circulate in the hands of people necessary for auctions and individual trading.</p>
+				</li>
+			</ul>
+					
+			<hr class="roma2">
+		
+			
+			<ul class="sidetext">
+				<li><p class="side"><a href="CM/index.html">Old magazine advertisement</a></p></li>
+				<li><p class="side"><a href="Chronology/index.html">Products History</a></p></li>
+				<li><p class="side"><a href="privacy-policy.txt">Privacy policy</a></p></li>
+				<li><p class="side"><a href="link.html">Link</a></p></li>
+				</li>
+			</ul>
+		
+			<hr class="roma2">
+			
+			<div class="category_ad_02">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- レスポンシブ広告(サイドバー下段) -->
+				<ins class="adsbygoogle"
+					 style="display:block"
+					 data-ad-client="ca-pub-0298264792816716"
+					 data-ad-slot="2988674704"
+					 data-ad-format="vertical, rectangle"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		
+			<hr class="roma2">
+		</div>
+			
+		</div>
+	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-0298264792816716"
+     data-ad-slot="7706891405"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                		
+    </main>
+
+
+<!-- フッター -->
+<footer>     
+                    <!-- アナリティクス -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-2054521-2', 'auto');
+  ga('send', 'pageview');
+
+</script> 
+                    
+                    
+</footer>
+
+</div>
+
+
+</BODY>
+</HTML>

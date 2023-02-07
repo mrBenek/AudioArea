@@ -35,14 +35,18 @@ namespace WebScraper
 
     class Parser
     {
+        const string ProductsDir = "products";
+        const string CategoriesDir = "categories";
+
         JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
         {
             PreserveReferencesHandling = PreserveReferencesHandling.Objects,
+            Formatting= Formatting.Indented,
             MaxDepth = 300
         };
         private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
         private int productId;
-        public List<Category> categories { get; } = new List<Category>(); 
+        public List<Category> categories { get; } = new List<Category>();
         static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
 
         //Categories are save to JSON file, because only they contain main categories
@@ -73,6 +77,12 @@ namespace WebScraper
             //{
             //    Console.WriteLine("categories are the same");
             //}
+        }
+
+        public void DownloadImage()
+        {
+            Task taskDownloadImage = Task.Run(() => DownloadImageAsynch(categories));
+            taskDownloadImage.Wait();
         }
 
         public List<Category> LoadCategoriesJsonFile(string filePath)
@@ -111,13 +121,16 @@ namespace WebScraper
             {
                 if (links[i].Attributes.Count > 0)
                 {
+                    string href = links[i].Attributes["href"].Value;
+                    int index = href.IndexOf('/');
+
                     Company company = new Company
                     {
                         Name = links[i].InnerText.Replace('/', '-'),
-                        Link = baseLink + '/' + links[i].Attributes[0].Value,
+                        Link = baseLink + '/' + href,
+                        BaseLink = baseLink + '/' + href.Substring(0, index + 1),
                         Id = i
                     };
-                    company.BaseLink = company.Link.Substring(0, company.Link.Length - 10);
                     companies.Add(company);
                 }
             }
@@ -125,14 +138,14 @@ namespace WebScraper
             return companies;
         }
 
-        public void ParseCategory(Company company, bool saveToFile, string pathFile = null, string fileName = null, string mainCategory = null)
+        public void ParseCategory(Company company, bool saveToFile, string pathFile = null, string fileName = null, string mainCategory = null, string imageName = null, string urlSubCategory = null)
         {
             pathFile ??= Path.Combine(projPath, "test", "companies", company.Name + ".html");
-            string html = GetHtml(company.Link, pathFile, true, false);
+            string html = GetHtml(urlSubCategory ?? company.Link, pathFile, true, false);
 
             if (!String.IsNullOrEmpty(html))
             {
-                var categories = ParseHtmlCategory(html, company, mainCategory);
+                var categories = ParseHtmlCategory(html, company, mainCategory, imageName);
 
                 if (saveToFile)
                 {
@@ -174,7 +187,7 @@ namespace WebScraper
             if (index != -1)
             {
                 string fileName = Path.GetFileName(product.Company.Name + '_' + product.Link.Substring(index + 1));
-                string pathFile = Path.Combine(projPath, "test", "products", mainCategory, fileName);
+                string pathFile = Path.Combine(projPath, "test", ProductsDir, mainCategory, fileName);
                 ParseHtmlProducts(product, pathFile);
             }
             else
@@ -198,10 +211,25 @@ namespace WebScraper
             }
         }
 
+        private void SetProductImage(Product product, string imageName, string baselink)
+        {
+            if (imageName != null)
+            {
+                product.ImageLink = baselink + imageName;
+                int index = imageName.LastIndexOf('/'); // sometime name is speaker/nameImg.jpg
+
+                if (index != -1)
+                {
+                    imageName = imageName.Substring(index + 1);
+                }
+                product.ImageName = imageName;
+            }
+        }
+
         private void ParseLinks(HtmlNode linkNode, HtmlNode nodeAreaItem, Company company, ref Category category)
         {
             Regex r = new Regex(@"\w.*\w", RegexOptions.Multiline);
-            
+
             if (linkNode.Attributes.Count > 0)
             {
                 string[] categoryGroups = r.Matches(linkNode.InnerText)
@@ -213,13 +241,15 @@ namespace WebScraper
                 {
                     if (nodeAreaItem.Attributes[0].Value == "brandarea") //search in subcategory
                     {
-                        int index = linkNode.Attributes[0].Value.IndexOf('/');
+                        string subCategoryLink = linkNode.Attributes[0].Value;
+                        int index = subCategoryLink.IndexOf('/');
                         if (index != -1)
                         {
-                            string mainCategory = linkNode.Attributes[0].Value.Substring(0, index);
+                            string mainCategory = subCategoryLink.Substring(0, index);
                             string fileName = Path.GetFileName(company.Name + '_' + String.Join(',', categoryGroups) + ".html");
                             string pathFile = Path.Combine(projPath, "test", "categoryGroup", fileName);
-                            ParseCategory(company, false, pathFile, null, mainCategory);
+                            string imageName = linkNode.ChildNodes["img"].Attributes[0].Value;
+                            ParseCategory(company, false, pathFile, null, mainCategory, imageName, company.BaseLink + subCategoryLink);
                         }
                     }
                     else if (categoryGroups.Count() == 1) //get products
@@ -235,7 +265,9 @@ namespace WebScraper
                             if (category.ParentId == 0) //category other is in category other, e.g Audiotechnika Other booster -> other
                             {
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
-                                product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
+                                string imageName = linkNode.ChildNodes["img"]?.Attributes["src"]?.Value;
+                                SetProductImage(product, imageName, company.BaseLink);
+
                                 category.Products.Add(product);
                                 company.Products.Add(product);
                                 FillProducts(category, product);
@@ -252,8 +284,9 @@ namespace WebScraper
                                 }
 
                                 product.Link = company.BaseLink + linkNode.Attributes[0].Value;
-                                product.PictureLink = company.BaseLink + linkNode.FirstChild.Attributes[0].Value;
-
+                                string imageName = linkNode.ChildNodes["img"]?.Attributes["src"]?.Value;
+                                SetProductImage(product, imageName, company.BaseLink);
+                                
                                 Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
                                 mainCat ??= AddMainCategory(mainCategory.ToLower());
                                 FillCategory(category, product, mainCat?.Id);
@@ -261,10 +294,13 @@ namespace WebScraper
                         }
                         else
                         {
+                            string imageName = linkNode.ChildNodes["img"]?.Attributes["src"]?.Value;
+
                             if (category.ParentId == 0) //category other is in category other, e.g Audiotechnika Other booster -> other
                             {
                                 product.Link = category.BaseLink + '/' + category.Name + '/' + linkNode.Attributes[0].Value;
-                                product.PictureLink = category.BaseLink + '/' + category.Name + '/' + linkNode.FirstChild.Attributes[0].Value;
+                                SetProductImage(product, imageName, category.BaseLink + '/' + category.Name + '/');
+
                                 category.Products.Add(product);
                                 company.Products.Add(product);
                                 FillProducts(category, product);
@@ -275,8 +311,6 @@ namespace WebScraper
                                 {
                                     category.BaseLink = company.BaseLink.Remove(company.BaseLink.Length - 1);
                                 }
-                                product.Link = category.BaseLink + '/' + linkNode.Attributes[0].Value;
-                                product.PictureLink = category.BaseLink + '/' + linkNode.FirstChild.Attributes[0].Value;
 
                                 string mainCategory;
                                 if (category.ParentId == -1)
@@ -290,16 +324,18 @@ namespace WebScraper
                                 }
                                 Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
                                 mainCat ??= AddMainCategory(mainCategory.ToLower());
+                                if (mainCat != null)
+                                {
+                                    product.Link = company.BaseLink + mainCat.Name + '/' + linkNode.Attributes[0].Value;
+                                    SetProductImage(product, imageName, company.BaseLink + mainCat.Name + '/');
+                                }
                                 FillCategory(category, product, mainCat?.Id);
                             }
                         }
                     }
                     else
                     {
-                        Console.WriteLine("Wrong element:");
-                        Console.WriteLine($"Company: {company.Name}");
-                        Console.WriteLine($"Name: {String.Join(',', categoryGroups)}");
-                        Console.WriteLine($"Link: {company.BaseLink + linkNode.Attributes[0].Value} \n\n");
+                        Console.WriteLine($"Wrong element: Company: {company.Name}, Link: {company.BaseLink + linkNode.Attributes[0].Value}");
                     }
                 }
             }
@@ -324,7 +360,7 @@ namespace WebScraper
             return false;
         }
 
-        private List<Category> ParseHtmlCategory(string html, Company company, string mainCategory = null)
+        private List<Category> ParseHtmlCategory(string html, Company company, string mainCategory = null, string imageName = null)
         {
             HtmlDocument htmlDoc = new HtmlDocument();
             htmlDoc.LoadHtml(html);
@@ -333,47 +369,55 @@ namespace WebScraper
 
             if (nodeAreaItems != null)
             {
-                string catName = nodeAreaItems[0].ParentNode.SelectSingleNode("//h5").InnerText;
-                foreach (HtmlNode nodeAreaItem in nodeAreaItems)
+                string catName = nodeAreaItems[0].ParentNode.SelectSingleNode("//h5")?.InnerText;
+                if (catName != null) //np. MITSUBISHI-DIATONE/tech
                 {
-                    var linkNodes = nodeAreaItem.SelectNodes(".//li/a");
-                    if (nodeAreaItem.PreviousSibling.Name == "h5")
+                    foreach (HtmlNode nodeAreaItem in nodeAreaItems)
                     {
-                        catName = nodeAreaItem.PreviousSibling.InnerText;
-                    }
-                    Category category = categories.FirstOrDefault(x => checkCatNames(ref catName, x.Name));
-
-                    if (nodeAreaItem.Attributes[0].Value != "brandarea" && linkNodes != null)
-                    {
-                        if (category == null)
+                        var linkNodes = nodeAreaItem.SelectNodes(".//li/a");
+                        if (nodeAreaItem.PreviousSibling.Name == "h5")
                         {
-                            category = new(catName)
-                            {
-                                Id = categoryId++,
-                            };
-
-                            if (mainCategory != null)
-                            {
-                                if (Enum.TryParse(mainCategory, out Category_t mainCat))
-                                {
-                                    category.ParentId = (int)mainCat;
-                                }
-                                else
-                                {
-                                    Console.WriteLine($"Main category: {mainCategory} doesn't exist");
-                                    category.ParentId = 1000;
-                                }
-                                category.BaseLink = company.BaseLink + mainCategory;
-                            }
-                            categories.Add(category);
+                            catName = nodeAreaItem.PreviousSibling.InnerText;
                         }
-                    }
+                        Category category = categories.FirstOrDefault(x => checkCatNames(ref catName, x.Name));
 
-                    if (linkNodes != null)
-                    {
-                        foreach (HtmlNode linkNode in linkNodes)
+                        if (nodeAreaItem.Attributes[0].Value != "brandarea" && linkNodes != null)
                         {
-                            ParseLinks(linkNode, nodeAreaItem, company, ref category);
+                            if (category == null)
+                            {
+                                category = new(catName)
+                                {
+                                    Id = categoryId++,
+                                };
+
+                                if (mainCategory != null)
+                                {
+                                    if (Enum.TryParse(mainCategory, out Category_t mainCat))
+                                    {
+                                        category.ParentId = (int)mainCat;
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine($"Main category: {mainCategory} doesn't exist");
+                                        category.ParentId = 1000;
+                                    }
+                                    category.BaseLink = company.BaseLink + mainCategory;
+                                    if (imageName != null)
+                                    {
+                                        category.ImageLink = company.BaseLink + imageName;
+                                        category.ImageName = imageName;
+                                    }
+                                }
+                                categories.Add(category);
+                            }
+                        }
+
+                        if (linkNodes != null)
+                        {
+                            foreach (HtmlNode linkNode in linkNodes)
+                            {
+                                ParseLinks(linkNode, nodeAreaItem, company, ref category);
+                            }
                         }
                     }
                 }
@@ -457,11 +501,23 @@ namespace WebScraper
             {
                 if (!File.Exists(filePath))
                 {
-                    response = CallUrl(url).Result;
-                    if (saveHtml && !String.IsNullOrEmpty(response))
+                    try
                     {
-                        File.WriteAllText(filePath, response);
+                        response = CallUrl(url).Result;
+                        if (saveHtml && !String.IsNullOrEmpty(response))
+                        {
+                            File.WriteAllText(filePath, response);
+                            response = File.ReadAllText(filePath);
+                        }
                     }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine($"Can't connect to url: {url}, Exception {e.Message}");
+                    }
+                }
+                else
+                {
+                    response = File.ReadAllText(filePath);
                 }
             }
 
@@ -507,6 +563,52 @@ namespace WebScraper
             );
 
             File.WriteAllText(Path.Combine(projPath, "data", "Companies", fileName + ".csv"), csv);
+        }
+
+        private async Task DownloadFileAsynch(HttpClient httpClient, string filePath, string imageLink)
+        {
+            if (!File.Exists(filePath))
+            {
+                try
+                {
+                    var imageBytes = await httpClient.GetByteArrayAsync(new Uri(imageLink));
+                    await File.WriteAllBytesAsync(filePath, imageBytes);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine("Can't download file from url: " + imageLink + " Exception: " + e.Message);
+                }
+            }
+        }
+
+        public async Task DownloadImageAsynch(List<Category> categories)
+        {
+            using (HttpClient httpClient = new())
+            {
+                foreach (Product product in categories.SelectMany(x => x.Products))
+                {
+                    if (product.ImageLink != null && product.ImageName != null)
+                    {
+                        string filePath = Path.Combine(projPath, "images", ProductsDir, product.Category.MainCategoryId, product.ImageName);
+                        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                        await DownloadFileAsynch(httpClient, filePath, product.ImageLink);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Function DownloadImageAsynch() -> Company: " + product.Company.Name + ", Category: " + product.Category.Name + ", Product: " + product.Name);
+                    }
+
+                    foreach (Category category in categories)
+                    {
+                        if (category.ImageLink != null && category.ImageName != null)
+                        {
+                            string filePath = Path.Combine(projPath, "images", CategoriesDir, category.ImageName);
+                            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
+                            await DownloadFileAsynch(httpClient, filePath, category.ImageLink);
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -88,6 +88,15 @@ namespace WebScraper {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to speaker system.
+        /// </summary>
+        internal static string Speaker_System___Active_Speakers {
+            get {
+                return ResourceManager.GetString("Speaker System / Active Speakers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to stereo.
         /// </summary>
         internal static string stereo_component_mini_component {

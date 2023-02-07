@@ -126,6 +126,9 @@
   <data name="portable equipment" xml:space="preserve">
     <value>portable</value>
   </data>
+  <data name="Speaker System / Active Speakers" xml:space="preserve">
+    <value>speaker system</value>
+  </data>
   <data name="stereo/component/mini component" xml:space="preserve">
     <value>stereo</value>
   </data>

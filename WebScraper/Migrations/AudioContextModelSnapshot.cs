@@ -35,6 +35,12 @@ namespace WebScraper.Migrations
                     b.Property<string>("FileName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
 
@@ -44,12 +50,9 @@ namespace WebScraper.Migrations
                     b.Property<int>("ParentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("PictureLink")
-                        .HasColumnType("nvarchar(max)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 
             modelBuilder.Entity("WebScraper.Company", b =>
@@ -68,7 +71,7 @@ namespace WebScraper.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Companies");
+                    b.ToTable("Companies", (string)null);
                 });
 
             modelBuilder.Entity("WebScraper.Product", b =>
@@ -85,13 +88,19 @@ namespace WebScraper.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageLink")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PictureLink")
+                    b.Property<string>("Properties")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -100,7 +109,7 @@ namespace WebScraper.Migrations
 
                     b.HasIndex("CompanyId");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("WebScraper.Product", b =>

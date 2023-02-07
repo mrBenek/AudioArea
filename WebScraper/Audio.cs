@@ -24,13 +24,14 @@ namespace WebScraper
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //configures one-to - many relationship
             modelBuilder.Entity<Product>( b =>
             {
+                //configures one-to-many relationship
                 b.HasOne(e => e.Category)
                 .WithMany(e => e.Products)
                 .HasForeignKey(e => e.CategoryId);
 
+                //configures dictionary as json
                 b.Property(b => b.Properties)
                 .HasConversion(
                     v => JsonConvert.SerializeObject(v),
