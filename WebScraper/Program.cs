@@ -18,7 +18,7 @@ namespace WebScraper
     public class Program
     {
         public static readonly string ProjPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-        public static readonly RunConfig Config = RunConfig.SaveToJsonTest | RunConfig.GetLocalHtml;
+        public static readonly RunConfig Config = RunConfig.LoadFromJsonTest | RunConfig.GetLocalHtml;
 
         static void Main(string[] args)
         {

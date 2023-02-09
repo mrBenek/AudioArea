@@ -13,7 +13,7 @@ namespace WebScraper
         private readonly string filePathJsonTest = Path.Combine(Program.ProjPath, "data", JsonFileName + "_test.json");
         private readonly string filePath;
 
-        JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
+        private readonly JsonSerializerSettings jsonSerializerSettings = new()
         {
             PreserveReferencesHandling = PreserveReferencesHandling.Objects,
             MaxDepth = 300
