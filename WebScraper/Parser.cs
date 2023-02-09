@@ -1,5 +1,4 @@
 ﻿using HtmlAgilityPack;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -35,66 +34,25 @@ namespace WebScraper
 
     class Parser
     {
-        const string ProductsDir = "products";
-        const string CategoriesDir = "categories";
-
-        JsonSerializerSettings jsonSerializerSettings = new JsonSerializerSettings
-        {
-            PreserveReferencesHandling = PreserveReferencesHandling.Objects,
-            Formatting= Formatting.Indented,
-            MaxDepth = 300
-        };
         private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
         private int productId;
-        public List<Category> categories { get; } = new List<Category>();
-        static string projPath = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
-
-        //Categories are save to JSON file, because only they contain main categories
-        public void SaveCategoriesToJson(string url, string filePath)
+        private List<Category> categories { get; } = new List<Category>();
+        
+        public List<Category> GetCategories(string url, int count)
         {
-            var companies = ParseCompanies(url, "links");
+            var companies = ParseCompanies(url);
 
-            //foreach (Company company in companies)
-            for (int i = 0; i < 165; i++) //number of companies is reduce due to deserialize error: stack overflow (all companies: 171)
+            for (int i = 0; i < count; i++) //max number of companies is reduce to 165 due to deserialize error: stack overflow (all companies: 171)
             {
-                ParseCategory(companies[i], false);
+                ParseCategory(companies[i]);
             }
-            string jsonString = JsonConvert.SerializeObject(categories, Formatting.None, jsonSerializerSettings);
-            File.WriteAllText(filePath, jsonString);
-
-            //jsonString = JsonConvert.SerializeObject(companies, Formatting.Indented, serializerSettings);
-            //string jsonStringOld = File.ReadAllText(filePathJson);
-
-            //JValue s1 = new JValue(jsonStringOld);
-            //JValue s2 = new JValue(jsonString);
-
-            //if (!JToken.DeepEquals(s1, s2))
-            //{
-            //    Console.WriteLine("categories are not the same");
-            //File.WriteAllText(filePathJson, jsonString);
-            //}
-            //else
-            //{
-            //    Console.WriteLine("categories are the same");
-            //}
-        }
-
-        public void DownloadImage()
-        {
-            Task taskDownloadImage = Task.Run(() => DownloadImageAsynch(categories));
-            taskDownloadImage.Wait();
-        }
-
-        public List<Category> LoadCategoriesJsonFile(string filePath)
-        {
-            string jsonString = File.ReadAllText(filePath);
-            return (List<Category>)JsonConvert.DeserializeObject(jsonString, typeof(List<Category>), jsonSerializerSettings);
+            return categories;
         }
 
         public List<Company> ParseCompanies(string url, string fileName = null)
         {
-            string filePath = Path.Combine(projPath, "test", "root", "audio-database.html");
-            string html = GetHtml(url, filePath, true, false);
+            string filePath = Path.Combine(Program.ProjPath, "test", "root", "audio-database.html");
+            string html = GetHtml(url, filePath);
 
             if (!String.IsNullOrEmpty(html))
             {
@@ -138,22 +96,14 @@ namespace WebScraper
             return companies;
         }
 
-        public void ParseCategory(Company company, bool saveToFile, string pathFile = null, string fileName = null, string mainCategory = null, string imageName = null, string urlSubCategory = null)
+        public void ParseCategory(Company company, string pathFile = null, string mainCategory = null, string imageName = null, string urlSubCategory = null)
         {
-            pathFile ??= Path.Combine(projPath, "test", "companies", company.Name + ".html");
-            string html = GetHtml(urlSubCategory ?? company.Link, pathFile, true, false);
+            pathFile ??= Path.Combine(Program.ProjPath, "test", "companies", company.Name + ".html");
+            string html = GetHtml(urlSubCategory ?? company.Link, pathFile);
 
             if (!String.IsNullOrEmpty(html))
             {
-                var categories = ParseHtmlCategory(html, company, mainCategory, imageName);
-
-                if (saveToFile)
-                {
-                    foreach (Category category in categories)
-                    {
-                        WriteToCsv(category, fileName);
-                    }
-                }
+                ParseHtmlCategory(html, company, mainCategory, imageName);
             }
         }
 
@@ -187,7 +137,7 @@ namespace WebScraper
             if (index != -1)
             {
                 string fileName = Path.GetFileName(product.Company.Name + '_' + product.Link.Substring(index + 1));
-                string pathFile = Path.Combine(projPath, "test", ProductsDir, mainCategory, fileName);
+                string pathFile = Path.Combine(Program.ProjPath, "test", Scraper.ProductsDir, mainCategory, fileName);
                 ParseHtmlProducts(product, pathFile);
             }
             else
@@ -216,7 +166,7 @@ namespace WebScraper
             if (imageName != null)
             {
                 product.ImageLink = baselink + imageName;
-                int index = imageName.LastIndexOf('/'); // sometime name is speaker/nameImg.jpg
+                int index = imageName.LastIndexOf('/'); // sometimes name is speaker/nameImg.jpg
 
                 if (index != -1)
                 {
@@ -247,9 +197,9 @@ namespace WebScraper
                         {
                             string mainCategory = subCategoryLink.Substring(0, index);
                             string fileName = Path.GetFileName(company.Name + '_' + String.Join(',', categoryGroups) + ".html");
-                            string pathFile = Path.Combine(projPath, "test", "categoryGroup", fileName);
+                            string pathFile = Path.Combine(Program.ProjPath, "test", "categoryGroup", fileName);
                             string imageName = linkNode.ChildNodes["img"].Attributes[0].Value;
-                            ParseCategory(company, false, pathFile, null, mainCategory, imageName, company.BaseLink + subCategoryLink);
+                            ParseCategory(company, pathFile, mainCategory, imageName, company.BaseLink + subCategoryLink);
                         }
                     }
                     else if (categoryGroups.Count() == 1) //get products
@@ -287,7 +237,7 @@ namespace WebScraper
                                 string imageName = linkNode.ChildNodes["img"]?.Attributes["src"]?.Value;
                                 SetProductImage(product, imageName, company.BaseLink);
                                 
-                                Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
+                                Category mainCat = categories.FirstOrDefault(x => CheckCatNames(ref mainCategory, x.Name));
                                 mainCat ??= AddMainCategory(mainCategory.ToLower());
                                 FillCategory(category, product, mainCat?.Id);
                             }
@@ -322,7 +272,7 @@ namespace WebScraper
                                 {
                                     mainCategory = ((Category_t)category.ParentId).ToString();
                                 }
-                                Category mainCat = categories.FirstOrDefault(x => checkCatNames(ref mainCategory, x.Name));
+                                Category mainCat = categories.FirstOrDefault(x => CheckCatNames(ref mainCategory, x.Name));
                                 mainCat ??= AddMainCategory(mainCategory.ToLower());
                                 if (mainCat != null)
                                 {
@@ -341,7 +291,7 @@ namespace WebScraper
             }
         }
 
-        private bool checkCatNames(ref string catName, string existCatName)
+        private bool CheckCatNames(ref string catName, string existCatName)
         {
             catName = catName.ToLower();
             if (existCatName == catName)
@@ -379,7 +329,7 @@ namespace WebScraper
                         {
                             catName = nodeAreaItem.PreviousSibling.InnerText;
                         }
-                        Category category = categories.FirstOrDefault(x => checkCatNames(ref catName, x.Name));
+                        Category category = categories.FirstOrDefault(x => CheckCatNames(ref catName, x.Name));
 
                         if (nodeAreaItem.Attributes[0].Value != "brandarea" && linkNodes != null)
                         {
@@ -428,7 +378,7 @@ namespace WebScraper
 
         public List<Company> ParseHtmlProducts(Product product, string htmlPath)
         {
-            string html = GetHtml(product?.Link, htmlPath, true, false);
+            string html = GetHtml(product?.Link, htmlPath);
 
             if (!string.IsNullOrEmpty(html))
             {
@@ -481,11 +431,11 @@ namespace WebScraper
             return await response;
         }
 
-        private string GetHtml(string url, string filePath, bool useHtmlFile, bool saveHtml)
+        private string GetHtml(string url, string filePath)
         {
             string response = "";
 
-            if (useHtmlFile)
+            if (Program.Config.HasFlag(RunConfig.GetLocalHtml))
             {
                 if (File.Exists(filePath))
                 {
@@ -504,7 +454,7 @@ namespace WebScraper
                     try
                     {
                         response = CallUrl(url).Result;
-                        if (saveHtml && !String.IsNullOrEmpty(response))
+                        if (!String.IsNullOrEmpty(response))
                         {
                             File.WriteAllText(filePath, response);
                             response = File.ReadAllText(filePath);
@@ -532,83 +482,17 @@ namespace WebScraper
             return response;
         }
 
-        private bool IsValidPath(string path)
-        {
-            if (path != null)
-            {
-                Regex r = new Regex(@"^[\w\-. ]+$");
-                return r.IsMatch(path);
-            }
-            return false;
-        }
-
-        private void WriteToCsv(Category category, string fileName = null)
-        {
-            //if (IsValidPath(category.Name))
-            //{
-            //    String catategoryCompany = String.Join(
-            //        Environment.NewLine,
-            //        category.SubCategories.Select(d => $"{d.Name};{d.Link};{d.PictureLink}")
-            //    );
-
-            //    File.AppendAllText(Path.Combine(projPath, "data", "Categories", fileName ?? category.Name + ".csv"), catategoryCompany + Environment.NewLine);
-            //}
-        }
-
         private void WriteToCsv(List<Company> companies, string fileName)
         {
+            var files = Directory.GetFiles(Path.Combine(Program.ProjPath, "data"), "*.csv").ToList();
+            files.ForEach(file => File.WriteAllText(file, string.Empty));
+
             String csv = String.Join(
                 Environment.NewLine,
                 companies.Select(d => $"{d.Name};{d.Link};")
             );
 
-            File.WriteAllText(Path.Combine(projPath, "data", "Companies", fileName + ".csv"), csv);
-        }
-
-        private async Task DownloadFileAsynch(HttpClient httpClient, string filePath, string imageLink)
-        {
-            if (!File.Exists(filePath))
-            {
-                try
-                {
-                    var imageBytes = await httpClient.GetByteArrayAsync(new Uri(imageLink));
-                    await File.WriteAllBytesAsync(filePath, imageBytes);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine("Can't download file from url: " + imageLink + " Exception: " + e.Message);
-                }
-            }
-        }
-
-        public async Task DownloadImageAsynch(List<Category> categories)
-        {
-            using (HttpClient httpClient = new())
-            {
-                foreach (Product product in categories.SelectMany(x => x.Products))
-                {
-                    if (product.ImageLink != null && product.ImageName != null)
-                    {
-                        string filePath = Path.Combine(projPath, "images", ProductsDir, product.Category.MainCategoryId, product.ImageName);
-                        Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-                        await DownloadFileAsynch(httpClient, filePath, product.ImageLink);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Function DownloadImageAsynch() -> Company: " + product.Company.Name + ", Category: " + product.Category.Name + ", Product: " + product.Name);
-                    }
-
-                    foreach (Category category in categories)
-                    {
-                        if (category.ImageLink != null && category.ImageName != null)
-                        {
-                            string filePath = Path.Combine(projPath, "images", CategoriesDir, category.ImageName);
-                            Directory.CreateDirectory(Path.GetDirectoryName(filePath));
-                            await DownloadFileAsynch(httpClient, filePath, category.ImageLink);
-                        }
-                    }
-                }
-            }
+            File.WriteAllText(Path.Combine(Program.ProjPath, "data", fileName + ".csv"), csv);
         }
     }
 }
