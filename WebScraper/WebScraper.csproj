@@ -16,6 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AudioArea.Common.EntityModels.SqlServer\AudioArea.Common.EntityModels.SqlServer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Translation.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>

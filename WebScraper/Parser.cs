@@ -7,34 +7,13 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web;
+using Packt.Shared;
 
 namespace WebScraper
 {
-    public enum Category_t
-    {
-        stereo = 1,
-        etc,
-        surround,
-        unit,
-        speaker,
-        tuner,
-        player,
-        amp,
-        portable,
-        radio,
-        headphone,
-        kit,
-        boombox,
-        photo,
-        professional,
-        diatoneds,
-        diatonesp,
-        speaker_unit,
-    }
-
     class Parser
     {
-        private int categoryId = (int)Enum.GetValues(typeof(Category_t)).Cast<Category_t>().Max() + 1;
+        private int categoryId = (int)Enum.GetValues(typeof(CategoryType)).Cast<CategoryType>().Max() + 1;
         private int productId;
         private List<Category> categories { get; } = new List<Category>();
         
@@ -110,7 +89,7 @@ namespace WebScraper
         private Category AddMainCategory(string mainCategory)
         {
             Category cat = null;
-            if (Enum.TryParse(mainCategory, out Category_t mainCat))
+            if (Enum.TryParse(mainCategory, out CategoryType mainCat))
             {
                 cat = new(mainCategory)
                 {
@@ -127,11 +106,11 @@ namespace WebScraper
             string mainCategory;
             if (category.ParentId != 0)
             {
-                mainCategory = ((Category_t)category.ParentId).ToString();
+                mainCategory = ((CategoryType)category.ParentId).ToString();
             }
             else
             {
-                mainCategory = ((Category_t)category.Id).ToString();
+                mainCategory = ((CategoryType)category.Id).ToString();
             }
             int index = product.Link.LastIndexOf('/'); //sometimes product.Name != link
             if (index != -1)
@@ -270,7 +249,7 @@ namespace WebScraper
                                 }
                                 else
                                 {
-                                    mainCategory = ((Category_t)category.ParentId).ToString();
+                                    mainCategory = ((CategoryType)category.ParentId).ToString();
                                 }
                                 Category mainCat = categories.FirstOrDefault(x => CheckCatNames(ref mainCategory, x.Name));
                                 mainCat ??= AddMainCategory(mainCategory.ToLower());
@@ -342,7 +321,7 @@ namespace WebScraper
 
                                 if (mainCategory != null)
                                 {
-                                    if (Enum.TryParse(mainCategory, out Category_t mainCat))
+                                    if (Enum.TryParse(mainCategory, out CategoryType mainCat))
                                     {
                                         category.ParentId = (int)mainCat;
                                     }

@@ -1,7 +1,21 @@
+using Packt.Shared; // AddAudioContext extension method
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+string? sqlServerConnection = builder.Configuration
+  .GetConnectionString("DefaultConnection");
+
+if (sqlServerConnection is null)
+{
+	Console.WriteLine("SQL Server database connection string is missing!");
+}
+else
+{
+	builder.Services.AddAudioContext(sqlServerConnection);
+}
 
 var app = builder.Build();
 

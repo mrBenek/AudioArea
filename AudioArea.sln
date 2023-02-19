@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper", "WebScraper\WebScraper.csproj", "{99001028-53B5-40E9-BE49-803A6F593604}"
+	ProjectSection(ProjectDependencies) = postProject
+		{267453B7-2B88-4DFA-98EB-FB23A14C85CC} = {267453B7-2B88-4DFA-98EB-FB23A14C85CC}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioArea.Mvc", "AudioArea.Mvc\AudioArea.Mvc.csproj", "{0D5F4641-9086-422C-B5B4-C7DC940C7169}"
 EndProject
