@@ -7,6 +7,7 @@
     <title>Home Page - AudioArea</title>
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/site.css?v=pAGv4ietcJNk_EwsQZ5BN9-K4MuNYS2a9wl4Jw-q9D0" />
+    <link rel="stylesheet" href="css/fontawesome-6.3.0/css/all.min.css" />
     <link rel="stylesheet" href="AudioArea.Mvc.styles.css?v=xqw0BENUXVJTyLkO2VWPUO4c10sSvhlIMo-hbpT32hI" />
 </head>
 
@@ -23,14 +24,14 @@
                 <div class="navbar-collapse collapse w-100 order-1 dual-collapse2">
                     <div class="mx-auto">
                         <ul b-lg2fj7b4ng class="navbar-nav flex-grow-1 mx-auto order-1">
+                            <li b-lg2fj7b4ng class="nav-item">
+                                <a class="nav-link text-dark" href="/">Products</a>
+                            </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Products</a>
+                                <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Categories</a>
                                 <div class="dropdown-menu">
-                                    <a href="#" class="dropdown-item">Inbox</a>
-                                    <a href="#" class="dropdown-item">Drafts</a>
-                                    <a href="#" class="dropdown-item">Sent Items</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a href="#" class="dropdown-item">Trash</a>
+                                    <a href="#" class="dropdown-item">Amplifier</a>
+                                    <a href="#" class="dropdown-item">Speaker</a>
                                 </div>
                             </li>
                             <li b-lg2fj7b4ng class="nav-item">
@@ -59,24 +60,15 @@
         </nav>
     </header>
     <div b-lg2fj7b4ng class="container mt-5">
-        <main b-lg2fj7b4ng role="main" class="pb-3">
-
-            <div class="text-center">
-                <label for="exampleDataList" class="form-label" style="font-size:35px;">Search and compare music equipment</label>
-                <div class="row justify-content-md-center">
-                    <div class="col-sm-8">
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
-                        <datalist id="datalistOptions">
-                            <option value="San Francisco">
-                            <option value="New York">
-                            <option value="Seattle">
-                            <option value="Los Angeles">
-                            <option value="Chicago">
-                        </datalist>
-                    </div>
-                </div>
-            </div>
-        </main>
+        <div class="text-center">
+            <label for="exampleDataList" class="form-label" style="font-size:35px;">Search and compare music equipment</label>
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
     </div>
     <div class="container mt-4">
         <div class="text-center">
@@ -104,6 +96,4 @@
     <!-- End Browser Link -->
 
     <script src="/_framework/aspnetcore-browser-refresh.js"></script>
-</body>
-
-</html>
+</body></html>
