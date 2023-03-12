@@ -1,0 +1,6 @@
+﻿@using Packt.Shared
+@model List<Category>
+@foreach (Category cat in Model)
+{
+	<a href="#" class="dropdown-item">@cat.Name</a>
+}

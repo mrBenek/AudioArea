@@ -10,4 +10,8 @@
     <ProjectReference Include="..\AudioArea.Common.DataContext.SqlServer\AudioArea.Common.DataContext.SqlServer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\" />
+  </ItemGroup>
+
 </Project>
