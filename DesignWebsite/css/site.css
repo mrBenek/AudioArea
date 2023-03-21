@@ -23,6 +23,18 @@ html {
     object-fit: contain;
 }
 
+.chevron-rotate {
+    -moz-transition: all .4s linear;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.chevron-rotate.down {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,

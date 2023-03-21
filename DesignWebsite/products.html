@@ -59,14 +59,72 @@
         </nav>
     </header>
     <div class="container-xxl px-2">
-        <div class="row mx-3 gx-3">
+        <div class="row mx-3 gx-3 d-flex">
             <div class="col-xl-3">
-                <h1 class="display-4 font-italic bg-light bg-gradient">Title for filters</h1>
+                <div class="d-flex justify-content-between">
+                    <p class="mt-1 fs-4">Filters</p>
+                    <button type="button" class="float-end btn">Clear filters</button>
+                </div>
+                <div class="dropdown">
+                    <a data-bs-toggle="collapse" href="#company-collapse" class="btn form-control btn-rotate" aria-expanded="true">
+                        Company
+                        <div class="fa fa-chevron-up chevron-rotate m-1"></div>
+                    </a>
+                    <div class="collapse show" id="company-collapse">
+                        <ul class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Unitra
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Marantz
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Panasonic
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a data-bs-toggle="collapse" href="#category-collapse" class="btn form-control btn-rotate" aria-expanded="true">
+                        Category
+                        <div class="fa fa-chevron-up chevron-rotate m-1"></div>
+                    </a>
+                    <div class="collapse show" id="category-collapse">
+                        <ul class="list-group-item">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    Unitra
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Marantz
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label" for="flexCheckChecked">
+                                    Panasonic
+                                </label>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-xl-9">
                 <div class="jumbotron p-md-2 rounded jumbotron-default">
-                    <!--                                    <div class="jumbotron p-md-2 rounded bg-light bg-gradient">-->
-                    <p class="float-end  mt-1 fs-5">10</p>
+                    <p class="float-end mt-1 fs-5">10</p>
                     <p class="float-end px-2 mt-2">out of</p>
                     <input value="2" type="text" maxlength="2" id="brazil" class="form-control form-control-sm float-end bg-light fs-5" style="width: 28px  " />
                     <div class="dropdown float-end ps-2 pe-5">
@@ -194,4 +252,6 @@
     <!-- End Browser Link -->
 
     <script src="/_framework/aspnetcore-browser-refresh.js"></script>
-</body></html>
+</body>
+
+</html>

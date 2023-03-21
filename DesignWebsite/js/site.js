@@ -2,3 +2,6 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
+$(".btn-rotate").click(function () {
+    $(this).find(".chevron-rotate").toggleClass("down");
+})
