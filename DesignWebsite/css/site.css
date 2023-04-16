@@ -35,6 +35,16 @@ html {
     transform: rotate(180deg);
 }
 
+.btn-apply-filters {
+    margin-top: 8px;
+}
+
+.btn-apply-filters.flow {
+    margin-top: 0px;
+    position: fixed;
+    top: 94%;
+}
+
 .btn:focus,
 .btn:active:focus,
 .btn-link.nav-link:focus,
