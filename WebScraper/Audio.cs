@@ -15,7 +15,7 @@ namespace WebScraper
         protected override void OnConfiguring(
             DbContextOptionsBuilder optionsBuilder)
         {
-            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Audio;Integrated Security=True";
+            string connection = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=Audio;Integrated Security=True;TrustServerCertificate=True";
             optionsBuilder.UseSqlServer(connection);
         }
 
