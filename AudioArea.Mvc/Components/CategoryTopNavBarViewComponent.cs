@@ -4,11 +4,11 @@ using Packt.Shared;
 
 namespace AudioArea.Mvc.Components
 {
-    public class CategoryViewComponent : ViewComponent
+    public class CategoryTopNavBarViewComponent : ViewComponent
     {
-        protected readonly AudioContext db;
+        private readonly AudioContext db;
 
-        public CategoryViewComponent(AudioContext injectedContext)
+        public CategoryTopNavBarViewComponent(AudioContext injectedContext)
         {
             db = injectedContext;
         }

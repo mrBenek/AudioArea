@@ -1,0 +1,186 @@
+﻿@using Packt.Shared;
+@using AudioArea.Mvc.Components;
+@model HomeProductsViewModel;
+
+@{
+}
+
+<div class="container-xxl px-2">
+    <div class="row mx-3 gx-3 d-flex">
+        <div class="col-xl-3">
+            <div class="d-flex justify-content-between">
+                <p class="mt-1 fs-4">Filters</p>
+                <button type="button" class="float-end btn">Clear filters</button>
+            </div>
+            <div class="dropdown">
+                <a data-bs-toggle="collapse" href="#company-collapse" class="btn form-control btn-rotate" aria-expanded="true">
+                    Company
+                    <div class="fa fa-chevron-up chevron-rotate m-1"></div>
+                </a>
+                <div class="collapse show" id="company-collapse">
+                    <ul class="list-group-item">
+                        @foreach (Company c in Model.Companies)
+                        {
+                            <li class="form-check">
+                                <input class="form-check-input" name="company" type="checkbox" value="@c.Id" id="company-@c.Id">
+                                <label class="form-check-label" for="company-@c.Id">@c.Name</label>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <form asp-controller="Home" asp-action="GetProducts" method="post">
+                <div class="dropdown">
+                    <a data-bs-toggle="collapse" href="#category-collapse" class="btn form-control btn-rotate" aria-expanded="true">
+                        Category
+                        <div class="fa fa-chevron-up chevron-rotate m-1"></div>
+                    </a>
+                    <div class="collapse show" id="category-collapse">
+                        @await Component.InvokeAsync(typeof(CategoryFilterViewComponent))
+                    </div>
+                </div>
+                <div class="d-grid">
+                    <a class="btn bg-success btn-apply-filters" id="btn-apply-filters">Apply filters</a>
+                </div>
+            </form>
+        </div>
+        <div class="col-xl-9">
+            <div class="jumbotron p-md-2 rounded jumbotron-default">
+                <p class="float-end mt-1 fs-5">10</p>
+                <p class="float-end px-2 mt-2">out of</p>
+                <input value="2" type="text" maxlength="2" id="brazil" class="form-control form-control-sm float-end bg-light fs-5" style="width: 28px  " />
+                <div class="dropdown float-end ps-2 pe-5">
+                    <button class="btn btn-light border-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Sort by
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">Name</a></li>
+                        <li><a class="dropdown-item" href="#">Company</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown float-end px-2">
+                    <button class="btn btn-light border-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Show on page
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="#">All</a></li>
+                        <li><a class="dropdown-item" href="#">20</a></li>
+                        <li><a class="dropdown-item" href="#">40</a></li>
+                        <li><a class="dropdown-item" href="#">60</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 font-italic">Title for selected filters and information info</h1>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="image-default" src="~/images/sam600.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="image-default" src="~/images/sam530.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="image-default" src="~/images/sam530.JPG" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <img class="image-default" src="~/images/sam4344.JPG" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div>
+                                <small class="text-muted">9 mins</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="p-3 d-flex justify-content-center" aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active" aria-current="page">
+                        <span class="page-link">2</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Handle checkbox change event
+        $('input[type="checkbox"][name="company"]').on('change', function () {
+            var selectedCompanyIds = $('input[type="checkbox"][name="company"]:checked').map(function () {
+                return $(this).val();
+            }).get();
+
+            $.ajax({
+                url: '@Url.Action("CompanyCheckedId", "Products")',
+                type: 'POST',
+                dataType: 'html',
+                data: {
+                    companyIds: selectedCompanyIds
+                },
+                success: function (result) {
+                    $('#category-collapse').html(result);
+                },
+                error: function () {
+                    console.log('An error occurred while restrieving filtered category data.');
+                }
+            });
+        });
+    </script>
+}

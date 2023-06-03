@@ -8,11 +8,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebScraper", "WebScraper\We
 		{267453B7-2B88-4DFA-98EB-FB23A14C85CC} = {267453B7-2B88-4DFA-98EB-FB23A14C85CC}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioArea.Mvc", "AudioArea.Mvc\AudioArea.Mvc.csproj", "{0D5F4641-9086-422C-B5B4-C7DC940C7169}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioArea.Mvc", "AudioArea.Mvc\AudioArea.Mvc.csproj", "{0D5F4641-9086-422C-B5B4-C7DC940C7169}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioArea.Common.DataContext.SqlServer", "AudioArea.Common.DataContext.SqlServer\AudioArea.Common.DataContext.SqlServer.csproj", "{FCEC6EF6-29A1-4FFB-B000-94B40B22A23E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioArea.Common.DataContext.SqlServer", "AudioArea.Common.DataContext.SqlServer\AudioArea.Common.DataContext.SqlServer.csproj", "{FCEC6EF6-29A1-4FFB-B000-94B40B22A23E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioArea.Common.EntityModels.SqlServer", "AudioArea.Common.EntityModels.SqlServer\AudioArea.Common.EntityModels.SqlServer.csproj", "{267453B7-2B88-4DFA-98EB-FB23A14C85CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AudioArea.Common.EntityModels.SqlServer", "AudioArea.Common.EntityModels.SqlServer\AudioArea.Common.EntityModels.SqlServer.csproj", "{267453B7-2B88-4DFA-98EB-FB23A14C85CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

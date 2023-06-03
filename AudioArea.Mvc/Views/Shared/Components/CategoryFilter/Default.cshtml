@@ -1,0 +1,12 @@
+﻿@using Packt.Shared
+@model List<Category>
+
+<ul class="list-group-item">
+    @foreach (Category c in Model)
+    {
+        <li class="form-check">
+            <input class="form-check-input" name="category" type="checkbox" value="@c.Id" id="category-@c.Id">
+            <label class="form-check-label" for="category-@c.Id">@c.Name</label>
+        </li>
+    }
+</ul>
