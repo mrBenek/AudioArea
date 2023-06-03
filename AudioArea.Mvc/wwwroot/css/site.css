@@ -1,26 +1,63 @@
 html {
-  font-size: 16px;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
-  .navbar-nav.abs {
-    position: absolute;
-    width: auto;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-  }
+    .navbar-nav.abs {
+        position: absolute;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.jumbotron-default {
+    background-color: var(--bs-light);
+    background-image: var(--bs-gradient);
+}
+
+.image-default {
+    width: 295px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.chevron-rotate {
+    -moz-transition: all .4s linear;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+.chevron-rotate.down {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.btn-apply-filters {
+    margin-top: 8px;
+}
+
+.btn-apply-filters.flow {
+    margin-top: 0px;
+    position: fixed;
+    top: 95%;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
