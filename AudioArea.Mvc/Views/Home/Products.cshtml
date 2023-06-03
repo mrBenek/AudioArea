@@ -73,7 +73,7 @@
                     <h1 class="display-4 font-italic">Title for selected filters and information info</h1>
                 </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-3" id="products">
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
                         <img class="image-default" src="~/images/sam600.jpg" alt="Card image cap">
@@ -163,12 +163,10 @@
     <script>
         // Handle checkbox change event
         $('input[type="checkbox"][name="company"]').on('change', function () {
-            var selectedCompanyIds = $('input[type="checkbox"][name="company"]:checked').map(function () {
-                return $(this).val();
-            }).get();
+            var selectedCompanyIds = GetSelectedItems("company");
 
             $.ajax({
-                url: '@Url.Action("CompanyCheckedId", "Products")',
+                url: '@Url.Action("CompanyCheckedIds", "Products")',
                 type: 'POST',
                 dataType: 'html',
                 data: {
@@ -182,5 +180,33 @@
                 }
             });
         });
+
+        $('#btn-apply-filters').click(function () {
+            var selectedCompanyIds = GetSelectedItems("company");
+            var selectedCategoryIds = GetSelectedItems("category");
+
+            $.ajax({
+                url: '@Url.Action("CheckedIds", "Products")',
+                type: 'POST',
+                dataType: 'html',
+                data: {
+                    companyIds: selectedCompanyIds,
+                    categoryIds: selectedCategoryIds
+                },
+                success: function (result) {
+                    $('#products').html(result);
+                },
+                error: function () {
+                    console.log('An error occurred while restrieving filtered category or company data.');
+                }
+            });
+        });
+
+        function GetSelectedItems(name) {
+            return $('input[type="checkbox"][name="' + name + '"]:checked').map(function () {
+                return $(this).val();
+            }).get();
+        }
+
     </script>
 }

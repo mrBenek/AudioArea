@@ -11,9 +11,15 @@ namespace AudioArea.Mvc.Controllers
         }
 
         [HttpPost]
-        public IActionResult CompanyCheckedId(int[] companyIds)
+        public IActionResult CompanyCheckedIds(int[] companyIds)
         {
             return ViewComponent("CategoryFilter", companyIds);
+        }
+
+        [HttpPost]
+        public IActionResult CheckedIds(int[] companyIds, int[] categoryIds)
+        {
+           return ViewComponent("ProductItems", new { companyIds, categoryIds });
         }
     }
 }
