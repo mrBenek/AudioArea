@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using System.Text.RegularExpressions;
 
 namespace Packt.Shared
 {
@@ -35,6 +36,25 @@ namespace Packt.Shared
                 Company = company;
                 CompanyId = company.Id;
             }
+        }
+
+        public string GetImagePath()
+        {
+            char searchChar = '/';
+            int occurrencePosition = 4;
+
+            if (ImageLink != null)
+            {
+                Match? match = Regex.Matches(ImageLink, Regex.Escape(searchChar.ToString()))
+                                   .Cast<Match>()
+                                   .Skip(occurrencePosition - 1)
+                                   .FirstOrDefault();
+
+                if (match != null)
+                    return ImageLink.Substring(match.Index + 1);
+            }
+
+            return "";
         }
     }
 }
