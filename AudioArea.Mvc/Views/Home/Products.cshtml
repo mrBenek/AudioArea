@@ -18,15 +18,7 @@
                     <div class="fa fa-chevron-up chevron-rotate m-1"></div>
                 </a>
                 <div class="collapse show" id="company-collapse">
-                    <ul class="list-group-item">
-                        @foreach (Company c in Model.Companies)
-                        {
-                            <li class="form-check">
-                                <input class="form-check-input" name="company" type="checkbox" value="@c.Id" id="company-@c.Id">
-                                <label class="form-check-label" for="company-@c.Id">@c.Name</label>
-                            </li>
-                        }
-                    </ul>
+                    @await Component.InvokeAsync(typeof(CompanyFilterViewComponent))
                 </div>
             </div>
             <form asp-controller="Home" asp-action="GetProducts" method="post">
