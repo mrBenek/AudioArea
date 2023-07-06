@@ -1,0 +1,14 @@
+PUT https://localhost:5002/api/categories/10000 HTTP/1.1
+Content-Type: application/json
+
+{
+  "id": 10000,
+  "parentId": 2,
+  "name": "etc",
+  "link": "test",
+  "imageName": "test",
+  "imageLink": "test",
+  "baseLink": "test",
+  "fileName": "test",
+  "products": [],
+}

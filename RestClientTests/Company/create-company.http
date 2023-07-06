@@ -1,0 +1,10 @@
+POST https://localhost:5002/api/companies/ HTTP/1.1 
+Content-Type: application/json
+
+{
+    "id": 10000,
+    "name": "TEST",
+    "link": "TEST.html",
+    "baseLink": "https://TEST/",
+    "products": []
+  }

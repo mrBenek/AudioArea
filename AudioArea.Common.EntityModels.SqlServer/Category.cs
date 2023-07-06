@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
+using Newtonsoft.Json;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace Packt.Shared
 {
@@ -25,20 +28,32 @@ namespace Packt.Shared
 		speaker_unit,
 	}
 
-	public partial class Category
+    [JsonObject(IsReference = true)]
+    [DataContract(IsReference = true)]
+    public partial class Category
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public int ParentId { get; set; } = -1;
+        [DataMember]
         public string? Name { get; set; }
+        [DataMember]
         public string? Link { get; set; }
+        [DataMember]
         public string? ImageName { get; set; }
+        [DataMember]
         public string? ImageLink { get; set; }
+        [DataMember]
         public string? BaseLink { get; set; }
+        [DataMember]
         public string? FileName { get; set; }
+        [XmlIgnore]
         public virtual List<Product> Products { get; set; } = new List<Product>();
 
         [NotMapped]
+        [JsonIgnore]
         public string MainCategoryId
         {
             get

@@ -1,0 +1,14 @@
+POST https://localhost:5002/api/categories/ HTTP/1.1 
+Content-Type: application/json
+
+{
+  "id": 10000,
+  "parentId": 2,
+  "name": "etc",
+  "link": null,
+  "imageName": null,
+  "imageLink": null,
+  "baseLink": null,
+  "fileName": null,
+  "products": [],
+}
