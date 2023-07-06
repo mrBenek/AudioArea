@@ -1,0 +1,14 @@
+GET https://localhost:5002/api/products/ HTTP/1.1
+###
+GET https://localhost:5002/api/products/?company=AAD HTTP/1.1 
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?company=AAD HTTP/1.1 
+Accept: application/json
+###
+GET https://localhost:5002/api/products/2 HTTP/1.1 
+###
+GET https://localhost:5002/api/products/2 HTTP/1.1
+Accept: application/json
+###
+GET https://localhost:5002/api/products/abcxy HTTP/1.1

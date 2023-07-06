@@ -1,0 +1,1 @@
+DELETE https://localhost:5002/api/products/10000 HTTP/1.1
