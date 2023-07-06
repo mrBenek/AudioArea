@@ -1,25 +1,44 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace Packt.Shared
 {
-	public partial class Product
+    [JsonObject(IsReference = true)]
+    [DataContract(IsReference = true)]
+    public partial class Product
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string? Name { get; set; }
+        [DataMember]
         public string? Link { get; set; }
+        [DataMember]
         public string? ImageName { get; set; }
+        [DataMember]
         public string? ImageLink { get; set; }
+        [DataMember]
         public string? Description { get; set; }
 
+        [XmlIgnore]
         public Dictionary<string, string>? Properties { get; set; } = new(); //json
 
+        [DataMember]
         public int CategoryId { get; set; }
-        public virtual Category? Category { get; set; }
 
+        //[InverseProperty("Category")]
+        [XmlIgnore]
+        public virtual Category? Category { get; set; }
+        [DataMember]
         public int CompanyId { get; set; }
+
+        
+        [XmlIgnore]
         public virtual Company? Company { get; set; }
 
         public Product() { } //need for json deserialize
