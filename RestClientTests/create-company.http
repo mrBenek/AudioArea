@@ -1,0 +1,21 @@
+POST https://localhost:5002/api/products/ HTTP/1.1 
+Content-Type: application/json
+
+{
+  "id": 10000,
+  "name": "TEST",
+  "link": "https://audio-database.com/AAD/speaker/test.html",
+  "imageName": "test.jpg",
+  "imageLink": "https://audio-database.com/AAD/speaker/same-44.jpg",
+  "description": "test.\r\n\r\nIt is equipped with two 11.4 cm cone woofers.\r\nThis unit is aad custom-made unit. It uses a special high-tech corn material with a special molecular structure in which aluminum and polypropylene are mixed.\r\n\r\nThe 2.5cm soft dome tweeter is carried.\r\nThe silk diaphragm is adopted as a diaphragm. In addition, a chamber with acoustic damping is provided at the back, and by combining this with the pole piece, the frequency response of the tweeter is made smoother.\r\n\r\nMagnetic shield design.\r\n\r\n\r\nThe network uses closely matched parts with minimal error.\r\nBy using an air core coil for the inductor, even if the playback volume is high, the magnetic saturation that leads to distortion and leakage of the amplifier output is prevented. Also, the printed circuit board is plated with 24 carat gold and has a high current specification.\r\n\r\nWe adopt virtual coaxial layout for placement of unit.\r\nThe enclosure uses a 15 mm thick MDF. It is also made using a wood cutter specially designed for speaker cabinet manufacture. A large amount of vibration absorbing material is used inside the cabinet to contribute to the sound with transparency.\r\nThe color of the appearance is maple.\r\n\r\nIt seems that there were two types of specifications on the grille fixed part.",
+  "properties": {
+    "Type": "2way 3speaker Closed box Bookshelf type Magnetic shield design",
+    "Unit": "Low range:11.4cm corn x2\r\nHigh range:2.5cm dome",
+    "Frequency Response": "70Hz - 22kHz",
+    "Impedance": "6ohm",
+  },
+  "categoryId": 19,
+  "category": null,
+  "companyId": 0,
+  "company": null
+}

@@ -1,44 +1,44 @@
+using AudioArea.WebApi.Repositories; // ICompanyRepository
 using Microsoft.AspNetCore.Mvc; // [Route], [ApiController], ControllerBase
-using Packt.Shared; // Product
-using AudioArea.WebApi.Repositories; // IProductRepository
+using Packt.Shared; // Company
 
 namespace Northwind.WebApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class ProductsController : ControllerBase
+public class CompaniesController : ControllerBase
 {
-    private readonly IProductRepository repo;
+    private readonly ICompanyRepository repo;
 
-    public ProductsController(IProductRepository repo)
+    public CompaniesController(ICompanyRepository repo)
     {
         this.repo = repo;
     }
 
-    // GET: api/products
-    // GET: api/products/?company=[company]
+    // GET: api/companies
+    // GET: api/companies/?name=[name]
     [HttpGet]
-    [ProducesResponseType(200, Type = typeof(IEnumerable<Product>))]
-    public async Task<IEnumerable<Product>> GetProducts(string? company)
+    [ProducesResponseType(200, Type = typeof(IEnumerable<Company>))]
+    public async Task<IEnumerable<Company>> GetCompanies(string? name)
     {
-        if (string.IsNullOrWhiteSpace(company))
+        if (string.IsNullOrWhiteSpace(name))
         {
             return await repo.RetrieveAllAsync();
         }
         else
         {
             return (await repo.RetrieveAllAsync())
-              .Where(product => product.Company?.Name == company);
+              .Where(company => company.Name == name);
         }
     }
 
-    // GET: api/products/[id]
-    [HttpGet("{id}", Name = nameof(GetProduct))]
-    [ProducesResponseType(200, Type = typeof(Product))]
+    // GET: api/companies/[id]
+    [HttpGet("{id}", Name = nameof(GetCompany))]
+    [ProducesResponseType(200, Type = typeof(Company))]
     [ProducesResponseType(404)]
-    public async Task<IActionResult> GetProduct(int id)
+    public async Task<IActionResult> GetCompany(int id)
     {
-        Product? c = await repo.RetrieveAsync(id);
+        Company? c = await repo.RetrieveAsync(id);
         if (c == null)
         {
             return NotFound();
@@ -46,45 +46,45 @@ public class ProductsController : ControllerBase
         return Ok(c);
     }
 
-    // POST: api/products
-    // BODY: Product (JSON, XML)
+    // POST: api/companies
+    // BODY: Company (JSON, XML)
     [HttpPost]
-    [ProducesResponseType(201, Type = typeof(Product))]
+    [ProducesResponseType(201, Type = typeof(Company))]
     [ProducesResponseType(400)]
-    public async Task<IActionResult> Create([FromBody] Product c)
+    public async Task<IActionResult> Create([FromBody] Company c)
     {
         if (c == null)
         {
             return BadRequest();
         }
-        Product? addedProduct = await repo.CreateAsync(c);
-        if (addedProduct == null)
+        Company? addedCompany = await repo.CreateAsync(c);
+        if (addedCompany == null)
         {
-            return BadRequest("Repository failed to create product.");
+            return BadRequest("Repository failed to create company.");
         }
         else
         {
             return CreatedAtRoute(
-              routeName: nameof(GetProduct),
-              routeValues: new { id = addedProduct.Id },
-              value: addedProduct);
+              routeName: nameof(GetCompany),
+              routeValues: new { id = addedCompany.Id },
+              value: addedCompany);
         }
     }
 
-    // PUT: api/products/[id]
-    // BODY: Product (JSON, XML)
+    // PUT: api/companies/[id]
+    // BODY: Company (JSON, XML)
     [HttpPut("{id}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(400)]
     [ProducesResponseType(404)]
     public async Task<IActionResult> Update(
-      int id, [FromBody] Product c)
+      int id, [FromBody] Company c)
     {
         if (c == null || c.Id != id)
         {
             return BadRequest();
         }
-        Product? existing = await repo.RetrieveAsync(id);
+        Company? existing = await repo.RetrieveAsync(id);
         if (existing == null)
         {
             return NotFound();
@@ -93,14 +93,14 @@ public class ProductsController : ControllerBase
         return new NoContentResult();
     }
 
-    // DELETE: api/products/[id]
+    // DELETE: api/Companies/[id]
     [HttpDelete("{id}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(400)]
     [ProducesResponseType(404)]
     public async Task<IActionResult> Delete(int id)
     {
-        Product? existing = await repo.RetrieveAsync(id);
+        Company? existing = await repo.RetrieveAsync(id);
         if (existing == null)
         {
             return NotFound();
@@ -113,7 +113,7 @@ public class ProductsController : ControllerBase
         else
         {
             return BadRequest(
-              $"Product {id} was found but failed to delete.");
+              $"Company {id} was found but failed to delete.");
         }
     }
 }

@@ -11,9 +11,13 @@ namespace Packt.Shared
     public partial class Company
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string? Name { get; set; }
+        [DataMember]
         public string? Link { get; set; }
+        [DataMember]
         public string? BaseLink { get; set; }
 
         [InverseProperty("Company")]
