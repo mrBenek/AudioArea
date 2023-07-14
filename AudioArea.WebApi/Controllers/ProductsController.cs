@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc; // [Route], [ApiController], ControllerBase
 using Packt.Shared; // Product
 using AudioArea.WebApi.Repositories; // IProductRepository
+using WebApiPagination.Entities.Dtos;
+using System.Text.Json;
 
 namespace Northwind.WebApi.Controllers;
 
@@ -16,20 +18,18 @@ public class ProductsController : ControllerBase
     }
 
     // GET: api/products
-    // GET: api/products/?company=[company]
+    // GET: api/products/?company=[company]&page=2&itemsperpage=2
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Product>))]
-    public async Task<IEnumerable<Product>> GetProducts(string? company)
+    public async Task<IEnumerable<Product>> GetProducts([FromQuery(Name = "company")] string? company, [FromQuery] PaginationParams @params)
     {
-        if (string.IsNullOrWhiteSpace(company))
-        {
-            return await repo.RetrieveAllAsync();
-        }
-        else
-        {
-            return (await repo.RetrieveAllAsync())
-              .Where(product => product.Company?.Name == company);
-        }
+        var products = await repo.RetrieveAsync(company);
+
+        var paginationMetadata = new PaginationMetadata(products.Count(), @params.Page, @params.ItemsPerPage);
+        Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
+
+        return products.Skip((@params.Page - 1) * @params.ItemsPerPage)
+                       .Take(@params.ItemsPerPage);
     }
 
     // GET: api/products/[id]

@@ -32,12 +32,13 @@ namespace Packt.Shared
         public int CategoryId { get; set; }
 
         //[InverseProperty("Category")]
+        [JsonIgnore]
         [XmlIgnore]
         public virtual Category? Category { get; set; }
         [DataMember]
         public int CompanyId { get; set; }
 
-        
+        [JsonIgnore]
         [XmlIgnore]
         public virtual Company? Company { get; set; }
 

@@ -42,6 +42,15 @@ public class ProductRepository : IProductRepository
             ? Enumerable.Empty<Product>() : productsCache.Values);
     }
 
+    public Task<IEnumerable<Product>> RetrieveAsync(string? company)
+    {
+        if (string.IsNullOrWhiteSpace(company))
+            return RetrieveAllAsync();
+
+        return Task.FromResult(productsCache is null
+            ? Enumerable.Empty<Product>() : productsCache.Values.Where(product => product.Company?.Name == company));
+    }
+
     public Task<Product?> RetrieveAsync(int id)
     {
         if (productsCache is null) return null!;
