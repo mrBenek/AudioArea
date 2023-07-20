@@ -12,3 +12,12 @@ GET https://localhost:5002/api/products/2 HTTP/1.1
 Accept: application/json
 ###
 GET https://localhost:5002/api/products/abcxy HTTP/1.1
+### Pagination
+GET https://localhost:5002/api/products/?company=AAD&page=2&itemsperpage=2 HTTP/1.1 
+Accept: application/json
+###
+GET https://localhost:5002/api/products/?company=AAD&page=2&itemsperpage=2 HTTP/1.1 
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?page=2&itemsperpage=20 HTTP/1.1 
+Accept: application/xml

@@ -25,6 +25,9 @@ public class ProductsController : ControllerBase
     {
         var products = await repo.RetrieveAsync(company);
 
+        if (@params.ItemsPerPage == 0)
+            return products;
+
         var paginationMetadata = new PaginationMetadata(products.Count(), @params.Page, @params.ItemsPerPage);
         Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
 

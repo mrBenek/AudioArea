@@ -3,7 +3,7 @@
     public class PaginationParams
     {
         private const int _maxItemsPerPage = 50;
-        private int itemsPerPage = _maxItemsPerPage;
+        private int itemsPerPage;
 
         public int Page { get; set; } = 1;
         public int ItemsPerPage 
