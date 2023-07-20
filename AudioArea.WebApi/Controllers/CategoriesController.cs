@@ -16,20 +16,34 @@ public class CategoriesController : ControllerBase
     }
 
     // GET: api/categories
-    // GET: api/categories/?name=[name]
+    // GET: api/categories/?name=[name]&parentId=[parentId]
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Category>))]
-    public async Task<IEnumerable<Category>> GetCategories(string? name)
+    public async Task<IEnumerable<Category>> GetCategories(string? name, [FromQuery(Name = "parentId")] int? parentId)
     {
-        if (string.IsNullOrWhiteSpace(name))
+        if (string.IsNullOrWhiteSpace(name) && parentId == null)
         {
             return await repo.RetrieveAllAsync();
         }
         else
         {
-            return (await repo.RetrieveAllAsync())
-              .Where(category => category.Name == name);
+            if (name != null && parentId != null)
+            {
+                return (await repo.RetrieveAllAsync())
+                        .Where(category => category.Name == name && category.ParentId == parentId);
+            }
+            if (parentId != null)
+            {
+                return (await repo.RetrieveAllAsync())
+                       .Where(category => category.ParentId == parentId);
+            }
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                return (await repo.RetrieveAllAsync())
+                        .Where(category => category.Name == name);
+            }
         }
+        return Enumerable.Empty<Category>();
     }
 
     // GET: api/categories/[id]
