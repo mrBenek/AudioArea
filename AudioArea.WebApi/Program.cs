@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters; // IOutputFormatter, OutputFormatter
 using Microsoft.AspNetCore.Mvc.Formatters.Xml;
 using Packt.Shared; // AddAudioContext extension method
+using Microsoft.AspNetCore.HttpLogging; // HttpLoggingFields
 using System.Runtime.Serialization;
 using System.Xml;
 using static System.Console;
@@ -37,6 +38,13 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
+builder.Services.AddHttpLogging(options =>
+{
+    options.LoggingFields = HttpLoggingFields.All;
+    options.RequestBodyLogLimit = 4096; // default is 32k
+    options.ResponseBodyLogLimit = 4096; // default is 32k
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -44,6 +52,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseHttpLogging();
 
 app.UseHttpsRedirection();
 
