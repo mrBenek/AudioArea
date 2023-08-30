@@ -1,5 +1,6 @@
 ﻿using AudioArea.Mvc.Models;
 using Microsoft.AspNetCore.Mvc;
+using WebApiPagination.Entities.Dtos;
 
 namespace AudioArea.Mvc.Controllers
 {
@@ -17,9 +18,14 @@ namespace AudioArea.Mvc.Controllers
         }
 
         [HttpPost]
-        public IActionResult CheckedIds(int[] companyIds, int[] categoryIds)
+        public IActionResult GetItemsPerPage(int[] companyIds, int[] categoryIds, int pageNumber, int itemsPerPage, string sortedBy)
         {
-           return ViewComponent("ProductItems", new { companyIds, categoryIds });
+            PaginationParams paginationParams = new()
+            {
+                Page = pageNumber,
+                ItemsPerPage = itemsPerPage
+            };
+            return ViewComponent("ProductCards", new { companyIds, categoryIds, paginationParams, sortedBy });
         }
     }
 }

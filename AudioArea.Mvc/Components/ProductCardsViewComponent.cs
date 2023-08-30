@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Packt.Shared;
+using WebApiPagination.Entities.Dtos;
 
 namespace AudioArea.Mvc.Components
 {
@@ -13,14 +14,24 @@ namespace AudioArea.Mvc.Components
             db = injectedContext;
         }
 
-        public async Task<IViewComponentResult> InvokeAsync(int[] companyIds, int[] categoryIds)
+        public async Task<IViewComponentResult> InvokeAsync(int[] companyIds, int[] categoryIds, PaginationParams paginationParams, string sortedBy)
         {
             IList<Product> Products;
             if (companyIds != null && companyIds.Any())
             {
-                Products = await (from p in db.Products 
-                                    where companyIds.Contains(p.CompanyId) && categoryIds.Contains(p.CategoryId)
-                                    select p).Distinct().ToListAsync();
+                if (categoryIds != null && categoryIds.Any())
+                {
+                    Products = await (from p in db.Products
+                                      where companyIds.Contains(p.CompanyId) && categoryIds.Contains(p.CategoryId)
+                                      select p).Distinct().ToListAsync();
+                }
+                else
+                {
+                    Products = await (from p in db.Products
+                                     where companyIds.Contains(p.CompanyId)
+                                     select p).Distinct().ToListAsync();
+                }
+                
             }
             else
             {
