@@ -289,13 +289,15 @@
             </div>
             <div class="col-xl-9">
                 <div class="jumbotron p-md-2 rounded jumbotron-default">
-                    <p class="float-end mt-1 fs-5">10</p>
+                    <p id="max-page-number" class="float-end mt-1 fs-5">10</p>
                     <p class="float-end px-2 mt-2">out of</p>
-                    <input value="2" type="text" maxlength="2" id="brazil" class="form-control form-control-sm float-end bg-light text-center fs-5" style="width: 5%" />
+                    <input value="2" type="number" min="1" max="10" id="page-number" class="form-control form-control-sm float-end bg-light text-center fs-5" style="width: 5%" step="any" />
                     <div class="float-end px-2 rounded" style="width: 15%">
                         <select class="form-select float-end px-2 rounded border-dark">
-                            <option selected>Name</option>
-                            <option>Company</option>
+                            <option value="name_asc" selected>Name A→Z</option>
+                            <option value="name_desc">Name Z→A</option>
+                            <option value="company_asc">Company A→Z</option>
+                            <option value="company_desc">Company Z→A</option>
                         </select>
                     </div>
                     <div class="float-end px-2 rounded" style="width: 10%">
