@@ -36,3 +36,6 @@ Accept: application/xml
 ###
 GET https://localhost:5002/api/products/?companyId=0&categoryId=19&CurrentPage=1&PageSize=100&sortedBy=name_asc  HTTP/1.2
 Accept: application/xml
+###
+GET https://localhost:5002/api/products/?companyId=0&CurrentPage=1&PageSize=100&sortedBy=name_asc  HTTP/1.2
+Accept: application/xml

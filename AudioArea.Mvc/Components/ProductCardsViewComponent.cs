@@ -23,10 +23,10 @@ namespace AudioArea.Mvc.Components
             IEnumerable<Product>? Products;
 
             if (companyIds != null && companyIds.Any() &&
-                categoryIds != null && categoryIds.Any() &&
                 pagination != null)
             {
-                string uri = $"api/products/?companyId={String.Join(',', companyIds)}&categoryId={String.Join(',', categoryIds)}&CurrentPage={pagination.CurrentPage}&PageSize={pagination.PageSize}&sortedBy={sortedBy}";
+                string urlCategoryFilter = (categoryIds != null && categoryIds.Any()) ? String.Join(',', categoryIds) : ""; 
+                string uri = $"api/products/?companyId={String.Join(',', companyIds)}{urlCategoryFilter}&CurrentPage={pagination.CurrentPage}&PageSize={pagination.PageSize}&sortedBy={sortedBy}";
                 HttpClient client = clientFactory.CreateClient(name: "AudioArea.WebApi");
                 HttpRequestMessage request = new(method: HttpMethod.Get, requestUri: uri);
                 HttpResponseMessage response = await client.SendAsync(request);
