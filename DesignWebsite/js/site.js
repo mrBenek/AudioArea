@@ -1,5 +1,6 @@
 ﻿var btnApplyFilters = document.getElementById('btn-apply-filters');
 var categoryCollapse = document.getElementById('category-collapse');
+var companyCollapse = document.getElementById('company-collapse');
 var inputPageNumber = document.getElementById('page-number');
 var maxPageNumber = document.getElementById('max-page-number');
 var dropdownCategories = document.getElementById('dropdown-categories');
@@ -27,7 +28,9 @@ function btnApplyFiltersClick() {
 
 btnApplyFilters.addEventListener('click', () => btnApplyFiltersClick())
 categoryCollapse.addEventListener('hidden.bs.collapse', () => changeStyleApplyFiltersBtn())
+companyCollapse.addEventListener('hidden.bs.collapse', () => changeStyleApplyFiltersBtn())
 categoryCollapse.addEventListener('shown.bs.collapse', () => changeStyleApplyFiltersBtn())
+companyCollapse.addEventListener('shown.bs.collapse', () => changeStyleApplyFiltersBtn())
 document.addEventListener('scroll', () => changeStyleApplyFiltersBtn(), {
     passive: true
 });
