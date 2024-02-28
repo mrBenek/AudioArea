@@ -5,16 +5,13 @@ namespace AudioArea.Mvc.Components
 {
     public class PageNavigationViewComponent : ViewComponent
     {
-        private readonly AudioContext db;
-
-        public PageNavigationViewComponent(AudioContext injectedContext)
+        public PageNavigationViewComponent()
         {
-            db = injectedContext;
         }
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(Pagination pagination)
         {
-            return View();
+            return View(pagination);
         }
     }
 }

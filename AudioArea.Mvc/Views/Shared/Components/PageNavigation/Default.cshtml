@@ -1,7 +1,44 @@
-﻿
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item active" aria-current="page">
-        <span class="page-link">2</span>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item"><a class="page-link" href="#">4</a></li>
+﻿@using Packt.Shared
+@model Pagination
+
+@if (Model.TotalPages > 0)
+{
+	@if (Model.CurrentPage < Model.TotalPages)
+	{
+		<li class="page-item">
+			<a class="page-link" aria-label="Previous" asp-controller="Products" asp-action="Index"
+				asp-route-SearchText="xxx" asp-route-pg="@(Model.TotalPages)" asp-route-pageSize="@Model.PageSize">
+				<span aria-hidden="true">&laquo;</span>
+			</a>
+		</li>
+	}
+	@if (Model.CurrentPage > 1)
+	{
+		<li class="page-item">
+			<a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="1"
+				asp-route-SearchText="xxx" asp-route-pageSize="@Model.PageSize">First</a>
+		</li>
+		<li>
+			<a class="page-link" asp-controller="Products" asp-action="Index"
+				asp-route-pg="@(Model.CurrentPage - 1)"
+				asp-route-SearchText="xxx" asp-route-pageSize="@Model.PageSize">Previous</a>
+		</li>
+	}
+	@for (var pge = Model.StartPage; pge <= Model.EndPage; pge++)
+	{
+		<li class="page-item @(pge == Model.CurrentPage ? "active" : "")">
+			<a class="page-link" asp-controller="Products" asp-action="Index" asp-route-pg="@pge"
+				asp-route-SearchText="xxx" asp-route-pageSize="@Model.PageSize"> @pge </a>
+		</li>
+
+	}
+	@if (Model.CurrentPage < Model.TotalPages)
+	{
+		<li class="page-item">
+			<a class="page-link" aria-label="Next" asp-controller="Products" asp-action="Index"
+				asp-route-SearchText="xxx" asp-route-pg="@(Model.CurrentPage + 1)" asp-route-pageSize="@Model.PageSize">
+				<span aria-hidden="true">&raquo;</span>
+			</a>
+		</li>
+	}
+}
