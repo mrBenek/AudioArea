@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc; // [Route], [ApiController], ControllerBase
 using Packt.Shared; // Product
 using AudioArea.WebApi.Repositories; // IProductRepository
-using WebApiPagination.Entities.Dtos;
-using System.Text.Json;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Newtonsoft.Json;
 
 namespace Northwind.WebApi.Controllers;
 
@@ -18,21 +18,34 @@ public class ProductsController : ControllerBase
     }
 
     // GET: api/products
-    // GET: api/products/?company=[company]&page=2&itemsperpage=2
+    // GET: api/products/?companyName=[companyName]&companyId=[companyId]&categoryId=[categoryId]&sortedBy=[sortedBy]page=2&itemsperpage=2
     [HttpGet]
     [ProducesResponseType(200, Type = typeof(IEnumerable<Product>))]
-    public async Task<IEnumerable<Product>> GetProducts([FromQuery(Name = "company")] string? company, [FromQuery] PaginationParams @params)
+    public async Task<IEnumerable<Product>> GetProducts([FromQuery(Name = "companyName")] string? companyName, [FromQuery(Name = "companyId")] string? companyId,
+        [FromQuery(Name = "categoryId")] string? categoryId, [FromQuery(Name = "sortedBy")] string? sortedBy,
+        [FromQuery] Pagination @params)
     {
-        var products = await repo.RetrieveAsync(company);
+        IEnumerable<Product> products;
+        List<int?>? companyIds = companyId?.Split(',').ToList().Select(s => Int32.TryParse(s, out int n) ? n : (int?)null).ToList();
+        List<int?>? categoryIds = categoryId?.Split(',').ToList().Select(s => Int32.TryParse(s, out int n) ? n : (int?)null).ToList();
 
-        if (@params.ItemsPerPage == 0)
+        if (!string.IsNullOrWhiteSpace(companyName))
+        {
+            products = await repo.RetrieveAsync(companyName);
+        }
+        else
+        {
+            products = await repo.RetrieveAsync(companyIds, categoryIds, sortedBy);
+        }
+
+        if (@params.PageSize == 0)
             return products;
 
-        var paginationMetadata = new PaginationMetadata(products.Count(), @params.Page, @params.ItemsPerPage);
-        Response.Headers.Add("X-Pagination", JsonSerializer.Serialize(paginationMetadata));
+        var paginationMetadata = new Pagination(products.Count(), @params.CurrentPage, @params.PageSize);
+        Response.Headers.Add("X-Pagination", JsonConvert.SerializeObject(paginationMetadata));
 
-        return products.Skip((@params.Page - 1) * @params.ItemsPerPage)
-                       .Take(@params.ItemsPerPage);
+        return products.Skip((@params.CurrentPage - 1) * @params.PageSize)
+                       .Take(@params.PageSize);
     }
 
     // GET: api/products/[id]

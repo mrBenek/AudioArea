@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking; // EntityEntry<T>
+using Microsoft.IdentityModel.Tokens;
 using Packt.Shared; // Product
 using System.Collections.Concurrent; // ConcurrentDictionary
 
@@ -44,11 +45,51 @@ public class ProductRepository : IProductRepository
 
     public Task<IEnumerable<Product>> RetrieveAsync(string? company)
     {
-        if (string.IsNullOrWhiteSpace(company))
-            return RetrieveAllAsync();
-
-        return Task.FromResult(productsCache is null
+        return Task.FromResult((productsCache is null || string.IsNullOrWhiteSpace(company))
             ? Enumerable.Empty<Product>() : productsCache.Values.Where(product => product.Company?.Name == company));
+    }
+
+    public Task<IEnumerable<Product>> RetrieveAsync(List<int?>? companyIds, List<int?>? categoryIds, string? sortedBy)
+    {
+        var result = Enumerable.Empty<Product>();
+        if (companyIds.IsNullOrEmpty() && categoryIds.IsNullOrEmpty())
+        {
+            return Task.FromResult(result);
+        }
+        else if (companyIds.IsNullOrEmpty() && !categoryIds.IsNullOrEmpty() && categoryIds != null)
+        {
+            result = productsCache is null
+                ? Enumerable.Empty<Product>() : productsCache.Values.Where(p => categoryIds.Contains(p.CategoryId));
+        }
+        else if (!companyIds.IsNullOrEmpty() && categoryIds.IsNullOrEmpty() && companyIds != null)
+        {
+            result = productsCache is null
+                ? Enumerable.Empty<Product>() : productsCache.Values.Where(p => companyIds.Contains(p.CompanyId));
+        }
+        else if (categoryIds != null && companyIds != null)
+        {
+            result = productsCache is null
+                ? Enumerable.Empty<Product>() : productsCache.Values.Where(p => companyIds.Contains(p.CompanyId) && categoryIds.Contains(p.CategoryId));
+        }
+        switch (sortedBy)
+        {
+            case "name_asc":
+                result = result.OrderBy(s => s.Name);
+                break;
+            case "name_desc":
+                result = result.OrderByDescending(s => s.Name);
+                break;
+            case "company_asc":
+                result = result.OrderBy(s => s.Company?.Name);
+                break;
+            case "company_desc":
+                result = result.OrderByDescending(s => s.Company?.Name);
+                break;
+            default:
+                result = result.OrderBy(s => s.Name);
+                break;
+        }
+        return Task.FromResult(result);
     }
 
     public Task<Product?> RetrieveAsync(int id)

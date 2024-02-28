@@ -1,9 +1,9 @@
 GET https://localhost:5002/api/products/ HTTP/1.1
 ###
-GET https://localhost:5002/api/products/?company=AAD HTTP/1.1 
+GET https://localhost:5002/api/products/?companyName=AAD HTTP/1.1 
 Accept: application/xml
 ###
-GET https://localhost:5002/api/products/?company=AAD HTTP/1.1 
+GET https://localhost:5002/api/products/?companyName=AAD HTTP/1.1 
 Accept: application/json
 ###
 GET https://localhost:5002/api/products/2 HTTP/1.1 
@@ -13,11 +13,26 @@ Accept: application/json
 ###
 GET https://localhost:5002/api/products/abcxy HTTP/1.1
 ### Pagination
-GET https://localhost:5002/api/products/?company=AAD&page=2&itemsperpage=2 HTTP/1.1 
+GET https://localhost:5002/api/products/?companyName=AAD&page=2&itemsperpage=2 HTTP/1.1 
 Accept: application/json
 ###
-GET https://localhost:5002/api/products/?company=AAD&page=2&itemsperpage=2 HTTP/1.1 
+GET https://localhost:5002/api/products/?companyName=AAD&page=2&itemsperpage=2 HTTP/1.1 
 Accept: application/xml
 ###
 GET https://localhost:5002/api/products/?page=2&itemsperpage=20 HTTP/1.1 
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?categoryId=24&page=1&itemsperpage=2&sortedBy=Name HTTP/1.1 
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?companyId=1,2,10,15&sortedBy=name_asc HTTP/1.2
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?companyId=1,2,10,15&sortedBy=name_desc HTTP/1.2
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?companyId=1,2,10,15&sortedBy=company_desc HTTP/1.2
+Accept: application/xml
+###
+GET https://localhost:5002/api/products/?companyId=0&categoryId=19&CurrentPage=1&PageSize=100&sortedBy=name_asc  HTTP/1.2
 Accept: application/xml
