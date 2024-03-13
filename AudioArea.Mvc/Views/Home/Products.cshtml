@@ -42,7 +42,7 @@
                 <p class="float-end px-2 mt-2">out of</p>
                 <input value="2" type="number" min="1" max="10" id="page-number" class="form-control form-control-sm float-end bg-light text-center fs-5" style="width: 5%" step="any" />
                 <div class="float-end px-2 rounded" style="width: 15%">
-                    <select class="form-select float-end px-2 rounded border-dark">
+                    <select id="sorted-by" class="form-select float-end px-2 rounded border-dark">
                         <option value="name_asc" selected>Name  A→Z</option>
                         <option value="name_desc">Name  Z→A</option>
                         <option value="company_asc">Company  A→Z</option>
@@ -50,7 +50,7 @@
                     </select>
                 </div>
                 <div class="float-end px-2 rounded" style="width: 10%">
-                    <select id="ItemsPerPage" class="form-select float-end px-2 rounded border-dark">
+                    <select id="items-per-page" class="form-select float-end px-2 rounded border-dark">
                         <option>20</option>
                         <option>40</option>
                         <option>60</option>
@@ -92,7 +92,10 @@
             });
         });
 
-        $('#btn-apply-filters').click(function () {
+        $('#page-number').change(() => LoadProducts())
+        $('#btn-apply-filters').click(() => LoadProducts());
+
+        function LoadProducts() {
             var selectedCompanyIds = GetSelectedItems("company");
             var selectedCategoryIds = GetSelectedItems("category");
             var pageNumber = GetPageNumber();
@@ -116,7 +119,7 @@
                     console.log('An error occurred while restrieving filtered category or company data.');
                 }
             });
-        });
+        }
 
         function GetSelectedItems(name) {
             return $('input[type="checkbox"][name="' + name + '"]:checked').map(function () {
@@ -125,15 +128,15 @@
         }
 
         function GetPageNumber() {
-            return $('#PageNumber').val();
+            return $('#page-number').val();
         }
 
         function GetSortedBy() {
-            return $('#SortedBy').val();
+            return $('#sorted-by').val();
         }
 
         function GetItemsPerPage() {
-            return $('#ItemsPerPage').val();
+            return $('#items-per-page').val();
         }
     </script>
 }
