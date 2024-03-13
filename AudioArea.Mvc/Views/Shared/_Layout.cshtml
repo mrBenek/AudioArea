@@ -27,7 +27,7 @@
                         </li>
                         <li class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown">Categories</a>
-                            <div class="dropdown-menu">
+							<div class="dropdown-menu" id="dropdown-categories">
 								@await Component.InvokeAsync(typeof(CategoryTopNavBarViewComponent))
                             </div>
                         </li>
@@ -62,7 +62,8 @@
 	</footer>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>
 	<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/layout.js" asp-append-version="true"></script>
+	<script src="~/js/@(System.IO.Path.GetFileNameWithoutExtension(Html.ViewContext.View.Path).ToLower()).js" asp-append-version="true"></script>
 	@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
